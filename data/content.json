@@ -1,0 +1,250 @@
+{
+  "agency": {
+    "name": "RainFow",
+    "tagline": "We Build Digital Experiences",
+    "email": "hello@rainfow.com",
+    "phone": "+8801700000000",
+    "address": "Dhaka, Bangladesh",
+    "years_experience": 5,
+    "projects_completed": 50,
+    "happy_clients": 35,
+    "available": true
+  },
+
+  "social": {
+    "facebook": "https://facebook.com/rainfow",
+    "linkedin": "https://linkedin.com/company/rainfow",
+    "github": "https://github.com/rainfow",
+    "twitter": ""
+  },
+
+  "services": [
+    {
+      "icon": "💻",
+      "title": "Web Development",
+      "description": "Custom PHP applications, dashboards, and business tools built to scale.",
+      "price_from": 15000
+    },
+    {
+      "icon": "🛒",
+      "title": "E-commerce",
+      "description": "Complete online stores with payment, delivery, and inventory management.",
+      "price_from": 25000
+    },
+    {
+      "icon": "📱",
+      "title": "Mobile Apps",
+      "description": "Cross-platform Android/iOS apps using React Native and Flutter.",
+      "price_from": 40000
+    },
+    {
+      "icon": "🎨",
+      "title": "UI/UX Design",
+      "description": "Modern, conversion-focused design for websites and applications.",
+      "price_from": 10000
+    },
+    {
+      "icon": "📈",
+      "title": "SEO & Marketing",
+      "description": "Search engine optimization and digital marketing to grow your traffic.",
+      "price_from": 8000
+    },
+    {
+      "icon": "🛠️",
+      "title": "Maintenance",
+      "description": "Ongoing support, updates, and monitoring for peace of mind.",
+      "price_from": 5000
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "RainFow Lite E-commerce",
+      "category": "E-commerce",
+      "description": "Full-featured online store with admin panel, order tracking, and bKash integration.",
+      "image": "",
+      "client": "RainFow Bangladesh",
+      "technologies": "PHP, MySQL, Tailwind",
+      "featured": true,
+      "completed_at": "2026-09-01",
+      "url": ""
+    },
+    {
+      "title": "AgroMart Inventory System",
+      "category": "Web App",
+      "description": "Multi-warehouse inventory management with real-time stock alerts.",
+      "image": "",
+      "client": "AgroMart Ltd.",
+      "technologies": "PHP, MySQL, Chart.js",
+      "featured": true,
+      "completed_at": "2026-08-15",
+      "url": ""
+    },
+    {
+      "title": "EduCare Student Portal",
+      "category": "Web App",
+      "description": "School management system with attendance, grades, and parent portal.",
+      "image": "",
+      "client": "EduCare Academy",
+      "technologies": "PHP, MySQL, Bootstrap",
+      "featured": true,
+      "completed_at": "2026-07-20",
+      "url": ""
+    },
+    {
+      "title": "StyleHub Fashion Store",
+      "category": "E-commerce",
+      "description": "Modern fashion e-commerce with size guide and wishlist feature.",
+      "image": "",
+      "client": "StyleHub BD",
+      "technologies": "PHP, MySQL, Tailwind",
+      "featured": false,
+      "completed_at": "2026-06-10",
+      "url": ""
+    },
+    {
+      "title": "FitTrack Mobile App",
+      "category": "Mobile App",
+      "description": "Fitness tracking app with workout plans and progress charts.",
+      "image": "",
+      "client": "FitTrack",
+      "technologies": "React Native, Firebase",
+      "featured": false,
+      "completed_at": "2026-05-05",
+      "url": ""
+    },
+    {
+      "title": "LocalBiz Directory",
+      "category": "Web App",
+      "description": "Bangladeshi business directory with search and reviews.",
+      "image": "",
+      "client": "LocalBiz",
+      "technologies": "PHP, MySQL, Alpine.js",
+      "featured": false,
+      "completed_at": "2026-04-12",
+      "url": ""
+    }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Rakib Hasan",
+      "company": "AgroMart Ltd.",
+      "message": "RainFow delivered our inventory system in 3 weeks. Excellent quality and support!",
+      "rating": 5
+    },
+    {
+      "name": "Fatema Akter",
+      "company": "StyleHub BD",
+      "message": "Our online sales doubled after the new site launch. Highly recommended!",
+      "rating": 5
+    },
+    {
+      "name": "Tanvir Ahmed",
+      "company": "EduCare Academy",
+      "message": "Professional team, clear communication, delivered on time. Will work again.",
+      "rating": 5
+    }
+  ],
+
+  "process": [
+    {
+      "number": "01",
+      "title": "Discover",
+      "description": "We listen to your goals, users, and constraints."
+    },
+    {
+      "number": "02",
+      "title": "Design",
+      "description": "Wireframes, prototypes, and design system approved by you."
+    },
+    {
+      "number": "03",
+      "title": "Develop",
+      "description": "Agile sprints with weekly demos and instant feedback."
+    },
+    {
+      "number": "04",
+      "title": "Deploy",
+      "description": "Launch, train your team, and stay on for support."
+    }
+  ],
+
+  "why_us": [
+    {
+      "icon": "⚡",
+      "title": "Fast Delivery",
+      "description": "Ship your MVP in weeks, not months."
+    },
+    {
+      "icon": "🎯",
+      "title": "Results Driven",
+      "description": "We focus on what moves your business forward."
+    },
+    {
+      "icon": "🔒",
+      "title": "Secure & Stable",
+      "description": "Built with security-first architecture."
+    },
+    {
+      "icon": "🤝",
+      "title": "Ongoing Support",
+      "description": "We stay with you long after launch."
+    }
+  ],
+
+  "pricing": [
+    {
+      "name": "Starter",
+      "price": "15,000",
+      "period": "one-time",
+      "description": "Perfect for small business websites",
+      "features": [
+        "Up to 5 pages",
+        "Responsive design",
+        "Contact form",
+        "Basic SEO",
+        "1 month support"
+      ],
+      "highlight": false
+    },
+    {
+      "name": "Business",
+      "price": "45,000",
+      "period": "one-time",
+      "description": "E-commerce & custom web apps",
+      "features": [
+        "Unlimited pages",
+        "Admin dashboard",
+        "Payment integration",
+        "Order tracking",
+        "3 months support",
+        "Free hosting setup"
+      ],
+      "highlight": true
+    },
+    {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "Complex systems & integrations",
+      "features": [
+        "Custom architecture",
+        "API integrations",
+        "Multi-user roles",
+        "Advanced security",
+        "12 months support",
+        "Priority response"
+      ],
+      "highlight": false
+    }
+  ],
+
+  "clients": [
+    { "name": "AgroMart" },
+    { "name": "StyleHub" },
+    { "name": "EduCare" },
+    { "name": "FitTrack" },
+    { "name": "LocalBiz" }
+  ]
+}
