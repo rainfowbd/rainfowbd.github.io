@@ -2,7 +2,7 @@
      SHARED HEADER
      - Logo only (no brand text)
      - Search: fixed width, centered
-     - Contact Us (WhatsApp) · Cart (hover preview)
+     - Contact Us (WhatsApp) · Cart (hover preview with WA enquiry)
      - 2nd nav: semi-transparent navy, static
      ============================================================ -->
 <header class="site-header">
@@ -43,7 +43,7 @@
           <span class="ha-line2">Contact Us</span>
         </a>
 
-        <!-- Cart + hover preview (Checkout button is inside this dropdown) -->
+        <!-- Cart + hover preview (no subtotal, WhatsApp enquiry CTA) -->
         <div class="cart-wrap">
           <a href="cart.html" class="header-action cart-action" aria-label="Cart">
             <svg class="ha-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -64,11 +64,11 @@
               <p class="cart-empty">Your cart is empty.</p>
             </div>
             <div class="cart-preview-foot">
-              <div class="cart-total">
-                <span>Subtotal</span>
-                <strong id="cart-preview-subtotal">৳0</strong>
-              </div>
-              <a href="checkout.html" class="btn-checkout">Checkout →</a>
+              <a class="btn-checkout wa-enquiry"
+                 href="https://wa.me/8801876757033?text=Hi%20RainFow%2C%20I%27d%20like%20to%20enquire%20about%20the%20items%20in%20my%20cart."
+                 target="_blank" rel="noopener">
+                Enquire on WhatsApp →
+              </a>
               <a href="cart.html" class="cart-view-link">View full cart</a>
             </div>
           </div>
