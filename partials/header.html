@@ -1,9 +1,9 @@
 <!-- ============================================================
      SHARED HEADER
-     - Logo only (no brand text), larger
-     - Black main bar with neon-blue search
-     - Contact Us (WhatsApp) · Cart (hover preview) · Checkout
-     - 2nd nav: Amazon-style navy bar
+     - Logo only (no brand text)
+     - Search: fixed width, centered
+     - Contact Us (WhatsApp) · Cart (hover preview)
+     - 2nd nav: semi-transparent navy, static
      ============================================================ -->
 <header class="site-header">
 
@@ -18,7 +18,7 @@
         <img src="images/logo.svg" alt="RainFow" class="logo-img">
       </a>
 
-      <!-- Search (neon blue glow) -->
+      <!-- Search (fixed width, centered) -->
       <form class="search-form" role="search" onsubmit="return false;">
         <input type="search" class="search-input" placeholder="Search products…" aria-label="Search">
         <button type="submit" class="search-btn" aria-label="Search">
@@ -43,7 +43,7 @@
           <span class="ha-line2">Contact Us</span>
         </a>
 
-        <!-- Cart + hover preview -->
+        <!-- Cart + hover preview (Checkout button is inside this dropdown) -->
         <div class="cart-wrap">
           <a href="cart.html" class="header-action cart-action" aria-label="Cart">
             <svg class="ha-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -74,9 +74,6 @@
           </div>
         </div>
 
-        <!-- Checkout header button -->
-        <a href="checkout.html" class="btn-checkout-header">Checkout</a>
-
       </div>
 
       <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">☰</button>
@@ -84,7 +81,7 @@
   </div>
 
   <!-- ============================================================
-       SECOND NAV (Amazon-style navy)
+       SECOND NAV (semi-transparent navy, static)
        ============================================================ -->
   <nav class="cat-nav">
     <div class="container cat-nav-inner">
@@ -126,7 +123,6 @@
     </details>
     <a href="about.html">About Us</a>
     <a href="cart.html">Cart (<span id="cart-count-mobile">0</span>)</a>
-    <a href="checkout.html">Checkout</a>
     <a href="https://wa.me/8801700000000" target="_blank" rel="noopener" class="wa-mobile">💬 Contact on WhatsApp</a>
   </div>
 </header>
