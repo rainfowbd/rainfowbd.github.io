@@ -1,0 +1,86 @@
+<!-- ============================================================
+     SHARED HEADER  (loaded via include.js into <div id="site-header">)
+     ============================================================ -->
+<header class="site-header">
+  <!-- Top strip -->
+  <div class="top-strip">
+    <div class="container top-strip-inner">
+      <span>🚚 Free delivery on orders over ৳2,000</span>
+      <div class="top-strip-links">
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="help.html">Help</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main bar: logo | search | account | cart -->
+  <div class="main-bar">
+    <div class="container main-bar-inner">
+
+      <a href="index.html" class="logo">
+        <span class="logo-mark">🌧️</span>
+        <span class="logo-text">RainFow</span>
+      </a>
+
+      <form class="search-form" role="search" onsubmit="return false;">
+        <select class="search-cat" aria-label="Category">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Fashion</option>
+          <option>Home &amp; Kitchen</option>
+          <option>Beauty</option>
+          <option>Sports</option>
+          <option>Books</option>
+        </select>
+        <input type="search" class="search-input" placeholder="Search products…" aria-label="Search">
+        <button type="submit" class="search-btn" aria-label="Search">🔍</button>
+      </form>
+
+      <div class="header-actions">
+        <a href="login.html" class="header-action">
+          <span class="ha-line1">Hello, sign in</span>
+          <span class="ha-line2">Account</span>
+        </a>
+        <a href="orders.html" class="header-action">
+          <span class="ha-line1">Returns</span>
+          <span class="ha-line2">&amp; Orders</span>
+        </a>
+        <a href="cart.html" class="header-action cart-action">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count" id="cart-count">0</span>
+          <span class="ha-line2 cart-label">Cart</span>
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+
+  <!-- Category nav strip -->
+  <nav class="cat-nav">
+    <div class="container cat-nav-inner">
+      <a href="index.html" class="cat-link">☰ All</a>
+      <a href="category.html?c=electronics" class="cat-link">Electronics</a>
+      <a href="category.html?c=fashion"     class="cat-link">Fashion</a>
+      <a href="category.html?c=home"        class="cat-link">Home &amp; Kitchen</a>
+      <a href="category.html?c=beauty"      class="cat-link">Beauty</a>
+      <a href="category.html?c=sports"      class="cat-link">Sports</a>
+      <a href="category.html?c=books"       class="cat-link">Books</a>
+      <a href="deals.html" class="cat-link cat-link-hot">🔥 Today's Deals</a>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div id="mobile-menu" class="mobile-menu hidden">
+    <a href="category.html?c=electronics">Electronics</a>
+    <a href="category.html?c=fashion">Fashion</a>
+    <a href="category.html?c=home">Home &amp; Kitchen</a>
+    <a href="category.html?c=beauty">Beauty</a>
+    <a href="category.html?c=sports">Sports</a>
+    <a href="category.html?c=books">Books</a>
+    <a href="deals.html" class="hot">🔥 Today's Deals</a>
+    <a href="login.html">Sign in</a>
+    <a href="cart.html">Cart (<span id="cart-count-mobile">0</span>)</a>
+  </div>
+</header>
