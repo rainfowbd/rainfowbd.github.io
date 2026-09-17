@@ -1,5 +1,10 @@
 /* ============================================
-   RainFow Portfolio - Main App
+   RainFow — Main App (e-commerce)
+   - Renders dynamic sections from data/content.json
+   - Wires mobile menu, navbar scroll, footer year
+   - Contact form guard
+   - Cart preview + add-to-cart handled by include.js
+   (Floating WhatsApp lives in partials/footer.html — do NOT re-inject here)
    ============================================ */
 (function () {
     'use strict';
@@ -21,39 +26,41 @@
         return '৳' + Number(n).toLocaleString('en-BD');
     }
 
+    function formatDate(iso) {
+        if (!iso) return '';
+        const d = new Date(iso);
+        if (isNaN(d)) return '';
+        return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    }
+
     // ---------- Fetch content ----------
     async function loadContent() {
         const url = cfg.CONTENT_URL || 'data/content.json';
         const res = await fetch(url, { cache: 'no-cache' });
-        if (!res.ok) throw new Error('Failed to load content');
+        if (!res.ok) throw new Error('Failed to load content: ' + res.status);
         return res.json();
     }
 
-    // ---------- Renderers ----------
+    // =========================================================
+    // RENDERERS — all guard-check their target element,
+    // so missing sections simply no-op.
+    // =========================================================
+
     function renderAgency(data) {
         const a = data.agency || {};
 
-        // Replace all [data-agency="key"] elements
         $$('[data-agency]').forEach(el => {
             const key = el.dataset.agency;
             if (key in a) el.textContent = a[key];
         });
 
-        // Stats
         $$('[data-stat]').forEach(el => {
             const key = el.dataset.stat;
             if (a[key] != null) el.textContent = a[key] + '+';
         });
 
-        // Availability badge
         const badge = $('[data-availability]');
-        if (badge) {
-            if (a.available) {
-                badge.classList.remove('hidden');
-            } else {
-                badge.classList.add('hidden');
-            }
-        }
+        if (badge) badge.classList.toggle('hidden', !a.available);
     }
 
     function renderSocial(data) {
@@ -157,13 +164,6 @@
         }).join('');
     }
 
-    function formatDate(iso) {
-        if (!iso) return '';
-        const d = new Date(iso);
-        if (isNaN(d)) return '';
-        return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-    }
-
     function renderWhyUs(data) {
         const list = $('#why-list');
         if (!list) return;
@@ -203,10 +203,7 @@
         if (!list) return;
         const items = data.testimonials || [];
 
-        if (!items.length) {
-            list.innerHTML = '';
-            return;
-        }
+        if (!items.length) { list.innerHTML = ''; return; }
 
         list.innerHTML = items.slice(0, 3).map(t => `
             <div class="reveal bg-white rounded-2xl p-8 border border-gray-100
@@ -310,11 +307,10 @@
             const el = $(sel);
             if (el) el.textContent = val || '';
         };
-        setText('#contact-email', a.email);
-        setText('#contact-phone', a.phone);
+        setText('#contact-email',   a.email);
+        setText('#contact-phone',   a.phone);
         setText('#contact-address', a.address);
 
-        // Also update the mailto/tel links
         const emailLink = $('[data-mailto]');
         if (emailLink && a.email) emailLink.href = 'mailto:' + a.email;
 
@@ -322,7 +318,10 @@
         if (phoneLink && a.phone) phoneLink.href = 'tel:' + a.phone;
     }
 
-    // ---------- Contact Form ----------
+    // =========================================================
+    // INTERACTIONS
+    // =========================================================
+
     function initContactForm() {
         const form = $('#contact-form');
         if (!form) return;
@@ -331,34 +330,19 @@
         if (formAction.includes('YOUR_FORM_ID')) {
             form.addEventListener('submit', e => {
                 e.preventDefault();
-                alert('⚠️ Formspree is not configured yet.\n\nEdit assets/js/config.js and paste your Formspree form ID.');
+                alert('⚠️ Formspree is not configured yet.\n\n' +
+                      'Edit assets/js/config.js and paste your Formspree form ID.');
             });
         }
     }
 
-    // ---------- WhatsApp Button ----------
-    function initWhatsApp() {
-        const num = cfg.WHATSAPP_NUMBER;
-        if (!num) return;
+    // ❌ REMOVED: initWhatsApp()
+    // The floating WhatsApp button now lives in partials/footer.html
+    // and is styled by .wa-float in style.css. Do NOT re-inject it here.
 
-        const url = `https://wa.me/${num}?text=${encodeURIComponent(cfg.WHATSAPP_MESSAGE || 'Hi!')}`;
-        const btn = document.createElement('a');
-        btn.href = url;
-        btn.target = '_blank';
-        btn.rel = 'noopener';
-        btn.setAttribute('aria-label', 'Chat on WhatsApp');
-        btn.className = 'fixed bottom-6 right-6 z-40 bg-green-500 hover:bg-green-600 text-white ' +
-                        'w-14 h-14 rounded-full flex items-center justify-center shadow-2xl ' +
-                        'transition-transform hover:scale-110';
-        btn.innerHTML = `
-            <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>`;
-        document.body.appendChild(btn);
-    }
-
-    // ---------- Reveal on Scroll ----------
     function initReveal() {
+        if (!('IntersectionObserver' in window)) return;
+
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -375,37 +359,34 @@
         });
     }
 
-    // ---------- Mobile Menu ----------
     function initMobileMenu() {
         const btn  = $('#mobile-menu-btn');
         const menu = $('#mobile-menu');
         if (!btn || !menu) return;
+
         btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
         $$('#mobile-menu a').forEach(a => {
             a.addEventListener('click', () => menu.classList.add('hidden'));
         });
     }
 
-    // ---------- Navbar shadow on scroll ----------
     function initNavbarScroll() {
         const nav = $('#navbar');
         if (!nav) return;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-lg');
-            } else {
-                nav.classList.remove('shadow-lg');
-            }
+            nav.classList.toggle('shadow-lg', window.scrollY > 20);
         });
     }
 
-    // ---------- Year in footer ----------
     function initYear() {
         const y = $('#footer-year');
         if (y) y.textContent = new Date().getFullYear();
     }
 
-    // ---------- Boot ----------
+    // =========================================================
+    // BOOT
+    // =========================================================
     async function init() {
         try {
             const data = await loadContent();
@@ -427,12 +408,11 @@
             console.error('[RainFow] Content load failed:', err);
         }
 
-        // These run regardless
+        // These run regardless of content.json success
         initMobileMenu();
         initNavbarScroll();
         initYear();
         initContactForm();
-        initWhatsApp();
     }
 
     if (document.readyState === 'loading') {
