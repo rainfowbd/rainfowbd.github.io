@@ -456,14 +456,15 @@ button { font-family: inherit; }
 .mobile-menu .wa-mobile { color: var(--whatsapp); }
 
 /* ============================================
-   HERO BANNER — full-width fixed image
+   HERO BANNER — full width, stretched to fit
+   No crop, no whitespace. Uses 100% 100%.
    ============================================ */
 .hero-banner {
     position: relative;
     width: 100%;
     height: clamp(280px, 40vw, 520px);
     background-image: url('https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -654,25 +655,6 @@ button { font-family: inherit; }
 .btn-ghost:hover { background: rgba(255,255,255,0.2); }
 
 /* ============================================
-   TRUST STRIP
-   ============================================ */
-.trust-strip {
-    background: var(--header-bg);
-    color: #fff;
-    padding: 40px 0;
-    border-top: 1px solid var(--header-line);
-}
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 24px;
-}
-.trust-item { display: flex; gap: 12px; align-items: center; }
-.trust-item span { font-size: 28px; }
-.trust-item h4 { margin: 0; font-size: 15px; font-weight: 700; }
-.trust-item p  { margin: 2px 0 0; font-size: 13px; color: #cbd5e1; }
-
-/* ============================================
    FOOTER
    ============================================ */
 .site-footer {
@@ -771,7 +753,6 @@ button { font-family: inherit; }
 
 /* ============================================
    FLOATING WHATSAPP BUTTON
-   Locked dimensions — cannot stretch or duplicate
    ============================================ */
 .wa-float {
     position: fixed;
@@ -871,7 +852,6 @@ button { font-family: inherit; }
     .footer-top { flex-direction: column; align-items: flex-start; }
     .newsletter input { min-width: 0; flex: 1; }
 
-    /* Smaller floating WA */
     .wa-float {
         width: 50px;
         height: 50px;
