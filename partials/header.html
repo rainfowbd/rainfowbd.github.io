@@ -1,16 +1,21 @@
 <!-- ============================================================
-     SHARED HEADER  (loaded via include.js into <div id="site-header">)
+     SHARED HEADER
+     - Logo only (no brand text), larger
+     - Black main bar with neon-blue search
+     - Contact Us (WhatsApp) · Cart (hover preview) · Checkout
+     - 2nd nav: Amazon-style navy bar
      ============================================================ -->
 <header class="site-header">
 
-  <!-- Main bar: logo | search | checkout | cart | whatsapp -->
+  <!-- ============================================================
+       MAIN BAR (black)
+       ============================================================ -->
   <div class="main-bar">
     <div class="container main-bar-inner">
 
-      <!-- Logo + brand name -->
-      <a href="index.html" class="logo">
-        <img src="images/logo.svg" alt="RainFow" class="logo-img" width="140" height="36">
-        <span class="logo-text">RainFow</span>
+      <!-- Logo only -->
+      <a href="index.html" class="logo" aria-label="RainFow">
+        <img src="images/logo.svg" alt="RainFow" class="logo-img">
       </a>
 
       <!-- Search (neon blue glow) -->
@@ -25,7 +30,7 @@
         </button>
       </form>
 
-      <!-- Right-side actions -->
+      <!-- Right actions -->
       <div class="header-actions">
 
         <!-- Contact Us → WhatsApp -->
@@ -38,7 +43,7 @@
           <span class="ha-line2">Contact Us</span>
         </a>
 
-        <!-- Cart (hover → preview dropdown) -->
+        <!-- Cart + hover preview -->
         <div class="cart-wrap">
           <a href="cart.html" class="header-action cart-action" aria-label="Cart">
             <svg class="ha-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -50,7 +55,6 @@
             <span class="cart-count" id="cart-count">0</span>
           </a>
 
-          <!-- Hover dropdown -->
           <div class="cart-preview" role="dialog" aria-label="Cart preview">
             <div class="cart-preview-head">
               <strong>Your Cart</strong>
@@ -70,7 +74,7 @@
           </div>
         </div>
 
-        <!-- Checkout Button (primary CTA) -->
+        <!-- Checkout header button -->
         <a href="checkout.html" class="btn-checkout-header">Checkout</a>
 
       </div>
@@ -79,11 +83,13 @@
     </div>
   </div>
 
-  <!-- Second nav: HOME · Our Products · Category · About Us -->
+  <!-- ============================================================
+       SECOND NAV (Amazon-style navy)
+       ============================================================ -->
   <nav class="cat-nav">
     <div class="container cat-nav-inner">
-      <a href="index.html"      class="cat-link">HOME</a>
-      <a href="products.html"   class="cat-link">Our Products</a>
+      <a href="index.html"    class="cat-link">Home</a>
+      <a href="products.html" class="cat-link">Our Products</a>
 
       <div class="cat-dropdown">
         <button class="cat-link cat-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
@@ -103,9 +109,11 @@
     </div>
   </nav>
 
-  <!-- Mobile drawer -->
+  <!-- ============================================================
+       MOBILE DRAWER
+       ============================================================ -->
   <div id="mobile-menu" class="mobile-menu hidden">
-    <a href="index.html">HOME</a>
+    <a href="index.html">Home</a>
     <a href="products.html">Our Products</a>
     <details class="mobile-cat">
       <summary>Category ▾</summary>

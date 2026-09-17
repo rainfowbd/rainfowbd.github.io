@@ -1,6 +1,6 @@
 /* ============================================
    RainFow — Main Stylesheet
-   Black / Neon-Blue e-commerce theme
+   Black main bar / Navy 2nd nav / Neon-blue accents
    ============================================ */
 
 /* ---------- RESET ---------- */
@@ -39,9 +39,9 @@ button { font-family: inherit; }
     --bg:           #ffffff;
     --bg-alt:       #f9fafb;
 
-    --header-bg:    #000000;
+    --header-bg:    #000000;   /* main bar */
     --header-line:  #1f2937;
-    --header-mid:   #232f3e;
+    --header-mid:   #232f3e;   /* 2nd nav */
 
     --accent:       #febd69;
     --accent-hover: #f3a847;
@@ -103,6 +103,7 @@ button { font-family: inherit; }
     z-index: 50;
 }
 
+/* ---------- MAIN BAR (black) ---------- */
 .main-bar {
     background: var(--header-bg);
     color: #fff;
@@ -115,26 +116,20 @@ button { font-family: inherit; }
     height: 72px;
 }
 
-/* Logo */
+/* Logo — image only, larger */
 .logo {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 20px;
-    white-space: nowrap;
     flex-shrink: 0;
+    text-decoration: none;
 }
 .logo-img {
-    height: 36px;
+    height: 52px;
     width: auto;
-    max-width: 140px;
+    max-width: 200px;
 }
-.logo-text { letter-spacing: -0.3px; }
 
-/* ---------- SEARCH ---------- */
+/* ---------- SEARCH (neon blue glow) ---------- */
 .search-form {
     flex: 1;
     display: flex;
@@ -362,52 +357,51 @@ button { font-family: inherit; }
     box-shadow: 0 0 20px var(--brand-glow);
 }
 
-/* ---------- SECOND NAV ---------- */
+/* ============================================
+   SECOND NAV — Amazon-style navy
+   ============================================ */
 .cat-nav {
-    background: var(--header-bg);
-    border-bottom: 1px solid #111;
+    background: var(--header-mid);
+    border-bottom: none;
 }
 .cat-nav-inner {
     display: flex;
-    gap: 26px;
-    height: 44px;
+    gap: 22px;
+    height: 40px;
     align-items: center;
     overflow-x: auto;
 }
 .cat-link {
-    color: #d1d5db;
+    color: #e5e7eb;
     text-decoration: none;
     font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    text-transform: uppercase;
+    font-weight: 500;
     white-space: nowrap;
     padding: 6px 2px;
     border: none;
-    border-bottom: 2px solid transparent;
     background: none;
     cursor: pointer;
     font-family: inherit;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    transition: color .2s, border-color .2s;
+    transition: color .2s;
 }
-.cat-link:hover { color: #fff; border-bottom-color: var(--brand); }
+.cat-link:hover { color: #fff; }
 .caret { font-size: 10px; opacity: 0.7; }
 
+/* Category dropdown — light card */
 .cat-dropdown { position: relative; }
 .cat-dropdown-menu {
     position: absolute;
     top: calc(100% + 6px);
     left: 0;
     min-width: 200px;
-    background: #0d0d0d;
-    border: 1px solid var(--header-line);
-    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid var(--line);
+    border-radius: 8px;
     padding: 6px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5),
-                0 0 18px rgba(59,130,246,0.15);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
     opacity: 0;
     visibility: hidden;
     transform: translateY(-6px);
@@ -423,18 +417,20 @@ button { font-family: inherit; }
 .cat-dropdown-menu a {
     display: block;
     padding: 9px 12px;
-    color: #d1d5db;
+    color: var(--ink);
     text-decoration: none;
     font-size: 13px;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: background .15s, color .15s;
 }
 .cat-dropdown-menu a:hover {
     background: var(--brand-tint);
-    color: #fff;
+    color: var(--brand-dark);
 }
 
-/* ---------- MOBILE MENU ---------- */
+/* ============================================
+   MOBILE MENU
+   ============================================ */
 .mobile-menu-btn {
     display: none;
     background: none;
@@ -444,8 +440,8 @@ button { font-family: inherit; }
     cursor: pointer;
 }
 .mobile-menu {
-    background: var(--header-bg);
-    border-top: 1px solid var(--header-line);
+    background: var(--header-mid);
+    border-top: 1px solid #111;
     padding: 8px 0;
     display: flex;
     flex-direction: column;
@@ -455,11 +451,9 @@ button { font-family: inherit; }
     color: #e5e7eb;
     text-decoration: none;
     padding: 12px 20px;
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
     font-size: 14px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.3px;
+    font-weight: 500;
     cursor: pointer;
     list-style: none;
 }
@@ -467,15 +461,12 @@ button { font-family: inherit; }
 .mobile-cat[open] summary { color: var(--brand); }
 .mobile-cat a {
     padding-left: 36px;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 0;
     color: #9ca3af;
 }
 .mobile-menu .wa-mobile { color: var(--whatsapp); }
 
 /* ============================================
-   HERO BANNER — full-width fixed image, no text
+   HERO BANNER — full-width fixed image
    ============================================ */
 .hero-banner {
     position: relative;
@@ -612,7 +603,7 @@ button { font-family: inherit; }
     font-weight: 400;
 }
 
-/* Add-to-cart button on cards */
+/* Add-to-cart button */
 .btn-add {
     display: block;
     width: 100%;
@@ -719,9 +710,9 @@ button { font-family: inherit; }
     gap: 8px;
 }
 .footer-logo-img {
-    height: 36px;
+    height: 52px;
     width: auto;
-    max-width: 140px;
+    max-width: 200px;
 }
 .newsletter label {
     display: block;
@@ -792,10 +783,79 @@ button { font-family: inherit; }
 }
 
 /* ============================================
+   FLOATING WHATSAPP BUTTON
+   ============================================ */
+.wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 90;
+
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+
+    background: #25d366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25),
+                0 0 0 0 rgba(37,211,102,0.7);
+
+    transition: transform .2s, box-shadow .25s;
+    animation: wa-pulse 2.2s ease-out infinite;
+}
+.wa-float svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+.wa-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.3),
+                0 0 22px rgba(37,211,102,0.9);
+}
+
+@keyframes wa-pulse {
+    0%   { box-shadow: 0 8px 24px rgba(0,0,0,0.25),
+                       0 0 0 0 rgba(37,211,102,0.7); }
+    70%  { box-shadow: 0 8px 24px rgba(0,0,0,0.25),
+                       0 0 0 16px rgba(37,211,102,0); }
+    100% { box-shadow: 0 8px 24px rgba(0,0,0,0.25),
+                       0 0 0 0 rgba(37,211,102,0); }
+}
+
+.wa-float::after {
+    content: "Chat with us";
+    position: absolute;
+    right: calc(100% + 12px);
+    top: 50%;
+    transform: translateY(-50%) translateX(4px);
+
+    background: #111827;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .15s, transform .15s;
+}
+.wa-float:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* ============================================
    RESPONSIVE
    ============================================ */
 @media (max-width: 1100px) {
-    .logo-text { display: none; }
     .btn-checkout-header { display: none; }
     .whatsapp-action .ha-line2 { display: none; }
 }
@@ -806,10 +866,21 @@ button { font-family: inherit; }
     .search-form { display: none; }
     .mobile-menu-btn { display: block; }
     .main-bar-inner { height: 60px; }
+    .logo-img { height: 44px; }
     .cart-preview { right: -60px; width: 280px; }
     .hero-banner { background-attachment: scroll; }
     .footer-top { flex-direction: column; align-items: flex-start; }
     .newsletter input { min-width: 0; flex: 1; }
+
+    /* Smaller floating WA */
+    .wa-float {
+        width: 50px;
+        height: 50px;
+        bottom: 18px;
+        right: 18px;
+    }
+    .wa-float svg { width: 26px; height: 26px; }
+    .wa-float::after { display: none; }
 }
 
 /* ============================================
@@ -818,6 +889,7 @@ button { font-family: inherit; }
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .float { animation: none; }
+    .wa-float { animation: none; }
     * {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
