@@ -1,25 +1,17 @@
 /* =========================================================
    RainFow — include.js
-   - Injects partials (header/footer) via fetch
-   - Wires: mobile menu, footer year, category dropdown,
-            cart preview, add-to-cart buttons
-   - Listens for cart updates + cross-tab storage events
+   Injects partials + wires mobile menu, footer year,
+   category dropdown, cart preview, add-to-cart buttons.
    ========================================================= */
 (function () {
   'use strict';
 
-  /* ---------------------------------------------------------
-     1. PARTIAL INJECTION
-     --------------------------------------------------------- */
   const placeholders = document.querySelectorAll('[data-include]');
 
   const loadOne = (el) => {
     const url = el.getAttribute('data-include');
     return fetch(url, { cache: 'no-cache' })
-      .then(r => {
-        if (!r.ok) throw new Error(`${url} → ${r.status}`);
-        return r.text();
-      })
+      .then(r => { if (!r.ok) throw new Error(`${url} → ${r.status}`); return r.text(); })
       .then(html => { el.outerHTML = html; })
       .catch(err => {
         console.error('[include] failed:', err);
@@ -31,12 +23,8 @@
     ? Promise.all([...placeholders].map(loadOne))
     : Promise.resolve();
 
-  /* ---------------------------------------------------------
-     2. WIRING — runs after partials are in the DOM
-     --------------------------------------------------------- */
   ready.then(() => {
     document.dispatchEvent(new CustomEvent('includes:loaded'));
-
     wireMobileMenu();
     wireFooterYear();
     wireCategoryDropdown();
@@ -44,39 +32,23 @@
     renderCartPreview();
   });
 
-  /* ---------------------------------------------------------
-     Mobile menu toggle
-     --------------------------------------------------------- */
   function wireMobileMenu() {
     const btn  = document.getElementById('mobile-menu-btn');
     const menu = document.getElementById('mobile-menu');
     if (!btn || !menu) return;
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => menu.classList.add('hidden'));
-    });
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
   }
 
-  /* ---------------------------------------------------------
-     Footer year
-     --------------------------------------------------------- */
   function wireFooterYear() {
     const y = document.getElementById('footer-year');
     if (y) y.textContent = new Date().getFullYear();
   }
 
-  /* ---------------------------------------------------------
-     Category dropdown — click support (touch) + click-outside close
-     --------------------------------------------------------- */
   function wireCategoryDropdown() {
     document.querySelectorAll('.cat-dropdown-toggle').forEach(btn => {
       btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+        e.preventDefault(); e.stopPropagation();
         const menu = btn.nextElementSibling;
         if (!menu) return;
         const isOpen = menu.style.opacity === '1';
@@ -85,31 +57,20 @@
         btn.setAttribute('aria-expanded', String(!isOpen));
       });
     });
-
     document.addEventListener('click', () => {
       document.querySelectorAll('.cat-dropdown-menu').forEach(m => {
-        m.style.opacity = '0';
-        m.style.visibility = 'hidden';
+        m.style.opacity = '0'; m.style.visibility = 'hidden';
       });
-      document.querySelectorAll('.cat-dropdown-toggle').forEach(b =>
-        b.setAttribute('aria-expanded', 'false')
-      );
+      document.querySelectorAll('.cat-dropdown-toggle').forEach(b => b.setAttribute('aria-expanded', 'false'));
     });
   }
 
-  /* ---------------------------------------------------------
-     Add-to-cart — reads data-* attributes, calls RainFowCart.add
-     --------------------------------------------------------- */
   function wireAddToCart() {
     document.addEventListener('click', (e) => {
       const btn = e.target.closest('[data-add-to-cart]');
       if (!btn || btn.disabled) return;
       e.preventDefault();
-
-      if (!window.RainFowCart) {
-        console.warn('[cart] RainFowCart not loaded');
-        return;
-      }
+      if (!window.RainFowCart) return;
 
       const product = {
         id:    btn.dataset.id,
@@ -120,36 +81,25 @@
       if (!product.id) return;
 
       window.RainFowCart.add(product, 1);
-
       const original = btn.textContent;
-      btn.textContent = '✓ Added to Cart';
+      btn.textContent = '✓ Added';
       btn.disabled = true;
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.disabled = false;
-      }, 1400);
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 1400);
     });
   }
 
-  /* ---------------------------------------------------------
-     Cart preview — reads localStorage 'rainfow_cart'
-     --------------------------------------------------------- */
   function renderCartPreview() {
     const items = readCart();
-
     const countEl     = document.getElementById('cart-count');
     const countMobile = document.getElementById('cart-count-mobile');
     const previewN    = document.getElementById('cart-preview-count');
     const previewList = document.getElementById('cart-preview-items');
-    const previewTot  = document.getElementById('cart-preview-subtotal');
 
     const totalQty = items.reduce((s, i) => s + (i.qty || 1), 0);
-    const subtotal = items.reduce((s, i) => s + (i.price * (i.qty || 1)), 0);
 
     if (countEl)     countEl.textContent     = totalQty;
     if (countMobile) countMobile.textContent = totalQty;
     if (previewN)    previewN.textContent    = totalQty + (totalQty === 1 ? ' item' : ' items');
-    if (previewTot)  previewTot.textContent  = '৳' + subtotal.toLocaleString();
 
     if (!previewList) return;
 
@@ -160,44 +110,30 @@
 
     previewList.innerHTML = items.slice(0, 5).map(it => `
       <div class="cart-item">
-        <img src="${it.image || 'images/placeholder.png'}" alt="">
+        <img src="${it.image || ''}" alt="">
         <div class="cart-item-info">
           <h5>${escapeHtml(it.name || 'Product')}</h5>
-          <p>Qty: ${it.qty || 1}</p>
+          <p>SKU: ${escapeHtml(it.id || '')} · Qty: ${it.qty || 1}</p>
         </div>
-        <span class="cart-item-price">৳${(it.price * (it.qty || 1)).toLocaleString()}</span>
       </div>
     `).join('');
   }
 
-  /* ---------------------------------------------------------
-     Helpers
-     --------------------------------------------------------- */
   function readCart() {
-    try {
-      return JSON.parse(localStorage.getItem('rainfow_cart') || '[]');
-    } catch {
-      return [];
-    }
+    try { return JSON.parse(localStorage.getItem('rainfow_cart') || '[]'); }
+    catch { return []; }
   }
 
   function escapeHtml(str) {
     return String(str)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
 
-  /* ---------------------------------------------------------
-     Public API
-     --------------------------------------------------------- */
   window.RainFow = window.RainFow || {};
   window.RainFow.renderCartPreview = renderCartPreview;
   window.RainFow.readCart = readCart;
 
-  /* React to cart updates anywhere on the page */
   document.addEventListener('rainfow:cart-updated', renderCartPreview);
   window.addEventListener('storage', (e) => {
     if (e.key === 'rainfow_cart') renderCartPreview();

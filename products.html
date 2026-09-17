@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  <title>All Products — RainFow BD</title>
+  <meta name="description" content="Browse all products at RainFow — electronics, fashion, home &amp; kitchen, beauty and more.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div data-include="partials/header.html"></div>
+
+  <main class="products-page">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">All Products</span>
+      </nav>
+
+      <header class="page-head page-head--left">
+        <h1>All Products</h1>
+        <p class="page-sub" id="product-count-line">Loading products…</p>
+      </header>
+
+      <div class="toolbar">
+        <div class="toolbar-filters" role="group" aria-label="Filter by category">
+          <button class="chip is-active" data-cat="all">All</button>
+          <button class="chip" data-cat="electronics">Electronics</button>
+          <button class="chip" data-cat="fashion">Fashion</button>
+          <button class="chip" data-cat="home">Home &amp; Kitchen</button>
+          <button class="chip" data-cat="beauty">Beauty</button>
+        </div>
+
+        <div class="toolbar-sort">
+          <label for="sort-select" class="sr-only">Sort by</label>
+          <select id="sort-select" class="sort-select">
+            <option value="default">Sort: Default</option>
+            <option value="name-asc">Name: A → Z</option>
+            <option value="name-desc">Name: Z → A</option>
+            <option value="sku-asc">SKU: Low → High</option>
+            <option value="sku-desc">SKU: High → Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="all-products" class="product-grid"></div>
+
+      <div id="products-empty" class="products-empty hidden">
+        <div class="empty-icon">🔍</div>
+        <h2>No products found</h2>
+        <p>Try a different category or clear the filter.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="data/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/products-page.js"></script>
+</body>
+</html>

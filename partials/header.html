@@ -1,24 +1,16 @@
 <!-- ============================================================
      SHARED HEADER
-     - Logo only (no brand text)
-     - Search: fixed width, centered
-     - Contact Us (WhatsApp) · Cart (hover preview with WA enquiry)
-     - 2nd nav: semi-transparent navy, static
      ============================================================ -->
 <header class="site-header">
 
-  <!-- ============================================================
-       MAIN BAR (black)
-       ============================================================ -->
+  <!-- MAIN BAR (black) -->
   <div class="main-bar">
     <div class="container main-bar-inner">
 
-      <!-- Logo only -->
       <a href="index.html" class="logo" aria-label="RainFow">
         <img src="images/logo.svg" alt="RainFow" class="logo-img">
       </a>
 
-      <!-- Search (fixed width, centered) -->
       <form class="search-form" role="search" onsubmit="return false;">
         <input type="search" class="search-input" placeholder="Search products…" aria-label="Search">
         <button type="submit" class="search-btn" aria-label="Search">
@@ -30,7 +22,6 @@
         </button>
       </form>
 
-      <!-- Right actions -->
       <div class="header-actions">
 
         <!-- Contact Us → WhatsApp -->
@@ -43,7 +34,7 @@
           <span class="ha-line2">Contact Us</span>
         </a>
 
-        <!-- Cart + hover preview (no subtotal, WhatsApp enquiry CTA) -->
+        <!-- Cart -->
         <div class="cart-wrap">
           <a href="cart.html" class="header-action cart-action" aria-label="Cart">
             <svg class="ha-icon" width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -80,9 +71,7 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       SECOND NAV (semi-transparent navy, static)
-       ============================================================ -->
+  <!-- SECOND NAV -->
   <nav class="cat-nav">
     <div class="container cat-nav-inner">
       <a href="index.html"    class="cat-link">Home</a>
@@ -106,9 +95,7 @@
     </div>
   </nav>
 
-  <!-- ============================================================
-       MOBILE DRAWER
-       ============================================================ -->
+  <!-- MOBILE DRAWER -->
   <div id="mobile-menu" class="mobile-menu hidden">
     <a href="index.html">Home</a>
     <a href="products.html">Our Products</a>
