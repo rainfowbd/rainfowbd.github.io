@@ -5,20 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index, follow">
 
-  <title>RainFow BD — Online Shopping for Electronics, Fashion &amp; More</title>
-  <meta name="description" content="Shop electronics, fashion, home &amp; kitchen, beauty and more on RainFow. Fast delivery across Bangladesh.">
-  <meta name="keywords" content="RainFow, rainfowbd, online shopping Bangladesh, ecommerce Dhaka, electronics, fashion">
-  <meta name="author" content="RainFow">
+  <!-- 1. PRIMARY SEO TAGS -->
+  <!-- Note: We put the Brand Name first to tell Google this is the Site Name -->
+  <title>RainFow BD | Online Shopping for Electronics, Fashion & More in Bangladesh</title>
+  <meta name="description" content="Experience the best online shopping in Bangladesh with RainFow BD. Shop premium electronics, latest fashion, home essentials, and beauty products with fast delivery.">
+  <meta name="keywords" content="RainFow, RainFow BD, online shopping Bangladesh, ecommerce Dhaka, buy electronics online Bangladesh, fashion store BD">
+  <meta name="author" content="RainFow BD">
 
+  <!-- 2. STRUCTURED DATA (JSON-LD) - THIS FIXES THE "GITHUB" NAME ISSUE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RainFow BD",
+    "alternateName": ["RainFow", "RainFow Bangladesh"],
+    "url": "https://rainfowbd.github.io/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://rainfowbd.github.io/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- 3. OPEN GRAPH (Facebook/LinkedIn) -->
   <meta property="og:type"        content="website">
-  <meta property="og:title"       content="RainFow — Online Shopping in Bangladesh">
-  <meta property="og:description" content="Shop thousands of products with fast delivery across Bangladesh.">
+  <meta property="og:site_name"   content="RainFow BD">
+  <meta property="og:title"       content="RainFow BD — Premium Online Shopping in Bangladesh">
+  <meta property="og:description" content="Shop thousands of high-quality products with fast delivery across Bangladesh. Your trusted e-commerce partner.">
   <meta property="og:url"         content="https://rainfowbd.github.io/">
-  <meta name="google-site-verification" content="5RIN7NaM7jfVNCXz6h9BcZh9Q-e56kW8gJU663Y6nb8">
+  <meta property="og:image"       content="images/og-image.jpg"> <!-- Make sure to create this image! -->
 
+  <!-- 4. TWITTER CARDS -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="RainFow — Online Shopping">
-  <meta name="twitter:description" content="Shop thousands of products with fast delivery.">
+  <meta name="twitter:title"       content="RainFow BD — Online Shopping Bangladesh">
+  <meta name="twitter:description" content="The ultimate destination for electronics, fashion, and beauty in BD.">
+
+  <meta name="google-site-verification" content="5RIN7NaM7jfVNCXz6h9BcZh9Q-e56kW8gJU663Y6nb8">
 
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
   <link rel="apple-touch-icon" href="images/logo.svg">
@@ -28,16 +51,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  
+  <style>
+    /* Visually hide the H1 but keep it for Google's crawlers */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
 
   <div data-include="partials/header.html"></div>
 
   <main>
+    <!-- 5. PRIMARY HEADING (Crucial for SEO) -->
+    <h1 class="visually-hidden">RainFow BD - Online Shopping for Electronics, Fashion & Beauty in Bangladesh</h1>
 
     <!-- HERO BANNER -->
     <section class="hero-banner" aria-label="Promotional banner">
-      <a href="products.html" class="hero-banner-link" aria-label="Shop now"></a>
+      <a href="products.html" class="hero-banner-link" aria-label="Shop our latest deals at RainFow BD"></a>
     </section>
 
     <!-- SHOP BY CATEGORY -->
@@ -45,31 +85,31 @@
       <div class="container">
         <header class="section-head">
           <h2>Shop by Category</h2>
-          <p>Browse our most popular departments</p>
+          <p>Explore the most popular departments at RainFow BD</p>
         </header>
 
         <div class="cat-grid">
-          <a href="products.html?cat=electronics" class="cat-card">
+          <a href="category.html?c=electronics" class="cat-card">
             <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=70" alt="Electronics">
             <div class="cat-card-body"><h3>Electronics</h3></div>
           </a>
-          <a href="products.html?cat=fashion" class="cat-card">
+          <a href="category.html?c=fashion" class="cat-card">
             <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=70" alt="Fashion">
             <div class="cat-card-body"><h3>Fashion</h3></div>
           </a>
-          <a href="products.html?cat=home" class="cat-card">
+          <a href="category.html?c=home" class="cat-card">
             <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=70" alt="Home &amp; Kitchen">
             <div class="cat-card-body"><h3>Home &amp; Kitchen</h3></div>
           </a>
-          <a href="products.html?cat=beauty" class="cat-card">
+          <a href="category.html?c=beauty" class="cat-card">
             <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70" alt="Beauty">
             <div class="cat-card-body"><h3>Beauty</h3></div>
           </a>
-          <a href="products.html?cat=sports" class="cat-card">
+          <a href="category.html?c=sports" class="cat-card">
             <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=70" alt="Sports">
             <div class="cat-card-body"><h3>Sports</h3></div>
           </a>
-          <a href="products.html?cat=books" class="cat-card">
+          <a href="category.html?c=books" class="cat-card">
             <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=70" alt="Books">
             <div class="cat-card-body"><h3>Books</h3></div>
           </a>
@@ -82,7 +122,7 @@
       <div class="container">
         <header class="section-head">
           <h2>Featured Products</h2>
-          <p>Hand-picked deals updated daily</p>
+          <p>Hand-picked deals updated daily on RainFow BD</p>
         </header>
         <div class="product-grid" data-products data-filter="featured" data-limit="4"></div>
       </div>
@@ -91,10 +131,7 @@
     <!-- ELECTRONICS -->
     <section class="section">
       <div class="container">
-        <header class="section-head">
-          <h2>Electronics</h2>
-          <p>Latest gadgets and devices</p>
-        </header>
+        <header class="section-head"><h2>Electronics</h2><p>Latest gadgets and devices</p></header>
         <div class="product-grid" data-products data-filter="electronics"></div>
       </div>
     </section>
