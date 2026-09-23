@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rainfowbd.github.io/sitemap.xml
+Sitemap: https://rainfowbd.com/sitemap.xml
