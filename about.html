@@ -1,103 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - RainFow BD</title>
-    <meta name="description" content="Learn more about RainFow BD, our mission, vision, and our multi-vendor B2B sourcing network and e-commerce platform in Bangladesh.">
-    <meta name="robots" content="index, follow">
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --text-color: #1f2937;
-            --bg-color: #f9fafb;
-            --card-bg: #ffffff;
-        }
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            background: var(--card-bg);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        nav a {
-            margin-left: 1.5rem;
-            text-decoration: none;
-            color: #4b5563;
-            font-weight: 500;
-        }
-        nav a:hover, nav a.active {
-            color: var(--primary-color);
-        }
-        .container {
-            max-width: 800px;
-            margin: 3rem auto;
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-        h1 {
-            color: #111827;
-            margin-top: 0;
-        }
-        h2 {
-            color: var(--primary-color);
-            margin-top: 2rem;
-        }
-        p {
-            margin-bottom: 1rem;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #6b7280;
-            font-size: 0.875rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  <title>About Us — RainFow BD</title>
+  <meta name="description" content="Learn about RainFow — a Bangladesh-based digital agency building web apps, e-commerce platforms and mobile experiences.">
+  <meta name="keywords" content="RainFow, about, digital agency Bangladesh, Mohakhali DOHS, Dhaka, web development">
+  <meta name="author" content="RainFow">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="About RainFow — Digital Agency in Bangladesh">
+  <meta property="og:description" content="Meet the team and mission behind RainFow.">
+  <meta property="og:url"         content="https://rainfowbd.github.io/about.html">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="About RainFow">
+  <meta name="twitter:description" content="Meet the team and mission behind RainFow.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Page-specific styles -->
+  <style>
+    /* ============================================================
+       ABOUT PAGE
+       ============================================================ */
+    .about-page {
+      padding: 32px 0 80px;
+      background: var(--bg-alt);
+    }
+
+    /* ---------- Intro / Hero ---------- */
+    .about-intro {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 48px 40px;
+      margin-bottom: 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-intro::before {
+      content: "";
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(59,130,246,0.12), transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .about-intro .eyebrow {
+      display: inline-block;
+      background: var(--brand-tint);
+      color: var(--brand-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+    .about-intro h1 {
+      font-size: clamp(30px, 4.5vw, 46px);
+      font-weight: 800;
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+    .about-intro h1 span { color: var(--brand); }
+    .about-intro p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ---------- Info cards (address / contact) ---------- */
+    .about-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .info-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .info-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--brand);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.08),
+                  0 0 20px rgba(59,130,246,0.15);
+    }
+    .info-icon {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: var(--brand-tint);
+      color: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .info-body { min-width: 0; }
+    .info-body h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--muted);
+    }
+    .info-body p {
+      margin: 0;
+      font-size: 15px;
+      color: var(--ink);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .info-body a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .info-body a:hover { color: var(--brand); }
+
+    /* WhatsApp CTA button inside contact card */
+    .btn-wa-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      background: var(--whatsapp);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13.5px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      transition: background .2s, box-shadow .2s, transform .15s;
+    }
+    .btn-wa-inline:hover {
+      background: #1ebe5a;
+      transform: translateY(-1px);
+      box-shadow: 0 0 20px rgba(37,211,102,0.6);
+    }
+
+    /* ---------- Section wrapper ---------- */
+    .about-section {
+      margin-bottom: 48px;
+    }
+    .about-section-head {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .about-section-head h2 {
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+    .about-section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    /* ---------- Team grid ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .team-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+    .team-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--brand);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.08),
+                  0 0 22px rgba(59,130,246,0.18);
+    }
+    .team-avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 8px 20px rgba(59,130,246,0.35);
+    }
+    .team-role {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--brand-dark);
+      background: var(--brand-tint);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .team-name {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 800;
+    }
+
+    /* ---------- Values strip ---------- */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .value-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      text-align: center;
+    }
+    .value-card .v-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .value-card h4 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .value-card p {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* ---------- Final CTA ---------- */
+    .about-cta {
+      background: linear-gradient(135deg, #111827, #232f3e);
+      color: #fff;
+      border-radius: 16px;
+      padding: 48px 32px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .about-cta h2 {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 800;
+    }
+    .about-cta p {
+      margin: 0 0 24px;
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+    .about-cta .btn-wa-inline { margin-top: 0; }
+
+    /* ---------- Mobile ---------- */
+    @media (max-width: 640px) {
+      .about-intro { padding: 32px 22px; }
+      .about-info { grid-template-columns: 1fr; }
+      .team-grid  { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .team-card  { padding: 20px 12px; }
+      .team-avatar { width: 68px; height: 68px; font-size: 24px; margin-bottom: 12px; }
+      .team-name { font-size: 15px; }
+      .team-role { font-size: 10px; padding: 3px 8px; }
+      .about-cta { padding: 36px 22px; }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="logo">RainFow BD</a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About Us</a>
-        </nav>
-    </header>
+  <div data-include="partials/header.html"></div>
 
-    <main class="container">
-        <h1>About RainFow Bangladesh</h1>
-        <p>Welcome to <strong>RainFow BD</strong>. We are building a premier e-commerce platform and multi-vendor B2B sourcing network designed to streamline digital trade, business operations, and sourcing solutions in Bangladesh.</p>
-        
-        <h2>Our Mission</h2>
-        <p>Our mission is to bridge the gap between businesses and consumers by creating robust, high-performance digital ecosystems. We leverage cutting-edge technology, statistical insights, and streamlined web architectures to deliver reliable, scalable digital solutions.</p>
+  <main class="about-page">
+    <div class="container">
 
-        <h2>What We Do</h2>
-        <p>From comprehensive multi-vendor networking to modern web applications, RainFow BD focuses on innovation, efficiency, and expanding modern technological frameworks tailored for the evolving digital landscape.</p>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current">About Us</span>
+      </nav>
 
-        <h2>Get in Touch</h2>
-        <p>Have questions or want to collaborate? Feel free to reach out to our team or navigate back to our <a href="index.html" style="color: var(--primary-color); text-decoration: underline;">home page</a> to learn more about our current initiatives.</p>
-    </main>
+      <!-- ============================================================
+           INTRO
+           ============================================================ -->
+      <section class="about-intro">
+        <span class="eyebrow">About RainFow</span>
+        <h1>Building digital experiences that <span>convert</span>.</h1>
+        <p>
+          RainFow is a Bangladesh-based digital agency crafting custom web applications,
+          e-commerce platforms and mobile experiences for growing businesses. From idea to
+          launch, we combine clean design, scalable engineering and a deep understanding of
+          what makes customers click — so our clients can focus on what they do best.
+        </p>
+      </section>
 
-    <footer>
-        &copy; 2026 RainFow BD. All rights reserved.
-    </footer>
+      <!-- ============================================================
+           ADDRESS + CONTACT
+           ============================================================ -->
+      <section class="about-info">
 
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <div class="info-body">
+            <h3>Our Address</h3>
+            <p>Mohakhali DOHS<br>Mohakhali, Dhaka 1206<br>Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="info-icon">💬</div>
+          <div class="info-body">
+            <h3>Contact</h3>
+            <p>
+              <a href="https://wa.me/8801876757033" target="_blank" rel="noopener">
+                +880 1876 757 033
+              </a>
+            </p>
+            <a class="btn-wa-inline"
+               href="https://wa.me/8801876757033?text=Hi%20RainFow%2C%20I%27d%20like%20to%20know%20more%20about%20your%20services."
+               target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.94L0 24l6.4-1.68a11.83 11.83 0 0 0 5.64 1.44h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.13-3.37-8.44zM12.05 21.5h-.01a9.6 9.6 0 0 1-4.9-1.34l-.35-.21-3.8.99 1.02-3.7-.23-.38a9.6 9.6 0 0 1-1.48-5.12c0-5.31 4.33-9.64 9.66-9.64 2.58 0 5 1 6.83 2.83a9.6 9.6 0 0 1 2.82 6.83c0 5.31-4.33 9.64-9.56 9.64zm5.3-7.22c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.66.14-.2.29-.76.95-.93 1.14-.17.19-.34.21-.63.07-.29-.14-1.22-.45-2.32-1.44-.86-.77-1.44-1.72-1.6-2.01-.17-.29-.02-.44.12-.58.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.16-.24-.57-.48-.49-.66-.5-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 .97-1 2.37 0 1.4 1.02 2.75 1.16 2.94.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.11.55-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33z"/>
+              </svg>
+              Contact on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ============================================================
+           LEADERSHIP TEAM
+           ============================================================ -->
+      <section class="about-section">
+        <div class="about-section-head">
+          <h2>Leadership Team</h2>
+          <p>The people steering RainFow forward</p>
+        </div>
+
+        <div class="team-grid">
+
+          <div class="team-card">
+            <div class="team-avatar">M</div>
+            <span class="team-role">Chairman</span>
+            <h3 class="team-name">Mizan</h3>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">M</div>
+            <span class="team-role">CEO</span>
+            <h3 class="team-name">Mizan</h3>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">A</div>
+            <span class="team-role">CTO</span>
+            <h3 class="team-name">Anas</h3>
+          </div>
+
+          <div class="team-card">
+            <div class="team-avatar">R</div>
+            <span class="team-role">CMO</span>
+            <h3 class="team-name">Rayhan</h3>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+           VALUES
+           ============================================================ -->
+      <section class="about-section">
+        <div class="about-section-head">
+          <h2>What We Stand For</h2>
+          <p>The principles behind every project we ship</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="v-icon">🎯</div>
+            <h4>Conversion First</h4>
+            <p>Every pixel is designed with a business goal in mind.</p>
+          </div>
+          <div class="value-card">
+            <div class="v-icon">⚡</div>
+            <h4>Fast &amp; Reliable</h4>
+            <p>Performance and uptime are non-negotiable.</p>
+          </div>
+          <div class="value-card">
+            <div class="v-icon">🤝</div>
+            <h4>Client Partnership</h4>
+            <p>We build for the long term, not just the launch.</p>
+          </div>
+          <div class="value-card">
+            <div class="v-icon">🔒</div>
+            <h4>Trust &amp; Transparency</h4>
+            <p>Clear pricing, honest timelines, real communication.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           CTA
+           ============================================================ -->
+      <section class="about-cta">
+        <h2>Ready to build something great?</h2>
+        <p>Tell us about your project — we usually respond within a few hours.</p>
+        <a class="btn-wa-inline"
+           href="https://wa.me/8801876757033?text=Hi%20RainFow%2C%20I%27d%20like%20to%20discuss%20a%20project."
+           target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.52 3.48A11.94 11.94 0 0 0 12.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.94L0 24l6.4-1.68a11.83 11.83 0 0 0 5.64 1.44h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.13-3.37-8.44zM12.05 21.5h-.01a9.6 9.6 0 0 1-4.9-1.34l-.35-.21-3.8.99 1.02-3.7-.23-.38a9.6 9.6 0 0 1-1.48-5.12c0-5.31 4.33-9.64 9.66-9.64 2.58 0 5 1 6.83 2.83a9.6 9.6 0 0 1 2.82 6.83c0 5.31-4.33 9.64-9.56 9.64zm5.3-7.22c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.66.14-.2.29-.76.95-.93 1.14-.17.19-.34.21-.63.07-.29-.14-1.22-.45-2.32-1.44-.86-.77-1.44-1.72-1.6-2.01-.17-.29-.02-.44.12-.58.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.58-.9-2.16-.24-.57-.48-.49-.66-.5-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.29-1 .97-1 2.37 0 1.4 1.02 2.75 1.16 2.94.14.19 2 3.06 4.85 4.29.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.11.55-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33z"/>
+          </svg>
+          Start a Conversation
+        </a>
+      </section>
+
+    </div>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

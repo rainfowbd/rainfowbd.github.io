@@ -35,10 +35,12 @@
 
   <main>
 
+    <!-- HERO BANNER -->
     <section class="hero-banner" aria-label="Promotional banner">
       <a href="products.html" class="hero-banner-link" aria-label="Shop now"></a>
     </section>
 
+    <!-- SHOP BY CATEGORY -->
     <section class="section" id="categories">
       <div class="container">
         <header class="section-head">
@@ -47,27 +49,27 @@
         </header>
 
         <div class="cat-grid">
-          <a href="category.html?c=electronics" class="cat-card">
+          <a href="products.html?cat=electronics" class="cat-card">
             <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=70" alt="Electronics">
             <div class="cat-card-body"><h3>Electronics</h3></div>
           </a>
-          <a href="category.html?c=fashion" class="cat-card">
+          <a href="products.html?cat=fashion" class="cat-card">
             <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=70" alt="Fashion">
             <div class="cat-card-body"><h3>Fashion</h3></div>
           </a>
-          <a href="category.html?c=home" class="cat-card">
+          <a href="products.html?cat=home" class="cat-card">
             <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=70" alt="Home &amp; Kitchen">
             <div class="cat-card-body"><h3>Home &amp; Kitchen</h3></div>
           </a>
-          <a href="category.html?c=beauty" class="cat-card">
+          <a href="products.html?cat=beauty" class="cat-card">
             <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70" alt="Beauty">
             <div class="cat-card-body"><h3>Beauty</h3></div>
           </a>
-          <a href="category.html?c=sports" class="cat-card">
+          <a href="products.html?cat=sports" class="cat-card">
             <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=70" alt="Sports">
             <div class="cat-card-body"><h3>Sports</h3></div>
           </a>
-          <a href="category.html?c=books" class="cat-card">
+          <a href="products.html?cat=books" class="cat-card">
             <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=70" alt="Books">
             <div class="cat-card-body"><h3>Books</h3></div>
           </a>
@@ -75,6 +77,7 @@
       </div>
     </section>
 
+    <!-- FEATURED -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-head">
@@ -85,30 +88,46 @@
       </div>
     </section>
 
+    <!-- ELECTRONICS -->
     <section class="section">
       <div class="container">
-        <header class="section-head"><h2>Electronics</h2><p>Latest gadgets and devices</p></header>
+        <header class="section-head">
+          <h2>Electronics</h2>
+          <p>Latest gadgets and devices</p>
+        </header>
         <div class="product-grid" data-products data-filter="electronics"></div>
       </div>
     </section>
 
+    <!-- FASHION -->
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head"><h2>Fashion</h2><p>Fresh styles for every season</p></header>
+        <header class="section-head">
+          <h2>Fashion</h2>
+          <p>Fresh styles for every season</p>
+        </header>
         <div class="product-grid" data-products data-filter="fashion"></div>
       </div>
     </section>
 
+    <!-- HOME & KITCHEN -->
     <section class="section">
       <div class="container">
-        <header class="section-head"><h2>Home &amp; Kitchen</h2><p>Everything for a modern home</p></header>
+        <header class="section-head">
+          <h2>Home &amp; Kitchen</h2>
+          <p>Everything for a modern home</p>
+        </header>
         <div class="product-grid" data-products data-filter="home"></div>
       </div>
     </section>
 
+    <!-- BEAUTY -->
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head"><h2>Beauty</h2><p>Glow up with our top picks</p></header>
+        <header class="section-head">
+          <h2>Beauty</h2>
+          <p>Glow up with our top picks</p>
+        </header>
         <div class="product-grid" data-products data-filter="beauty"></div>
       </div>
     </section>
@@ -117,8 +136,10 @@
 
   <div data-include="partials/footer.html"></div>
 
+  <!-- Scripts — order matters -->
   <script src="assets/js/config.js"></script>
-  <script src="data/products.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/catalog.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/include.js"></script>
   <script src="assets/js/app.js"></script>

@@ -1,22 +1,23 @@
 /* ============================================
-   RainFow Portfolio - Config
-   ============================================
-   Before deploying, sign up at https://formspree.io
-   (free plan: 50 submissions/month)
-   Create a new form → copy the form ID → paste below.
-*/
+   RainFow — Config
+   ============================================ */
 
 window.RAINFOW_CONFIG = {
-    // Formspree form ID (example: "xdkogpzv")
+    // Formspree
     FORMSPREE_ID: "YOUR_FORM_ID_HERE",
 
-    // Path to content JSON
+    // Content JSON
     CONTENT_URL: "data/content.json",
 
-    // Optional: your WhatsApp number for the floating button
-    // Set to "" to hide the button
-    WHATSAPP_NUMBER: "8801700000000",
-
-    // WhatsApp message prefix
+    // WhatsApp
+    WHATSAPP_NUMBER: "8801876757033",
     WHATSAPP_MESSAGE: "Hi RainFow! I'd like to discuss a project."
+};
+
+/* ============================================
+   Supabase (public — safe to expose, RLS protects writes)
+   ============================================ */
+window.RAINFOW_SUPABASE = {
+    url:     "https://yezuhifmbhwaumfodjev.supabase.co",
+    anonKey: "sb_publishable_HPxgDCQNlyus_KegGKUwSQ_N95CFHL5"
 };

@@ -1,6 +1,11 @@
 /* =========================================================
-   RainFow — products.js (renderer)
-   Renders [data-products] containers from window.RAINFOW_PRODUCTS
+   RainFow — products.js (homepage renderer)
+   Renders [data-products][data-filter] containers on index.html.
+   Reads from window.RainFowCatalog (Supabase-backed).
+
+   Safety rules (do NOT remove):
+     1. Never touch #all-products (owned by products-page.js)
+     2. Only render containers that have a data-filter attribute
    ========================================================= */
 (function () {
   'use strict';
@@ -44,14 +49,23 @@
     `;
   }
 
-  function renderContainer(el) {
-    const all = window.RAINFOW_PRODUCTS || [];
+  function renderContainer(el, all) {
+    if (el.id === 'all-products') {
+      console.warn('[products.js] Skipped #all-products (reserved for products-page.js)');
+      return;
+    }
+
     const filter = el.dataset.filter;
-    const limit  = parseInt(el.dataset.limit, 10);
+    if (!filter) {
+      console.warn('[products.js] Skipped container without data-filter:', el);
+      return;
+    }
+
+    const limit = parseInt(el.dataset.limit, 10);
 
     let items = all.slice();
     if (filter === 'featured') items = items.filter(p => p.featured);
-    else if (filter)            items = items.filter(p => p.category === filter);
+    else                       items = items.filter(p => p.category === filter);
 
     if (!isNaN(limit) && limit > 0) items = items.slice(0, limit);
 
@@ -59,7 +73,17 @@
   }
 
   function init() {
-    document.querySelectorAll('[data-products]').forEach(renderContainer);
+    const containers = document.querySelectorAll('[data-products]');
+    if (!containers.length) return;
+
+    if (!window.RainFowCatalog) {
+      console.warn('[products.js] RainFowCatalog not loaded');
+      return;
+    }
+
+    window.RainFowCatalog.getProducts().then(all => {
+      containers.forEach(el => renderContainer(el, all));
+    });
   }
 
   if (document.readyState === 'loading') {

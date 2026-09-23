@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  <title>Product — RainFow BD</title>
+  <meta name="description" content="View product details on RainFow.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div data-include="partials/header.html"></div>
+
+  <main class="product-page">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="crumb-sep">/</span>
+        <a href="products.html" id="crumb-cat-link">Products</a>
+        <span class="crumb-sep">/</span>
+        <span class="crumb-current" id="crumb-product">…</span>
+      </nav>
+
+      <div id="product-loading" class="product-loading">Loading product…</div>
+
+      <div id="product-error" class="products-empty hidden">
+        <div class="empty-icon">🔍</div>
+        <h2>Product not found</h2>
+        <p>The product you're looking for doesn't exist or is no longer available.</p>
+        <a href="products.html" class="btn btn-primary" style="margin-top: 16px;">Browse all products</a>
+      </div>
+
+      <article id="product-detail" class="product-detail hidden">
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img id="gallery-main" src="" alt="">
+          </div>
+          <div class="product-gallery-thumbs" id="gallery-thumbs"></div>
+        </div>
+
+        <div class="product-info">
+          <h1 id="p-title"></h1>
+
+          <div class="product-sku-row">
+            <span class="sku-label">SKU</span>
+            <span class="sku-value" id="p-sku"></span>
+          </div>
+
+          <p id="p-description" class="product-description"></p>
+
+          <div class="product-meta">
+            <span class="meta-item" id="p-category"></span>
+            <span class="meta-item" id="p-stock"></span>
+          </div>
+
+          <button class="btn-add btn-add-lg"
+                  id="p-add-to-cart"
+                  data-add-to-cart>
+            Add to Cart
+          </button>
+
+          <div class="product-help">
+            <p>💬 Prices are shared personally based on your requirements.
+               Send us this product on WhatsApp for a quote.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/product-page.js"></script>
+</body>
+</html>

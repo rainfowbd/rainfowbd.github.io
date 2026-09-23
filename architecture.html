@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Architecture — RainFow BD</title>
+
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Minimal Markdown rendering library -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+      color: #111827;
+      line-height: 1.65;
+      background: #fff;
+    }
+    h1, h2, h3 { font-weight: 800; line-height: 1.25; margin-top: 2em; }
+    h1 { font-size: 2rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 12px; }
+    h2 { font-size: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; }
+    h3 { font-size: 1.15rem; }
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      font-family: ui-monospace, monospace;
+    }
+    pre {
+      background: #0d0d0d;
+      color: #e5e7eb;
+      padding: 16px;
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    pre code { background: transparent; color: inherit; padding: 0; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { border: 1px solid #e5e7eb; padding: 10px 12px; text-align: left; }
+    th { background: #f9fafb; font-weight: 700; }
+    a { color: #2563eb; }
+    hr { border: none; border-top: 1px solid #e5e7eb; margin: 40px 0; }
+    blockquote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 16px;
+      color: #4b5563;
+      margin-left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">Loading ARCHITECTURE.md…</div>
+
+  <script>
+    fetch('ARCHITECTURE.md', { cache: 'no-cache' })
+      .then(r => {
+        if (!r.ok) throw new Error('Not found: ' + r.status);
+        return r.text();
+      })
+      .then(md => {
+        document.getElementById('content').innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        document.getElementById('content').innerHTML =
+          '<h1>Could not load ARCHITECTURE.md</h1>' +
+          '<p>Error: ' + err.message + '</p>' +
+          '<p>Make sure <code>ARCHITECTURE.md</code> is in the repo root.</p>';
+      });
+  </script>
+
+</body>
+</html>

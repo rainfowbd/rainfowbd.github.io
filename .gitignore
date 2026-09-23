@@ -1,0 +1,156 @@
+# ============================================================
+# RainFow BD — .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# SECRETS — NEVER COMMIT THESE
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env
+
+# Supabase / service keys — keep local only
+supabase-notes.txt
+*.supabase-notes
+service-role*.txt
+secrets/
+*.secret
+
+# GitHub Actions secrets backup
+.github/secrets.local
+
+# Any file with "credentials" or "key" in the name (safety net)
+*credentials*.json
+*credentials*.txt
+*secret*.json
+*secret*.txt
+*-key.json
+*-key.txt
+
+# ------------------------------------------------------------
+# OS / EDITOR
+# ------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# NODE / TOOLING
+# ------------------------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+package-lock.json.bak
+.npm/
+.yarn/
+.pnp.*
+
+# Build outputs (if you add a build step later)
+dist/
+build/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.output/
+
+# ------------------------------------------------------------
+# LOCAL DEV SCRIPTS (may contain credentials)
+# ------------------------------------------------------------
+scripts/local/
+scripts/tmp/
+scripts/.cache/
+scripts/*.local.*
+tmp/
+temp/
+
+# ------------------------------------------------------------
+# IMAGE WORKSPACE (raw/unoptimized images — never push)
+# ------------------------------------------------------------
+images-raw/
+images-original/
+images-src/
+*.raw.jpg
+*.raw.png
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# But DO keep the actual served images
+!images/
+!images/logo.svg
+!images/*.webp
+
+# ------------------------------------------------------------
+# BACKUPS / ARCHIVES
+# ------------------------------------------------------------
+*.bak
+*.backup
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+backup/
+backups/
+_old/
+_archive/
+.IDEA
+
+# ------------------------------------------------------------
+# LOGS
+# ------------------------------------------------------------
+*.log
+logs/
+npm-debug.log*
+yarn-error.log*
+error.log
+debug.log
+
+# ------------------------------------------------------------
+# CLOUDFLARE / DEPLOYMENT
+# ------------------------------------------------------------
+.wrangler/
+cloudflare-*.json
+wrangler.toml.local
+
+# ------------------------------------------------------------
+# TEST / COVERAGE
+# ------------------------------------------------------------
+coverage/
+.nyc_output/
+*.lcov
+
+# ------------------------------------------------------------
+# SUPABASE LOCAL DEV (if you ever run `supabase start`)
+# ------------------------------------------------------------
+supabase/.branches/
+supabase/.temp/
+supabase/.env
+.supabase/
+
+# ------------------------------------------------------------
+# MISC
+# ------------------------------------------------------------
+.DS_Store
+*.pid
+*.seed
+*.tgz
+.cache

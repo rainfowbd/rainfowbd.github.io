@@ -35,6 +35,15 @@
         <p class="page-sub" id="product-count-line">Loading products…</p>
       </header>
 
+      <div id="search-banner" class="search-banner hidden">
+        <div class="search-banner-text">
+          Showing results for <strong id="search-term">“”</strong>
+        </div>
+        <button type="button" class="search-clear" id="clear-search">
+          ✕ Clear search
+        </button>
+      </div>
+
       <div class="toolbar">
         <div class="toolbar-filters" role="group" aria-label="Filter by category">
           <button class="chip is-active" data-cat="all">All</button>
@@ -61,7 +70,10 @@
       <div id="products-empty" class="products-empty hidden">
         <div class="empty-icon">🔍</div>
         <h2>No products found</h2>
-        <p>Try a different category or clear the filter.</p>
+        <p id="empty-hint">Try a different category or clear the filter.</p>
+        <button type="button" class="btn btn-primary" id="empty-clear" style="margin-top: 16px;">
+          Show all products
+        </button>
       </div>
 
     </div>
@@ -69,12 +81,13 @@
 
   <div data-include="partials/footer.html"></div>
 
+  <!-- Scripts — order matters. products.js is NOT loaded here. -->
   <script src="assets/js/config.js"></script>
-  <script src="data/products.js"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/catalog.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/include.js"></script>
   <script src="assets/js/app.js"></script>
-  <script src="assets/js/products.js"></script>
   <script src="assets/js/products-page.js"></script>
 </body>
 </html>
