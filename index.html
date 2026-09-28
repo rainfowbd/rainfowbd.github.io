@@ -6,13 +6,13 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://rainfowbd.com/">
 
-  <!-- 1. PRIMARY SEO TAGS -->
+  <!-- ============ PRIMARY SEO TAGS ============ -->
   <title>RainFow Bangladesh | Online Shopping for Electronics, Fashion & More</title>
   <meta name="description" content="Shop the latest electronics, fashion, home essentials, and beauty products at RainFow Bangladesh. Fast delivery across Bangladesh. Your trusted online shopping destination.">
   <meta name="keywords" content="RainFow Bangladesh, RainFow BD, online shopping Bangladesh, ecommerce Dhaka, buy electronics online Bangladesh, fashion store BD">
   <meta name="author" content="RainFow Bangladesh">
 
-  <!-- 2. STRUCTURED DATA (JSON-LD) -->
+  <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -51,7 +51,7 @@
   }
   </script>
 
-  <!-- 3. OPEN GRAPH -->
+  <!-- ============ OPEN GRAPH ============ -->
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="RainFow Bangladesh">
   <meta property="og:title"       content="RainFow Bangladesh | Premium Online Shopping">
@@ -61,52 +61,151 @@
   <meta property="og:image:width" content="512">
   <meta property="og:image:height" content="512">
 
-  <!-- 4. TWITTER CARDS -->
+  <!-- ============ TWITTER CARDS ============ -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="RainFow Bangladesh | Online Shopping">
   <meta name="twitter:description" content="The ultimate destination for electronics, fashion, and beauty in BD.">
   <meta name="twitter:image"       content="https://rainfowbd.com/images/logo-sq.png">
 
+  <!-- ============ GOOGLE VERIFICATION ============ -->
   <meta name="google-site-verification" content="5RIN7NaM7jfVNCXz6h9BcZh9Q-e56kW8gJU663Y6nb8">
 
-  <!-- 5. FAVICON & APP ICONS (matching your /images/ folder) -->
+  <!-- ============ FAVICON & APP ICONS ============ -->
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/logo-sq.png">
   <link rel="mask-icon" href="images/favicon.svg" color="#000000">
 
+  <!-- ============ FONTS ============ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- ============ PERFORMANCE HINTS ============ -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+
+  <!-- Preload the first hero banner (Cloudinary, responsive) -->
+  <link rel="preload" as="image"
+        href="https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026-md.webp"
+        imagesrcset="
+          https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026-sm.webp    960w,
+          https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026-md.webp   1440w,
+          https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026.webp      1920w
+        "
+        imagesizes="(max-width: 640px) 100vw,
+                    (max-width: 1200px) 92vw,
+                    982px"
+        fetchpriority="high">
+
+  <!-- ============ STYLESHEETS ============ -->
   <link rel="stylesheet" href="assets/css/style.css">
-  
+  <link rel="stylesheet" href="assets/css/hero-slider.css">
+  <link rel="stylesheet" href="assets/css/promo-modal.css">
+
+  <!-- ============ INLINE UTILITY ============ -->
   <style>
     .visually-hidden {
       position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0);
+      white-space: nowrap; border: 0;
     }
   </style>
 </head>
 <body>
 
+  <!-- ============ HEADER ============ -->
   <div data-include="partials/header.html"></div>
 
   <main>
+    <!-- ============ SEO H1 (hidden) ============ -->
     <h1 class="visually-hidden">RainFow Bangladesh - Online Shopping for Electronics, Fashion & Beauty</h1>
 
-    <section class="hero-banner" aria-label="Promotional banner">
-      <a href="products.html" class="hero-banner-link" aria-label="Shop our latest deals at RainFow Bangladesh"></a>
+    <!-- ============ HERO + PROMO GRID ============ -->
+    <section class="hero-promo-section">
+      <div class="container">
+        <div class="hero-promo-grid">
+
+          <!-- LEFT: HERO SLIDER -->
+          <div class="hero-slider" aria-label="Promotional banner slider" aria-roledescription="carousel">
+            <div class="hero-slider-track">
+
+              <!-- Slide 1 — Flash Sale 2026 (Cloudinary) -->
+              <div class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3">
+                <a href="products.html" class="hero-slide-link" aria-label="Shop the flash sale">
+                  <img
+                    src="https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026-md.webp"
+                    srcset="
+                      https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026-sm.webp    960w,
+                      https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026-md.webp   1440w,
+                      https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale2026.webp      1920w
+                    "
+                    sizes="(max-width: 640px) 100vw,
+                           (max-width: 1200px) 92vw,
+                           982px"
+                    alt="Flash Sale at RainFow Bangladesh"
+                    width="1920" height="940"
+                    loading="eager" fetchpriority="high">
+                </a>
+              </div>
+
+              <!-- Slide 2 — Flash Sale Banner 2 2026 (Cloudinary) -->
+              <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 3">
+                <a href="products.html" class="hero-slide-link" aria-label="Shop the second flash sale">
+                  <img
+                    src="https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale-b2-2026-md.webp"
+                    srcset="
+                      https://res.cloudinary.com/smtkxgsn/image/upload/v1790612082/flash-sale-b2-2026-sm.webp    960w,
+                      https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale-b2-2026-md.webp   1440w,
+                      https://res.cloudinary.com/smtkxgsn/image/upload/v1790612083/flash-sale-b2-2026.webp      1920w
+                    "
+                    sizes="(max-width: 640px) 100vw,
+                           (max-width: 1200px) 92vw,
+                           982px"
+                    alt="Flash Sale Banner 2 at RainFow Bangladesh"
+                    width="1920" height="940"
+                    loading="lazy">
+                </a>
+              </div>
+
+              <!-- Slide 3 — Mega Sale (Unsplash) -->
+              <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 3">
+                <a href="products.html" class="hero-slide-link" aria-label="Shop all deals">
+                  <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=1600&q=80"
+                       alt="Mega sale at RainFow Bangladesh"
+                       loading="lazy" width="1600" height="700">
+                </a>
+              </div>
+
+            </div>
+
+            <div class="hero-dots" role="tablist" aria-label="Slide navigation">
+              <button class="hero-dot is-active" role="tab" aria-selected="true" aria-label="Go to slide 1"><span class="hero-dot-fill"></span></button>
+              <button class="hero-dot" role="tab" aria-selected="false" aria-label="Go to slide 2"><span class="hero-dot-fill"></span></button>
+              <button class="hero-dot" role="tab" aria-selected="false" aria-label="Go to slide 3"><span class="hero-dot-fill"></span></button>
+            </div>
+          </div>
+
+          <!-- RIGHT: 2 PROMO BANNERS -->
+          <div class="hero-promo-side">
+            <a href="products.html?cat=electronics" class="promo-banner" aria-label="Electronics promo offer">
+              <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=900&q=80"
+                   alt="Electronics sale at RainFow Bangladesh" loading="lazy" width="900" height="464">
+            </a>
+            <a href="products.html?cat=fashion" class="promo-banner" aria-label="Fashion promo offer">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900&q=80"
+                   alt="Fashion sale at RainFow Bangladesh" loading="lazy" width="900" height="464">
+            </a>
+          </div>
+
+        </div>
+      </div>
     </section>
 
+    <!-- ============ SHOP BY CATEGORY ============ -->
     <section class="section" id="categories">
       <div class="container">
         <header class="section-head">
@@ -116,33 +215,34 @@
 
         <div class="cat-grid">
           <a href="products.html?cat=electronics" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=70" alt="Electronics">
+            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=70" alt="Electronics" loading="lazy">
             <div class="cat-card-body"><h3>Electronics</h3></div>
           </a>
           <a href="products.html?cat=fashion" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=70" alt="Fashion">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=70" alt="Fashion" loading="lazy">
             <div class="cat-card-body"><h3>Fashion</h3></div>
           </a>
           <a href="products.html?cat=home" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=70" alt="Home &amp; Kitchen">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=70" alt="Home &amp; Kitchen" loading="lazy">
             <div class="cat-card-body"><h3>Home &amp; Kitchen</h3></div>
           </a>
           <a href="products.html?cat=beauty" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70" alt="Beauty">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70" alt="Beauty" loading="lazy">
             <div class="cat-card-body"><h3>Beauty</h3></div>
           </a>
           <a href="products.html?cat=sports" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=70" alt="Sports">
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=70" alt="Sports" loading="lazy">
             <div class="cat-card-body"><h3>Sports</h3></div>
           </a>
           <a href="products.html?cat=books" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=70" alt="Books">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=70" alt="Books" loading="lazy">
             <div class="cat-card-body"><h3>Books</h3></div>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- ============ FEATURED PRODUCTS ============ -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-head">
@@ -153,6 +253,7 @@
       </div>
     </section>
 
+    <!-- ============ ELECTRONICS ============ -->
     <section class="section">
       <div class="container">
         <header class="section-head"><h2>Electronics</h2><p>Latest gadgets and devices</p></header>
@@ -160,40 +261,50 @@
       </div>
     </section>
 
+    <!-- ============ FASHION ============ -->
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head">
-          <h2>Fashion</h2>
-          <p>Fresh styles for every season</p>
-        </header>
+        <header class="section-head"><h2>Fashion</h2><p>Fresh styles for every season</p></header>
         <div class="product-grid" data-products data-filter="fashion"></div>
       </div>
     </section>
 
+    <!-- ============ HOME & KITCHEN ============ -->
     <section class="section">
       <div class="container">
-        <header class="section-head">
-          <h2>Home &amp; Kitchen</h2>
-          <p>Everything for a modern home</p>
-        </header>
+        <header class="section-head"><h2>Home &amp; Kitchen</h2><p>Everything for a modern home</p></header>
         <div class="product-grid" data-products data-filter="home"></div>
       </div>
     </section>
 
+    <!-- ============ BEAUTY ============ -->
     <section class="section section-alt">
       <div class="container">
-        <header class="section-head">
-          <h2>Beauty</h2>
-          <p>Glow up with our top picks</p>
-        </header>
+        <header class="section-head"><h2>Beauty</h2><p>Glow up with our top picks</p></header>
         <div class="product-grid" data-products data-filter="beauty"></div>
       </div>
     </section>
 
   </main>
 
+  <!-- ============ FOOTER ============ -->
   <div data-include="partials/footer.html"></div>
 
+  <!-- ============ PROMO POPUP ============ -->
+  <div class="promo-modal" id="promoModal" role="dialog" aria-modal="true" aria-label="Special offer" hidden>
+    <div class="promo-modal-backdrop" data-promo-close></div>
+    <div class="promo-modal-card" role="document">
+      <button class="promo-modal-close" aria-label="Close offer popup" data-promo-close>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <a href="products.html" class="promo-modal-link" aria-label="Shop the offer">
+        <img src="https://images.unsplash.com/photo-1607083206323-9e5c1c0d8c6b?w=600&q=80"
+             alt="Special offer at RainFow Bangladesh" loading="lazy" width="600" height="600">
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ JAVASCRIPT ============ -->
   <script src="assets/js/config.js"></script>
   <script src="assets/js/supabase-client.js"></script>
   <script src="assets/js/catalog.js"></script>
@@ -201,5 +312,7 @@
   <script src="assets/js/include.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/products.js"></script>
+  <script src="assets/js/hero-slider.js"></script>
+  <script src="assets/js/promo-modal.js"></script>
 </body>
 </html>

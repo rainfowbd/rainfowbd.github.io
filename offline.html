@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>You're Offline | RainFow Bangladesh</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-card">
+
+    <!-- GRAPHIC: WiFi off -->
+    <svg class="error-graphic" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="100" cy="100" r="90" fill="#f3f0ff"/>
+      <path d="M60 95a55 55 0 0180 0M75 110a35 35 0 0150 0M90 125a15 15 0 0120 0"
+            stroke="#6c5ce7" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <circle cx="100" cy="140" r="4" fill="#6c5ce7"/>
+      <path d="M55 55l90 90" stroke="#e74c3c" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="90" stroke="#e0dcff" stroke-width="2" fill="none"/>
+    </svg>
+
+    <h1 class="error-code" style="font-size:48px;">Offline</h1>
+    <h2 class="error-title">You're Not Connected</h2>
+    <p class="error-message">
+      It looks like you've lost your internet connection. Check your Wi-Fi or
+      mobile data, then try again.
+    </p>
+
+    <div class="error-actions">
+      <button onclick="location.reload()" class="error-btn error-btn-primary">Retry</button>
+    </div>
+
+    <p class="error-help">
+      Already have items in your cart? They'll be waiting when you're back online.
+    </p>
+
+  </div>
+</div>
+
+
+<script>
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: 'Error: 404',
+      page_location: location.href
+    });
+  }
+</script>
+
+</body>
+</html>

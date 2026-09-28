@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>408 — Request Timeout | RainFow Bangladesh</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-card">
+
+    <!-- GRAPHIC: Clock -->
+    <svg class="error-graphic" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="100" cy="100" r="90" fill="#e8f4ff"/>
+      <circle cx="100" cy="100" r="45" stroke="#3498db" stroke-width="4" fill="#fff"/>
+      <path d="M100 70v30l20 15"
+            stroke="#3498db" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="100" cy="100" r="4" fill="#3498db"/>
+      <circle cx="100" cy="100" r="90" stroke="#d0e8ff" stroke-width="2" fill="none"/>
+    </svg>
+
+    <h1 class="error-code" style="background:linear-gradient(135deg,#3498db,#74b9ff);-webkit-background-clip:text;background-clip:text;">408</h1>
+    <h2 class="error-title">Request Timed Out</h2>
+    <p class="error-message">
+      The server took too long to respond. This is usually caused by a slow
+      internet connection. Please check your network and try again.
+    </p>
+
+    <div class="error-actions">
+      <button onclick="location.reload()" class="error-btn error-btn-primary">Retry</button>
+      <a href="index.html" class="error-btn error-btn-ghost">Back to Home</a>
+    </div>
+
+  </div>
+</div>
+<script>
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: 'Error: 408',
+      page_location: location.href
+    });
+  }
+</script>
+</body>
+</html>

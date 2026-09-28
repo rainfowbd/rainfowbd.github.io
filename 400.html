@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>400 — Bad Request | RainFow Bangladesh</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-card">
+
+    <!-- GRAPHIC: Warning sign -->
+    <svg class="error-graphic" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="100" cy="100" r="90" fill="#fff8e6"/>
+      <path d="M100 55l45 80H55l45-80z"
+            stroke="#f39c12" stroke-width="4" stroke-linejoin="round" fill="#fff"/>
+      <path d="M100 85v30" stroke="#f39c12" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="100" cy="125" r="3" fill="#f39c12"/>
+      <circle cx="100" cy="100" r="90" stroke="#ffeeba" stroke-width="2" fill="none"/>
+    </svg>
+
+    <h1 class="error-code" style="background:linear-gradient(135deg,#f39c12,#fdcb6e);-webkit-background-clip:text;background-clip:text;">400</h1>
+    <h2 class="error-title">Bad Request</h2>
+    <p class="error-message">
+      Something in the request didn't look right. This usually happens with
+      broken links or malformed form data. Try navigating back and trying again.
+    </p>
+
+    <div class="error-actions">
+      <a href="index.html" class="error-btn error-btn-primary">Back to Home</a>
+      <a href="products.html" class="error-btn error-btn-ghost">Browse Products</a>
+    </div>
+
+    <p class="error-help">
+      Think this is our bug? <a href="contact.html">Report it here</a>.
+    </p>
+
+  </div>
+</div>
+<script>
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: 'Error: 400',
+      page_location: location.href
+    });
+  }
+</script>
+</body>
+</html>

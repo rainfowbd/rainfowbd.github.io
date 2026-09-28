@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>401 — Login Required | RainFow Bangladesh</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-card">
+
+    <!-- GRAPHIC: User with key -->
+    <svg class="error-graphic" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="100" cy="100" r="90" fill="#e8f4ff"/>
+      <circle cx="100" cy="78" r="20" stroke="#3498db" stroke-width="4" fill="#fff"/>
+      <path d="M65 145a35 35 0 0170 0"
+            stroke="#3498db" stroke-width="4" stroke-linecap="round" fill="none"/>
+      <circle cx="140" cy="135" r="6" stroke="#3498db" stroke-width="3" fill="#fff"/>
+      <path d="M146 135h14v6h-4v4h-4v-4h-6"
+            stroke="#3498db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="100" cy="100" r="90" stroke="#d0e8ff" stroke-width="2" fill="none"/>
+    </svg>
+
+    <h1 class="error-code" style="background:linear-gradient(135deg,#3498db,#74b9ff);-webkit-background-clip:text;background-clip:text;">401</h1>
+    <h2 class="error-title">Login Required</h2>
+    <p class="error-message">
+      This page is only available to logged-in users. Please sign in to your
+      RainFow account to continue.
+    </p>
+
+    <div class="error-actions">
+      <a href="login.html" class="error-btn error-btn-primary">Sign In</a>
+      <a href="index.html" class="error-btn error-btn-ghost">Back to Home</a>
+    </div>
+
+    <p class="error-help">
+      Don't have an account? <a href="register.html">Create one free</a>.
+    </p>
+
+  </div>
+</div>
+<script>
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: 'Error: 401',
+      page_location: location.href
+    });
+  }
+</script>
+</body>
+</html>

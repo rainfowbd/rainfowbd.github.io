@@ -1,6 +1,7 @@
 /* ============================================
    RainFow — Main Stylesheet
    Black main bar · Semi-transparent navy 2nd nav · Neon-blue accents
+   Full-width layout with small side gutter
    ============================================ */
 
 /* ---------- RESET ---------- */
@@ -42,6 +43,9 @@ button { font-family: inherit; }
     --header-mid:   #232f3e;
 
     --whatsapp:     #25d366;
+
+    /* Global gutter — change once to resize every section */
+    --page-gutter:  24px;
 }
 
 /* ---------- UTILITIES ---------- */
@@ -62,7 +66,25 @@ button { font-family: inherit; }
 ::selection { background: var(--brand); color: #fff; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; border-radius: 6px; }
 
-.container { max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+/* ============================================
+   CONTAINER — FULL WIDTH with small gutter
+   (Startech-style edge-to-edge layout)
+   ============================================ */
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--page-gutter);
+    box-sizing: border-box;
+}
+
+/* Optional soft cap on ultra-wide monitors so it doesn't stretch crazy */
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+    }
+}
+
 .hidden { display: none !important; }
 
 /* ============================================
@@ -281,26 +303,6 @@ button { font-family: inherit; }
 .mobile-cat[open] summary { color: var(--brand); }
 .mobile-cat a { padding-left: 36px; color: #9ca3af; }
 .mobile-menu .wa-mobile { color: var(--whatsapp); }
-
-/* ============================================
-   HERO BANNER
-   ============================================ */
-.hero-banner {
-    position: relative; width: 100%;
-    height: clamp(280px, 40vw, 520px);
-    background-image: url('https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1920&q=80');
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
-}
-.hero-banner-link { position: absolute; inset: 0; display: block; }
-.hero-banner::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,0.15) 100%);
-    pointer-events: none;
-}
 
 /* ============================================
    SECTIONS
@@ -668,7 +670,6 @@ button { font-family: inherit; }
     align-items: start;
 }
 
-/* Gallery */
 .product-gallery {
     display: flex; flex-direction: column; gap: 12px;
     min-width: 0;
@@ -713,7 +714,6 @@ button { font-family: inherit; }
     object-fit: cover; display: block;
 }
 
-/* Info column */
 .product-info {
     background: #fff;
     border: 1px solid var(--line);
@@ -974,7 +974,7 @@ button { font-family: inherit; }
 .summary-clear:hover { color: #dc2626; border-color: #fecaca; background: #fef2f2; }
 
 /* ============================================
-   SEARCH BANNER (products page)
+   SEARCH BANNER
    ============================================ */
 .search-banner {
     display: flex;
@@ -1059,8 +1059,6 @@ button { font-family: inherit; }
 
     .mobile-menu-btn { display: none; }
 
-    .hero-banner { background-attachment: scroll; height: clamp(180px, 46vw, 320px); }
-
     .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
     .product-media { padding: 6px; }
     .product-media-inner { border-width: 2px; border-radius: 8px; }
@@ -1103,7 +1101,6 @@ button { font-family: inherit; }
     .remove-btn { height: 34px; padding: 7px 12px; font-size: 11.5px; }
     .remove-btn svg { display: none; }
 
-    /* Product detail — mobile */
     .product-info { padding: 16px; gap: 12px; }
     .product-info h1 { font-size: 20px; }
     .product-description { font-size: 13.5px; }
@@ -1112,6 +1109,128 @@ button { font-family: inherit; }
     .btn-add-lg { padding: 12px 16px; font-size: 13.5px; }
     .meta-item { font-size: 11.5px; padding: 5px 9px; }
     .product-help { font-size: 12px; padding: 10px 12px; }
+}
+
+/* ============================================
+   ERROR PAGES
+   ============================================ */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8f9fb 0%, #eef2f7 100%);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  text-align: center;
+}
+
+.error-card {
+  max-width: 560px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+}
+
+.error-graphic {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.error-code {
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 8px;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.error-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 12px;
+}
+
+.error-message {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin: 0 0 32px;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.error-btn-primary {
+  background: #6c5ce7;
+  color: #ffffff;
+}
+.error-btn-primary:hover {
+  background: #5b4bd6;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+}
+
+.error-btn-ghost {
+  background: transparent;
+  color: #6c5ce7;
+  border: 1.5px solid #e5e7eb;
+}
+.error-btn-ghost:hover {
+  border-color: #6c5ce7;
+  background: #f9f9ff;
+}
+
+.error-help {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #f0f0f5;
+  font-size: 13px;
+  color: #9ca3af;
+}
+.error-help a {
+  color: #6c5ce7;
+  text-decoration: none;
+  font-weight: 500;
+}
+.error-help a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .error-card { padding: 36px 24px; }
+  .error-code { font-size: 56px; }
+  .error-title { font-size: 20px; }
+  .error-graphic { width: 140px; height: 140px; }
 }
 
 @media (max-width: 640px) {

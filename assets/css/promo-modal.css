@@ -1,0 +1,105 @@
+/* ============================================================
+   PROMO MODAL — Daraz-style Square (IMAGE ONLY)
+   ============================================================ */
+.promo-modal[hidden] { display: none; }
+
+.promo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: promoFadeIn 0.3s ease;
+}
+
+@keyframes promoFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.promo-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 30, 0.7);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+/* ---------- SQUARE CARD ---------- */
+.promo-modal-card {
+  position: relative;
+  width: min(92vw, 480px);
+  aspect-ratio: 1 / 1;          /* SQUARE */
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  animation: promoPop 0.4s cubic-bezier(0.2, 1.1, 0.4, 1);
+  z-index: 1;
+}
+
+@keyframes promoPop {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ---------- IMAGE (fills the whole square) ---------- */
+.promo-modal-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.promo-modal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- CLOSE BUTTON ---------- */
+.promo-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1a1a2e;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.promo-modal-close:hover {
+  transform: scale(1.1) rotate(90deg);
+  background: #ffffff;
+}
+
+/* Prevent body scroll while modal open */
+body.promo-modal-open {
+  overflow: hidden;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 480px) {
+  .promo-modal { padding: 14px; }
+  .promo-modal-card {
+    width: min(94vw, 380px);
+    border-radius: 14px;
+  }
+  .promo-modal-close {
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>500 — Something Went Wrong | RainFow Bangladesh</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-card">
+
+    <!-- GRAPHIC: Broken gear / server -->
+    <svg class="error-graphic" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="100" cy="100" r="90" fill="#fff1f1"/>
+      <rect x="55" y="65" width="90" height="70" rx="8"
+            stroke="#e74c3c" stroke-width="4" fill="#fff"/>
+      <circle cx="100" cy="100" r="14" stroke="#e74c3c" stroke-width="4" fill="none"/>
+      <path d="M100 86v-8M100 114v8M86 100h-8M114 100h8"
+            stroke="#e74c3c" stroke-width="4" stroke-linecap="round"/>
+      <path d="M78 150l10-10M122 150l-10-10"
+            stroke="#ffb3b3" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="100" cy="100" r="90" stroke="#ffe0e0" stroke-width="2" fill="none"/>
+    </svg>
+
+    <h1 class="error-code" style="background:linear-gradient(135deg,#e74c3c,#ff7675);-webkit-background-clip:text;background-clip:text;">500</h1>
+    <h2 class="error-title">Something Went Wrong</h2>
+    <p class="error-message">
+      Our servers hit a snag while processing your request. Our team has been
+      notified and is working on a fix. Please try again in a moment.
+    </p>
+
+    <div class="error-actions">
+      <button onclick="location.reload()" class="error-btn error-btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 10"/></svg>
+        Try Again
+      </button>
+      <a href="index.html" class="error-btn error-btn-ghost">Back to Home</a>
+    </div>
+
+    <p class="error-help">
+      Still broken? <a href="contact.html">Report this issue</a> — we'll fix it fast.
+    </p>
+
+  </div>
+</div>
+<script>
+  if (typeof gtag === 'function') {
+    gtag('event', 'page_view', {
+      page_title: 'Error: 500',
+      page_location: location.href
+    });
+  }
+</script>
+</body>
+</html>
