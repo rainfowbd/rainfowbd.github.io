@@ -45,7 +45,7 @@ button { font-family: inherit; }
     --whatsapp:     #25d366;
 
     /* Global gutter — change once to resize every section */
-    --page-gutter:  24px;
+    --page-gutter:  20px;
 }
 
 /* ---------- UTILITIES ---------- */
