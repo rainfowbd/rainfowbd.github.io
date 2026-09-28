@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://rainfowbd.com/</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rainfowbd.com/images/logo-sq.png</image:loc>
+      <image:title>RainFow Bangladesh</image:title>
+    </image:image>
   </url>
+
+  <!-- MAIN SHOP / PRODUCTS -->
   <url>
     <loc>https://rainfowbd.com/products.html</loc>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- ABOUT -->
   <url>
-    <loc>https://rainfowbd.com/products.html?cat=electronics</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://rainfowbd.com/about.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
+
+  <!-- CART -->
   <url>
-    <loc>https://rainfowbd.com/products.html?cat=fashion</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://rainfowbd.com/cart.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
+
+  <!-- ARCHITECTURE (informational / brand content) -->
   <url>
-    <loc>https://rainfowbd.com/products.html?cat=home</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://rainfowbd.com/architecture.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
-  <url>
-    <loc>https://rainfowbd.com/products.html?cat=beauty</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rainfowbd.com/products.html?cat=sports</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://rainfowbd.com/products.html?cat=books</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+
 </urlset>

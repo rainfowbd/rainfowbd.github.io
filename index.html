@@ -8,44 +8,73 @@
 
   <!-- 1. PRIMARY SEO TAGS -->
   <title>RainFow Bangladesh | Online Shopping for Electronics, Fashion & More</title>
-  <meta name="description" content="Experience the best online shopping in Bangladesh with RainFow Bangladesh. Shop premium electronics, latest fashion, home essentials, and beauty products with fast delivery.">
+  <meta name="description" content="Shop the latest electronics, fashion, home essentials, and beauty products at RainFow Bangladesh. Fast delivery across Bangladesh. Your trusted online shopping destination.">
   <meta name="keywords" content="RainFow Bangladesh, RainFow BD, online shopping Bangladesh, ecommerce Dhaka, buy electronics online Bangladesh, fashion store BD">
   <meta name="author" content="RainFow Bangladesh">
 
-  <!-- 2. STRUCTURED DATA (JSON-LD) - FORCED BRAND NAME & DOMAIN -->
+  <!-- 2. STRUCTURED DATA (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "RainFow Bangladesh",
-    "alternateName": ["RainFow", "RainFow BD"],
-    "url": "https://rainfowbd.com/",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://rainfowbd.com/products.html?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://rainfowbd.com/#organization",
+        "name": "RainFow Bangladesh",
+        "alternateName": ["RainFow", "RainFow BD"],
+        "url": "https://rainfowbd.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://rainfowbd.com/images/logo-sq.png",
+          "width": 512,
+          "height": 512
+        },
+        "sameAs": [
+          "https://www.facebook.com/p/RainFow-Bangladesh-61593164260020/",
+          "https://www.youtube.com/@RainFowBangladesh",
+          "https://www.instagram.com/rainfowbangladesh/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rainfowbd.com/#website",
+        "url": "https://rainfowbd.com/",
+        "name": "RainFow Bangladesh",
+        "publisher": { "@id": "https://rainfowbd.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://rainfowbd.com/products.html?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
   }
   </script>
 
-  <!-- 3. OPEN GRAPH (Facebook/LinkedIn/WhatsApp Previews) -->
+  <!-- 3. OPEN GRAPH -->
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="RainFow Bangladesh">
-  <meta property="og:title"       content="RainFow Bangladesh — Premium Online Shopping">
+  <meta property="og:title"       content="RainFow Bangladesh | Premium Online Shopping">
   <meta property="og:description" content="Shop thousands of high-quality products with fast delivery across Bangladesh. Your trusted e-commerce partner.">
   <meta property="og:url"         content="https://rainfowbd.com/">
-  <meta property="og:image"       content="https://rainfowbd.com/images/og-image.jpg">
+  <meta property="og:image"       content="https://rainfowbd.com/images/logo-sq.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
 
   <!-- 4. TWITTER CARDS -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="RainFow Bangladesh — Online Shopping">
+  <meta name="twitter:title"       content="RainFow Bangladesh | Online Shopping">
   <meta name="twitter:description" content="The ultimate destination for electronics, fashion, and beauty in BD.">
-  <meta name="twitter:image"       content="https://rainfowbd.com/images/og-image.jpg">
+  <meta name="twitter:image"       content="https://rainfowbd.com/images/logo-sq.png">
 
   <meta name="google-site-verification" content="5RIN7NaM7jfVNCXz6h9BcZh9Q-e56kW8gJU663Y6nb8">
 
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-  <link rel="apple-touch-icon" href="images/logo.svg">
+  <!-- 5. FAVICON & APP ICONS (matching your /images/ folder) -->
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo-sq.png">
+  <link rel="mask-icon" href="images/favicon.svg" color="#000000">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,7 +83,6 @@
   <link rel="stylesheet" href="assets/css/style.css">
   
   <style>
-    /* Visually hide the H1 but keep it for Google's crawlers */
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -73,15 +101,12 @@
   <div data-include="partials/header.html"></div>
 
   <main>
-    <!-- 5. PRIMARY HEADING (Crucial for SEO) -->
     <h1 class="visually-hidden">RainFow Bangladesh - Online Shopping for Electronics, Fashion & Beauty</h1>
 
-    <!-- HERO BANNER -->
     <section class="hero-banner" aria-label="Promotional banner">
       <a href="products.html" class="hero-banner-link" aria-label="Shop our latest deals at RainFow Bangladesh"></a>
     </section>
 
-    <!-- SHOP BY CATEGORY -->
     <section class="section" id="categories">
       <div class="container">
         <header class="section-head">
@@ -118,7 +143,6 @@
       </div>
     </section>
 
-    <!-- FEATURED -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-head">
@@ -129,7 +153,6 @@
       </div>
     </section>
 
-    <!-- ELECTRONICS -->
     <section class="section">
       <div class="container">
         <header class="section-head"><h2>Electronics</h2><p>Latest gadgets and devices</p></header>
@@ -137,7 +160,6 @@
       </div>
     </section>
 
-    <!-- FASHION -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-head">
@@ -148,7 +170,6 @@
       </div>
     </section>
 
-    <!-- HOME & KITCHEN -->
     <section class="section">
       <div class="container">
         <header class="section-head">
@@ -159,7 +180,6 @@
       </div>
     </section>
 
-    <!-- BEAUTY -->
     <section class="section section-alt">
       <div class="container">
         <header class="section-head">
@@ -174,7 +194,6 @@
 
   <div data-include="partials/footer.html"></div>
 
-  <!-- Scripts — order matters -->
   <script src="assets/js/config.js"></script>
   <script src="assets/js/supabase-client.js"></script>
   <script src="assets/js/catalog.js"></script>

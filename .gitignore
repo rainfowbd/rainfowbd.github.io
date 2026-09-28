@@ -29,6 +29,22 @@ secrets/
 *-key.txt
 
 # ------------------------------------------------------------
+# ARCHITECTURE / INTERNAL DOCS — DO NOT PUBLISH
+# ------------------------------------------------------------
+architecture.html
+ARCHITECTURE.md
+architecture.md
+ARCHITECTURE*
+*architecture*
+*Architecture*
+
+# ------------------------------------------------------------
+# PDF FILES — DO NOT PUBLISH
+# ------------------------------------------------------------
+*.pdf
+*.PDF
+
+# ------------------------------------------------------------
 # OS / EDITOR
 # ------------------------------------------------------------
 .DS_Store
@@ -97,6 +113,11 @@ images-src/
 # But DO keep the actual served images
 !images/
 !images/logo.svg
+!images/logo-sq.svg
+!images/logo.png
+!images/logo-sq.png
+!images/favicon.svg
+!images/favicon.png
 !images/*.webp
 
 # ------------------------------------------------------------
@@ -119,8 +140,6 @@ _archive/
 # ------------------------------------------------------------
 *.log
 logs/
-npm-debug.log*
-yarn-error.log*
 error.log
 debug.log
 
@@ -139,7 +158,7 @@ coverage/
 *.lcov
 
 # ------------------------------------------------------------
-# SUPABASE LOCAL DEV (if you ever run `supabase start`)
+# SUPABASE LOCAL DEV
 # ------------------------------------------------------------
 supabase/.branches/
 supabase/.temp/
@@ -149,8 +168,5 @@ supabase/.env
 # ------------------------------------------------------------
 # MISC
 # ------------------------------------------------------------
-.DS_Store
 *.pid
 *.seed
-*.tgz
-.cache
