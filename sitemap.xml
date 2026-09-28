@@ -38,12 +38,4 @@
     <priority>0.4</priority>
   </url>
 
-  <!-- ARCHITECTURE (informational / brand content) -->
-  <url>
-    <loc>https://rainfowbd.com/architecture.html</loc>
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
 </urlset>
