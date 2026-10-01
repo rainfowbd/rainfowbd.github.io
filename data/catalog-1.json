@@ -1,0 +1,216 @@
+{
+  "chunk": 1,
+  "count": 10,
+  "products": [
+    {
+      "id": "RFFA00001",
+      "name": "Gils LS printed fancy T-Shirt",
+      "category": "fashion-girls",
+      "tag": "Womens Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790468272/rainfowbd/products/RFFA00001-1-800-1790468270320.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790468272/rainfowbd/products/RFFA00001-1-800-1790468270320.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790468285/rainfowbd/products/RFFA00001-2-800-1790468284951.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790468308/rainfowbd/products/RFFA00001-3-800-1790468307902.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790468735/rainfowbd/products/RFFA00001-4-800-1790468732152.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790468753/rainfowbd/products/RFFA00001-5-800-1790468752993.webp"
+      ],
+      "description": "Item: Gils LS printed fancy t-shirt\r\nFabric: 100% cotton single jersey 165 gsm\r\nBrand: Gemo\r\nColor: 12\r\nSize: 2/4/6/8/10/12\r\nRatio: 2/2/2/2/2/2\r\nQuantity: 2100 Pcs\r\nMinimum qty: 48 Pcs\r\nPack type: 12 Pcs assorted blister poly",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 48,
+      "stock": 2100,
+      "sortOrder": 1
+    },
+    {
+      "id": "RFFA00002",
+      "name": "Boys printed pedding jecket",
+      "category": "fashion-boys",
+      "tag": "Winter Collection",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790493932/rainfowbd/products/RFFA00002-1-800-1790493931461.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790493932/rainfowbd/products/RFFA00002-1-800-1790493931461.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790493968/rainfowbd/products/RFFA00002-2-800-1790493968349.webp"
+      ],
+      "description": "Item: Boys printed pedding jecket\nColor: 15/16\nSize: 2 to 12 Years\nRatio: 1/2/2/2/1\nQuantity: 2000 Pcs\nMinimum qty: 50 Pcs\nPack type: 1/1 poly with 8 Pcs assorted blister.",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 50,
+      "stock": 2000,
+      "sortOrder": 2
+    },
+    {
+      "id": "RFFA00003",
+      "name": "Girls LS Top Bottom Set",
+      "category": "fashion-kids",
+      "tag": "Kids Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790503205/rainfowbd/products/RFFA00003-1-800-1790503203205.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790503205/rainfowbd/products/RFFA00003-1-800-1790503203205.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790504759/rainfowbd/products/RFFA00003-2-800-1790504757909.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790504910/rainfowbd/products/RFFA00003-3-800-1790504909642.webp"
+      ],
+      "description": "Item: Girls LS Top Bottom Set\nFabric: 100% cotton viscoss AOP\nSize: 2 to 8 Years\nColor: 04\nQuantity: 800 Set\nMinimum qty: 48 Set\nPack type: 1/1 poly with 12 Pcs assorted blister poly",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 48,
+      "stock": 800,
+      "sortOrder": 3
+    },
+    {
+      "id": "RFFA00004",
+      "name": "Kids fancy Winter Sweat shirt Set",
+      "category": "fashion-kids",
+      "tag": "Kids Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790510335/rainfowbd/products/RFFA00004-1-800-1790510333879.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790510335/rainfowbd/products/RFFA00004-1-800-1790510333879.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790510357/rainfowbd/products/RFFA00004-2-800-1790510357484.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790510484/rainfowbd/products/RFFA00004-3-800-1790510483589.webp"
+      ],
+      "description": "Item: Kids fancy Winter Sweat shirt Set\nFabric: Tarry Fleece 280 GSM\nSize: 6 month to 36 month\nColor: 04\nQuantity: 500 Set\nMinimum qty: 40 Pcs\nPack type: 1/1 poly with 10 Pcs assorted blister poly",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 40,
+      "stock": 500,
+      "sortOrder": 4
+    },
+    {
+      "id": "RFFA00009",
+      "name": "Boys LS printed fancy t-shirt",
+      "category": "fashion-kids-unisex",
+      "tag": "Kids Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790518174/rainfowbd/products/RFFA00009-1-800-1790518173103.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790518174/rainfowbd/products/RFFA00009-1-800-1790518173103.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790518193/rainfowbd/products/RFFA00009-2-800-1790518193254.webp"
+      ],
+      "description": "Item: Boys LS printed fancy t-shirt\r\nFabric: 100% Cotton single jersey 180 gsm\r\nBrand: LEE\r\nColor: 12\r\nSize: 2-12 years\r\nRatio: 2/2/2/2/2/2\r\nQuantity: 5000 Pcs\r\nMinimum qty: 48 Pcs\r\nPack type: 1/1 poly with 12 Pcs assorted blister poly",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 48,
+      "stock": 5000,
+      "sortOrder": 9
+    },
+    {
+      "id": "RFFA00012",
+      "name": "Girls Denim 5 pocket Baggy pant with embroidery",
+      "category": "fashion-girls",
+      "tag": "Kids Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523086/rainfowbd/products/RFFA00012-1-800-1790523086598.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523086/rainfowbd/products/RFFA00012-1-800-1790523086598.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523100/rainfowbd/products/RFFA00012-2-800-1790523099988.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523113/rainfowbd/products/RFFA00012-3-800-1790523113648.webp"
+      ],
+      "description": "Item: Girls Denim 5 pocket Baggy pant with embroidery\r\nFabric: Denim 10.5 OZ with Spandex\r\nBrand: Baby Jeans\r\nColor: 04 Wash\r\nSize: 2/4/6/8 Years\r\nRatio: 3/3/3/3\r\nQuantity: 2000 Pcs\r\nMinimum qty: 48 Pcs\r\nPack type: 1/1 poly with 12 Pcs assorted blister poly",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 48,
+      "stock": 2000,
+      "sortOrder": 12
+    },
+    {
+      "id": "RFFA00014",
+      "name": "Girls to adult girls Denim Baggy pant",
+      "category": "fashion-kids",
+      "tag": "Kids Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790522936/rainfowbd/products/RFFA00014-1-800-1790522935249.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790522936/rainfowbd/products/RFFA00014-1-800-1790522935249.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790522981/rainfowbd/products/RFFA00014-2-800-1790522981241.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523036/rainfowbd/products/RFFA00014-3-800-1790523036185.webp"
+      ],
+      "description": "Item: Girls to adult girls Denim Baggy pant\r\nFabric: Denim cotton spandex 10.5 OZ\r\nBrand: Hello kitty\r\nColor: 03\r\nSize: 6/8/10/12/14/16 YEARS\r\nRatio: 2/2/2/2/2/2\r\nQuantity: 1500 Pcs\r\nMinimum qty: 36 Pcs\r\nPack type: 1x1 poly & 12 Pcs assorted blister poly bag",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 36,
+      "stock": 1500,
+      "sortOrder": 14
+    },
+    {
+      "id": "RFFA00022",
+      "name": "Men's Denim 6 Pocket Cargo Short with snap button inside flap",
+      "category": "fashion-men",
+      "tag": "Mens Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790519053/rainfowbd/products/RFFA00022-1-800-1790519052544.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790519053/rainfowbd/products/RFFA00022-1-800-1790519052544.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790519070/rainfowbd/products/RFFA00022-2-800-1790519069811.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790519083/rainfowbd/products/RFFA00022-3-800-1790519083166.webp"
+      ],
+      "description": "Item: Men's Denim 6 Pocket Cargo Short with snap button inside flap\r\nFabric: Denim with Spandex 11 Oz\r\nBrand: EXT\r\nColor: 02\r\nSize: 28/30/32/34/36/38\r\nRatio: 1/2/3/3/2/1\r\nQuantity: 5000 Pcs\r\nMinimum qty: 1000 Pcs\r\nPack type: 12 Pcs assorted blister poly\r\nMade for: Europe",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 1000,
+      "stock": 5000,
+      "sortOrder": 22
+    },
+    {
+      "id": "RFFA00027",
+      "name": "Men's baggy long pant",
+      "category": "fashion-men",
+      "tag": "Mens Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790521182/rainfowbd/products/RFFA00027-1-800-1790521182187.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790521182/rainfowbd/products/RFFA00027-1-800-1790521182187.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790521197/rainfowbd/products/RFFA00027-2-800-1790521194953.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790521210/rainfowbd/products/RFFA00027-3-800-1790521209806.webp"
+      ],
+      "description": "Item: Men's baggy long pant\r\nFabric: Denim 100% cotton 12.5 OZ\r\nBrand: Levi's\r\nSize: 28/30/32/34/36/38\r\nRatio: 1/2/2/2/2/1\r\nColor: 04\r\nQuantity: 1800 Pcs\r\nMOQ: 100 Pcs\r\nPack type: 1/1 poly & 10 Pcs blister with export carton",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 100,
+      "stock": 1800,
+      "sortOrder": 27
+    },
+    {
+      "id": "RFFA00028",
+      "name": "Kids LS fancy t-shirt",
+      "category": "fashion-kids-girls",
+      "tag": "Kids Fashion",
+      "featured": true,
+      "image": "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523433/rainfowbd/products/RFFA00028-1-800-1790523432309.webp",
+      "images": [
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523433/rainfowbd/products/RFFA00028-1-800-1790523432309.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523449/rainfowbd/products/RFFA00028-2-800-1790523449090.webp",
+        "https://res.cloudinary.com/smtkxgsn/image/upload/v1790523463/rainfowbd/products/RFFA00028-3-800-1790523463104.webp"
+      ],
+      "description": "Item: Kids LS fancy t-shirt\r\nFabric: 100% cotton single jersey 170 gsm\r\nColor: 08\r\nSize: 6m to 36m\r\nRatio: 2/2/2/2/2/2\r\nQuantity: 1800 Pcs\r\nMinimum qty: 100 Pcs\r\nPack type: 12 Pcs assorted blister poly",
+      "pricingMode": "contact",
+      "marketPrice": null,
+      "salePrice": null,
+      "contactNote": "FLASH SALE",
+      "minOrderQty": 100,
+      "stock": 1800,
+      "sortOrder": 28
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "generatedAt": "2026-10-01T17:15:08.979Z",
+  "count": 28,
+  "categories": [
+    {
+      "slug": "electronics",
+      "name": "Electronics",
+      "parentSlug": null,
+      "path": "electronics",
+      "depth": 0,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion",
+      "name": "Fashion",
+      "parentSlug": null,
+      "path": "fashion",
+      "depth": 0,
+      "sortOrder": 2
+    },
+    {
+      "slug": "home",
+      "name": "Home",
+      "parentSlug": null,
+      "path": "home",
+      "depth": 0,
+      "sortOrder": 3
+    },
+    {
+      "slug": "beauty",
+      "name": "Beauty",
+      "parentSlug": null,
+      "path": "beauty",
+      "depth": 0,
+      "sortOrder": 4
+    },
+    {
+      "slug": "fashion-unisex",
+      "name": "Unisex",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-unisex",
+      "depth": 1,
+      "sortOrder": 0
+    },
+    {
+      "slug": "fashion-men",
+      "name": "Men",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-men",
+      "depth": 1,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-women",
+      "name": "Women",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-women",
+      "depth": 1,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-kids",
+      "name": "Kids",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-kids",
+      "depth": 1,
+      "sortOrder": 3
+    },
+    {
+      "slug": "fashion-boys",
+      "name": "Boys",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-boys",
+      "depth": 1,
+      "sortOrder": 4
+    },
+    {
+      "slug": "fashion-girls",
+      "name": "Girls",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-girls",
+      "depth": 1,
+      "sortOrder": 5
+    },
+    {
+      "slug": "fashion-girls-summer-collection",
+      "name": "Summer Collection",
+      "parentSlug": "fashion-girls",
+      "path": "fashion/fashion-girls/fashion-girls-summer-collection",
+      "depth": 2,
+      "sortOrder": 0
+    },
+    {
+      "slug": "fashion-kids-unisex",
+      "name": "Unisex",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-unisex",
+      "depth": 2,
+      "sortOrder": 0
+    },
+    {
+      "slug": "fashion-kids-boys",
+      "name": "Boys",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-boys",
+      "depth": 2,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-men-winter",
+      "name": "Winter Collection",
+      "parentSlug": "fashion-men",
+      "path": "fashion/fashion-men/fashion-men-winter",
+      "depth": 2,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-women-winter",
+      "name": "Winter Collection",
+      "parentSlug": "fashion-women",
+      "path": "fashion/fashion-women/fashion-women-winter",
+      "depth": 2,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-kids-girls",
+      "name": "Girls",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-girls",
+      "depth": 2,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-men-summer",
+      "name": "Summer Collection",
+      "parentSlug": "fashion-men",
+      "path": "fashion/fashion-men/fashion-men-summer",
+      "depth": 2,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-women-summer",
+      "name": "Summer Collection",
+      "parentSlug": "fashion-women",
+      "path": "fashion/fashion-women/fashion-women-summer",
+      "depth": 2,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-men-accessories",
+      "name": "Accessories",
+      "parentSlug": "fashion-men",
+      "path": "fashion/fashion-men/fashion-men-accessories",
+      "depth": 2,
+      "sortOrder": 3
+    },
+    {
+      "slug": "fashion-women-accessories",
+      "name": "Accessories",
+      "parentSlug": "fashion-women",
+      "path": "fashion/fashion-women/fashion-women-accessories",
+      "depth": 2,
+      "sortOrder": 3
+    },
+    {
+      "slug": "fashion-men-summer-tshirts",
+      "name": "T-Shirts",
+      "parentSlug": "fashion-men-summer",
+      "path": "fashion/fashion-men/fashion-men-summer/fashion-men-summer-tshirts",
+      "depth": 3,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-men-winter-jackets",
+      "name": "Jackets",
+      "parentSlug": "fashion-men-winter",
+      "path": "fashion/fashion-men/fashion-men-winter/fashion-men-winter-jackets",
+      "depth": 3,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-women-summer-tshirts",
+      "name": "T-Shirts",
+      "parentSlug": "fashion-women-summer",
+      "path": "fashion/fashion-women/fashion-women-summer/fashion-women-summer-tshirts",
+      "depth": 3,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-women-winter-shawls",
+      "name": "Shawls",
+      "parentSlug": "fashion-women-winter",
+      "path": "fashion/fashion-women/fashion-women-winter/fashion-women-winter-shawls",
+      "depth": 3,
+      "sortOrder": 1
+    },
+    {
+      "slug": "fashion-men-summer-panjabi",
+      "name": "Panjabi",
+      "parentSlug": "fashion-men-summer",
+      "path": "fashion/fashion-men/fashion-men-summer/fashion-men-summer-panjabi",
+      "depth": 3,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-men-winter-sweaters",
+      "name": "Sweaters",
+      "parentSlug": "fashion-men-winter",
+      "path": "fashion/fashion-men/fashion-men-winter/fashion-men-winter-sweaters",
+      "depth": 3,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-women-winter-sweaters",
+      "name": "Sweaters",
+      "parentSlug": "fashion-women-winter",
+      "path": "fashion/fashion-women/fashion-women-winter/fashion-women-winter-sweaters",
+      "depth": 3,
+      "sortOrder": 2
+    },
+    {
+      "slug": "fashion-men-winter-hoodies",
+      "name": "Hoodies",
+      "parentSlug": "fashion-men-winter",
+      "path": "fashion/fashion-men/fashion-men-winter/fashion-men-winter-hoodies",
+      "depth": 3,
+      "sortOrder": 3
+    }
+  ]
+}

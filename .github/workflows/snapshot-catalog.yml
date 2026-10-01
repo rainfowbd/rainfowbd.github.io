@@ -7,7 +7,7 @@ on:
   workflow_dispatch:   # allow manual trigger from Actions tab
 
 permissions:
-  contents: write      # needed to commit catalog.json back
+  contents: write      # needed to commit snapshot files back
 
 jobs:
   snapshot:
@@ -21,19 +21,19 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Generate catalog.json
+      - name: Generate snapshot files
         env:
-          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          SD_SUPABASE_URL: ${{ secrets.SD_SUPABASE_URL }}
+          SD_SUPABASE_SERVICE_KEY: ${{ secrets.SD_SUPABASE_SERVICE_KEY }}
         run: node scripts/snapshot-catalog.mjs
 
       - name: Commit & push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/catalog.json
+          git add data/catalog-*.json data/categories.json data/manifest.json
           if git diff --staged --quiet; then
-            echo "No changes to catalog.json"
+            echo "No changes to snapshot files"
           else
             git commit -m "chore: snapshot catalog [skip ci]"
             git push
