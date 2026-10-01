@@ -45,12 +45,8 @@
       </div>
 
       <div class="toolbar">
-        <div class="toolbar-filters" role="group" aria-label="Filter by category">
-          <button class="chip is-active" data-cat="all">All</button>
-          <button class="chip" data-cat="electronics">Electronics</button>
-          <button class="chip" data-cat="fashion">Fashion</button>
-          <button class="chip" data-cat="home">Home &amp; Kitchen</button>
-          <button class="chip" data-cat="beauty">Beauty</button>
+        <div class="toolbar-filters" id="chip-bar" role="group" aria-label="Filter by category">
+          <!-- Chips injected by products-page.js -->
         </div>
 
         <div class="toolbar-sort">
@@ -61,6 +57,8 @@
             <option value="name-desc">Name: Z → A</option>
             <option value="sku-asc">SKU: Low → High</option>
             <option value="sku-desc">SKU: High → Low</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
           </select>
         </div>
       </div>
@@ -76,6 +74,9 @@
         </button>
       </div>
 
+      <!-- Lazy-load sentinel -->
+      <div id="load-sentinel" aria-hidden="true"></div>
+
     </div>
   </main>
 
@@ -83,7 +84,6 @@
 
   <!-- Scripts — order matters. products.js is NOT loaded here. -->
   <script src="assets/js/config.js"></script>
-  <script src="assets/js/supabase-client.js"></script>
   <script src="assets/js/catalog.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/include.js"></script>

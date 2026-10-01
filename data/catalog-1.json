@@ -21,6 +21,15 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Gils LS printed fancy t-shirt",
+        "Size": "2/4/6/8/10/12",
+        "Brand": "Gemo",
+        "Color": "12",
+        "Ratio": "2/2/2/2/2/2",
+        "Fabric": "100% cotton single jersey 165 gsm",
+        "Pack type": "12 Pcs assorted blister poly"
+      },
       "minOrderQty": 48,
       "stock": 2100,
       "sortOrder": 1
@@ -41,6 +50,13 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Boys printed pedding jecket",
+        "Size": "2 to 12 Years",
+        "Color": "15/16",
+        "Ratio": "1/2/2/2/1",
+        "Pack type": "1/1 poly with 8 Pcs assorted blister"
+      },
       "minOrderQty": 50,
       "stock": 2000,
       "sortOrder": 2
@@ -62,6 +78,13 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Girls LS Top Bottom Set",
+        "Size": "2 to 8 Years",
+        "Color": "04",
+        "Fabric": "100% cotton viscoss AOP",
+        "Pack type": "1/1 poly with 12 Pcs assorted blister poly"
+      },
       "minOrderQty": 48,
       "stock": 800,
       "sortOrder": 3
@@ -83,6 +106,13 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Kids fancy Winter Sweat shirt Set",
+        "Size": "6 month to 36 month",
+        "Color": "04",
+        "Fabric": "Tarry Fleece 280 GSM",
+        "Pack type": "1/1 poly with 10 Pcs assorted blister poly"
+      },
       "minOrderQty": 40,
       "stock": 500,
       "sortOrder": 4
@@ -103,6 +133,15 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Boys LS printed fancy t-shirt",
+        "Size": "2-12 years",
+        "Brand": "LEE",
+        "Color": "12",
+        "Ratio": "2/2/2/2/2/2",
+        "Fabric": "100% Cotton single jersey 180 gsm",
+        "Pack type": "1/1 poly with 12 Pcs assorted blister poly"
+      },
       "minOrderQty": 48,
       "stock": 5000,
       "sortOrder": 9
@@ -124,6 +163,15 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Girls Denim 5 pocket Baggy pant with embroidery",
+        "Size": "2/4/6/8 Years",
+        "Brand": "Baby Jeans",
+        "Color": "04 Wash",
+        "Ratio": "3/3/3/3",
+        "Fabric": "Denim 10.5 OZ with Spandex",
+        "Pack type": "1/1 poly with 12 Pcs assorted blister poly"
+      },
       "minOrderQty": 48,
       "stock": 2000,
       "sortOrder": 12
@@ -145,6 +193,15 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Girls to adult girls Denim Baggy pant",
+        "Size": "6/8/10/12/14/16 YEARS",
+        "Brand": "Hello kitty",
+        "Color": "03",
+        "Ratio": "2/2/2/2/2/2",
+        "Fabric": "Denim cotton spandex 10.5 OZ",
+        "Pack type": "1x1 poly & 12 Pcs assorted blister poly bag"
+      },
       "minOrderQty": 36,
       "stock": 1500,
       "sortOrder": 14
@@ -166,6 +223,16 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Men's Denim 6 Pocket Cargo Short with snap button inside flap",
+        "Size": "28/30/32/34/36/38",
+        "Brand": "EXT",
+        "Color": "02",
+        "Ratio": "1/2/3/3/2/1",
+        "Fabric": "Denim with Spandex 11 Oz",
+        "Made for": "Europe",
+        "Pack type": "12 Pcs assorted blister poly"
+      },
       "minOrderQty": 1000,
       "stock": 5000,
       "sortOrder": 22
@@ -187,6 +254,17 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "MOQ": "100 Pcs",
+        "Item": "Men's baggy long pant",
+        "Size": "28/30/32/34/36/38",
+        "Brand": "Levi's",
+        "Color": "04",
+        "Ratio": "1/2/2/2/2/1",
+        "Fabric": "Denim 100% cotton 12.5 OZ",
+        "Quantity": "1800 Pcs",
+        "Pack type": "1/1 poly & 10 Pcs blister with export carton"
+      },
       "minOrderQty": 100,
       "stock": 1800,
       "sortOrder": 27
@@ -208,6 +286,16 @@
       "marketPrice": null,
       "salePrice": null,
       "contactNote": "FLASH SALE",
+      "specifications": {
+        "Item": "Kids LS fancy t-shirt",
+        "Size": "6m to 36m",
+        "Color": "08",
+        "Ratio": "2/2/2/2/2/2",
+        "Fabric": "100% cotton single jersey 170 gsm",
+        "Quantity": "1800 Pcs",
+        "Pack type": "12 Pcs assorted blister poly",
+        "Minimum qty": "100 Pcs"
+      },
       "minOrderQty": 100,
       "stock": 1800,
       "sortOrder": 28

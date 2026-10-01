@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-10-01T17:15:08.983Z",
-  "version": 2,
+  "generatedAt": "2026-10-01T18:51:54.008Z",
+  "version": 3,
   "chunkSize": 24,
   "totals": {
     "products": 10,
     "categories": 28,
+    "visible": 7,
     "featured": 10
   },
   "chunks": [

@@ -1,9 +1,11 @@
 /* ============================================
    RainFow — Config
+   Public site config. No Supabase credentials here.
+   Data comes from static JSON snapshots in data/.
    ============================================ */
 
 window.RAINFOW_CONFIG = {
-    // Formspree
+    // Formspree (contact forms)
     FORMSPREE_ID: "YOUR_FORM_ID_HERE",
 
     // Content JSON
@@ -11,13 +13,9 @@ window.RAINFOW_CONFIG = {
 
     // WhatsApp
     WHATSAPP_NUMBER: "8801876757033",
-    WHATSAPP_MESSAGE: "Hi RainFow! I'd like to discuss a project."
-};
+    WHATSAPP_MESSAGE: "Hi RainFow! I'd like to discuss a project.",
 
-/* ============================================
-   Supabase (public — safe to expose, RLS protects writes)
-   ============================================ */
-window.RAINFOW_SUPABASE = {
-    url:     "https://yezuhifmbhwaumfodjev.supabase.co",
-    anonKey: "sb_publishable_HPxgDCQNlyus_KegGKUwSQ_N95CFHL5"
+    // Site
+    SITE_NAME: "RainFow Bangladesh",
+    SITE_URL:  "https://rainfowbd.com"
 };

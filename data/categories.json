@@ -1,14 +1,18 @@
 {
-  "generatedAt": "2026-10-01T17:15:08.979Z",
+  "generatedAt": "2026-10-01T18:51:53.993Z",
   "count": 28,
-  "categories": [
+  "visibleCount": 7,
+  "tree": [
     {
       "slug": "electronics",
       "name": "Electronics",
       "parentSlug": null,
       "path": "electronics",
       "depth": 0,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion",
@@ -16,7 +20,17 @@
       "parentSlug": null,
       "path": "fashion",
       "depth": 0,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 10,
+      "children": [
+        "fashion-unisex",
+        "fashion-men",
+        "fashion-women",
+        "fashion-kids",
+        "fashion-boys",
+        "fashion-girls"
+      ]
     },
     {
       "slug": "home",
@@ -24,7 +38,10 @@
       "parentSlug": null,
       "path": "home",
       "depth": 0,
-      "sortOrder": 3
+      "sortOrder": 3,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "beauty",
@@ -32,7 +49,10 @@
       "parentSlug": null,
       "path": "beauty",
       "depth": 0,
-      "sortOrder": 4
+      "sortOrder": 4,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-unisex",
@@ -40,7 +60,10 @@
       "parentSlug": "fashion",
       "path": "fashion/fashion-unisex",
       "depth": 1,
-      "sortOrder": 0
+      "sortOrder": 0,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men",
@@ -48,7 +71,14 @@
       "parentSlug": "fashion",
       "path": "fashion/fashion-men",
       "depth": 1,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 2,
+      "productCountAll": 2,
+      "children": [
+        "fashion-men-winter",
+        "fashion-men-summer",
+        "fashion-men-accessories"
+      ]
     },
     {
       "slug": "fashion-women",
@@ -56,7 +86,14 @@
       "parentSlug": "fashion",
       "path": "fashion/fashion-women",
       "depth": 1,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": [
+        "fashion-women-winter",
+        "fashion-women-summer",
+        "fashion-women-accessories"
+      ]
     },
     {
       "slug": "fashion-kids",
@@ -64,7 +101,14 @@
       "parentSlug": "fashion",
       "path": "fashion/fashion-kids",
       "depth": 1,
-      "sortOrder": 3
+      "sortOrder": 3,
+      "productCountDirect": 3,
+      "productCountAll": 5,
+      "children": [
+        "fashion-kids-unisex",
+        "fashion-kids-boys",
+        "fashion-kids-girls"
+      ]
     },
     {
       "slug": "fashion-boys",
@@ -72,7 +116,10 @@
       "parentSlug": "fashion",
       "path": "fashion/fashion-boys",
       "depth": 1,
-      "sortOrder": 4
+      "sortOrder": 4,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
     },
     {
       "slug": "fashion-girls",
@@ -80,7 +127,12 @@
       "parentSlug": "fashion",
       "path": "fashion/fashion-girls",
       "depth": 1,
-      "sortOrder": 5
+      "sortOrder": 5,
+      "productCountDirect": 2,
+      "productCountAll": 2,
+      "children": [
+        "fashion-girls-summer-collection"
+      ]
     },
     {
       "slug": "fashion-girls-summer-collection",
@@ -88,7 +140,10 @@
       "parentSlug": "fashion-girls",
       "path": "fashion/fashion-girls/fashion-girls-summer-collection",
       "depth": 2,
-      "sortOrder": 0
+      "sortOrder": 0,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-kids-unisex",
@@ -96,7 +151,10 @@
       "parentSlug": "fashion-kids",
       "path": "fashion/fashion-kids/fashion-kids-unisex",
       "depth": 2,
-      "sortOrder": 0
+      "sortOrder": 0,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
     },
     {
       "slug": "fashion-kids-boys",
@@ -104,7 +162,10 @@
       "parentSlug": "fashion-kids",
       "path": "fashion/fashion-kids/fashion-kids-boys",
       "depth": 2,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men-winter",
@@ -112,7 +173,14 @@
       "parentSlug": "fashion-men",
       "path": "fashion/fashion-men/fashion-men-winter",
       "depth": 2,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": [
+        "fashion-men-winter-jackets",
+        "fashion-men-winter-sweaters",
+        "fashion-men-winter-hoodies"
+      ]
     },
     {
       "slug": "fashion-women-winter",
@@ -120,7 +188,13 @@
       "parentSlug": "fashion-women",
       "path": "fashion/fashion-women/fashion-women-winter",
       "depth": 2,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": [
+        "fashion-women-winter-shawls",
+        "fashion-women-winter-sweaters"
+      ]
     },
     {
       "slug": "fashion-kids-girls",
@@ -128,7 +202,10 @@
       "parentSlug": "fashion-kids",
       "path": "fashion/fashion-kids/fashion-kids-girls",
       "depth": 2,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
     },
     {
       "slug": "fashion-men-summer",
@@ -136,7 +213,13 @@
       "parentSlug": "fashion-men",
       "path": "fashion/fashion-men/fashion-men-summer",
       "depth": 2,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": [
+        "fashion-men-summer-tshirts",
+        "fashion-men-summer-panjabi"
+      ]
     },
     {
       "slug": "fashion-women-summer",
@@ -144,7 +227,12 @@
       "parentSlug": "fashion-women",
       "path": "fashion/fashion-women/fashion-women-summer",
       "depth": 2,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": [
+        "fashion-women-summer-tshirts"
+      ]
     },
     {
       "slug": "fashion-men-accessories",
@@ -152,7 +240,10 @@
       "parentSlug": "fashion-men",
       "path": "fashion/fashion-men/fashion-men-accessories",
       "depth": 2,
-      "sortOrder": 3
+      "sortOrder": 3,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-women-accessories",
@@ -160,7 +251,10 @@
       "parentSlug": "fashion-women",
       "path": "fashion/fashion-women/fashion-women-accessories",
       "depth": 2,
-      "sortOrder": 3
+      "sortOrder": 3,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men-summer-tshirts",
@@ -168,7 +262,10 @@
       "parentSlug": "fashion-men-summer",
       "path": "fashion/fashion-men/fashion-men-summer/fashion-men-summer-tshirts",
       "depth": 3,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men-winter-jackets",
@@ -176,7 +273,10 @@
       "parentSlug": "fashion-men-winter",
       "path": "fashion/fashion-men/fashion-men-winter/fashion-men-winter-jackets",
       "depth": 3,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-women-summer-tshirts",
@@ -184,7 +284,10 @@
       "parentSlug": "fashion-women-summer",
       "path": "fashion/fashion-women/fashion-women-summer/fashion-women-summer-tshirts",
       "depth": 3,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-women-winter-shawls",
@@ -192,7 +295,10 @@
       "parentSlug": "fashion-women-winter",
       "path": "fashion/fashion-women/fashion-women-winter/fashion-women-winter-shawls",
       "depth": 3,
-      "sortOrder": 1
+      "sortOrder": 1,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men-summer-panjabi",
@@ -200,7 +306,10 @@
       "parentSlug": "fashion-men-summer",
       "path": "fashion/fashion-men/fashion-men-summer/fashion-men-summer-panjabi",
       "depth": 3,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men-winter-sweaters",
@@ -208,7 +317,10 @@
       "parentSlug": "fashion-men-winter",
       "path": "fashion/fashion-men/fashion-men-winter/fashion-men-winter-sweaters",
       "depth": 3,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-women-winter-sweaters",
@@ -216,7 +328,10 @@
       "parentSlug": "fashion-women-winter",
       "path": "fashion/fashion-women/fashion-women-winter/fashion-women-winter-sweaters",
       "depth": 3,
-      "sortOrder": 2
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
     },
     {
       "slug": "fashion-men-winter-hoodies",
@@ -224,7 +339,204 @@
       "parentSlug": "fashion-men-winter",
       "path": "fashion/fashion-men/fashion-men-winter/fashion-men-winter-hoodies",
       "depth": 3,
-      "sortOrder": 3
+      "sortOrder": 3,
+      "productCountDirect": 0,
+      "productCountAll": 0,
+      "children": []
+    }
+  ],
+  "visible": [
+    {
+      "slug": "fashion",
+      "name": "Fashion",
+      "parentSlug": null,
+      "path": "fashion",
+      "depth": 0,
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 10,
+      "children": [
+        "fashion-unisex",
+        "fashion-men",
+        "fashion-women",
+        "fashion-kids",
+        "fashion-boys",
+        "fashion-girls"
+      ]
+    },
+    {
+      "slug": "fashion-men",
+      "name": "Men",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-men",
+      "depth": 1,
+      "sortOrder": 1,
+      "productCountDirect": 2,
+      "productCountAll": 2,
+      "children": [
+        "fashion-men-winter",
+        "fashion-men-summer",
+        "fashion-men-accessories"
+      ]
+    },
+    {
+      "slug": "fashion-kids",
+      "name": "Kids",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-kids",
+      "depth": 1,
+      "sortOrder": 3,
+      "productCountDirect": 3,
+      "productCountAll": 5,
+      "children": [
+        "fashion-kids-unisex",
+        "fashion-kids-boys",
+        "fashion-kids-girls"
+      ]
+    },
+    {
+      "slug": "fashion-boys",
+      "name": "Boys",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-boys",
+      "depth": 1,
+      "sortOrder": 4,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
+    },
+    {
+      "slug": "fashion-girls",
+      "name": "Girls",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-girls",
+      "depth": 1,
+      "sortOrder": 5,
+      "productCountDirect": 2,
+      "productCountAll": 2,
+      "children": [
+        "fashion-girls-summer-collection"
+      ]
+    },
+    {
+      "slug": "fashion-kids-unisex",
+      "name": "Unisex",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-unisex",
+      "depth": 2,
+      "sortOrder": 0,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
+    },
+    {
+      "slug": "fashion-kids-girls",
+      "name": "Girls",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-girls",
+      "depth": 2,
+      "sortOrder": 2,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
+    }
+  ],
+  "topLevel": [
+    {
+      "slug": "fashion",
+      "name": "Fashion",
+      "parentSlug": null,
+      "path": "fashion",
+      "depth": 0,
+      "sortOrder": 2,
+      "productCountDirect": 0,
+      "productCountAll": 10,
+      "children": [
+        "fashion-unisex",
+        "fashion-men",
+        "fashion-women",
+        "fashion-kids",
+        "fashion-boys",
+        "fashion-girls"
+      ]
+    }
+  ],
+  "withProducts": [
+    {
+      "slug": "fashion-men",
+      "name": "Men",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-men",
+      "depth": 1,
+      "sortOrder": 1,
+      "productCountDirect": 2,
+      "productCountAll": 2,
+      "children": [
+        "fashion-men-winter",
+        "fashion-men-summer",
+        "fashion-men-accessories"
+      ]
+    },
+    {
+      "slug": "fashion-kids",
+      "name": "Kids",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-kids",
+      "depth": 1,
+      "sortOrder": 3,
+      "productCountDirect": 3,
+      "productCountAll": 5,
+      "children": [
+        "fashion-kids-unisex",
+        "fashion-kids-boys",
+        "fashion-kids-girls"
+      ]
+    },
+    {
+      "slug": "fashion-boys",
+      "name": "Boys",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-boys",
+      "depth": 1,
+      "sortOrder": 4,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
+    },
+    {
+      "slug": "fashion-girls",
+      "name": "Girls",
+      "parentSlug": "fashion",
+      "path": "fashion/fashion-girls",
+      "depth": 1,
+      "sortOrder": 5,
+      "productCountDirect": 2,
+      "productCountAll": 2,
+      "children": [
+        "fashion-girls-summer-collection"
+      ]
+    },
+    {
+      "slug": "fashion-kids-unisex",
+      "name": "Unisex",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-unisex",
+      "depth": 2,
+      "sortOrder": 0,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
+    },
+    {
+      "slug": "fashion-kids-girls",
+      "name": "Girls",
+      "parentSlug": "fashion-kids",
+      "path": "fashion/fashion-kids/fashion-kids-girls",
+      "depth": 2,
+      "sortOrder": 2,
+      "productCountDirect": 1,
+      "productCountAll": 1,
+      "children": []
     }
   ]
 }

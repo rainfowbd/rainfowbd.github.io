@@ -205,39 +205,15 @@
       </div>
     </section>
 
-    <!-- ============ SHOP BY CATEGORY ============ -->
+    <!-- ============ SHOP BY CATEGORY (dynamic) ============ -->
     <section class="section" id="categories">
       <div class="container">
         <header class="section-head">
           <h2>Shop by Category</h2>
-          <p>Explore the most popular departments at RainFow Bangladesh</p>
+          <p>Explore the departments at RainFow Bangladesh</p>
         </header>
-
-        <div class="cat-grid">
-          <a href="products.html?cat=electronics" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=600&q=70" alt="Electronics" loading="lazy">
-            <div class="cat-card-body"><h3>Electronics</h3></div>
-          </a>
-          <a href="products.html?cat=fashion" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=70" alt="Fashion" loading="lazy">
-            <div class="cat-card-body"><h3>Fashion</h3></div>
-          </a>
-          <a href="products.html?cat=home" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&q=70" alt="Home &amp; Kitchen" loading="lazy">
-            <div class="cat-card-body"><h3>Home &amp; Kitchen</h3></div>
-          </a>
-          <a href="products.html?cat=beauty" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70" alt="Beauty" loading="lazy">
-            <div class="cat-card-body"><h3>Beauty</h3></div>
-          </a>
-          <a href="products.html?cat=sports" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=70" alt="Sports" loading="lazy">
-            <div class="cat-card-body"><h3>Sports</h3></div>
-          </a>
-          <a href="products.html?cat=books" class="cat-card">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=70" alt="Books" loading="lazy">
-            <div class="cat-card-body"><h3>Books</h3></div>
-          </a>
+        <div class="cat-grid" data-category-grid>
+          <p class="cat-empty">Loading categories…</p>
         </div>
       </div>
     </section>
@@ -253,37 +229,9 @@
       </div>
     </section>
 
-    <!-- ============ ELECTRONICS ============ -->
-    <section class="section">
-      <div class="container">
-        <header class="section-head"><h2>Electronics</h2><p>Latest gadgets and devices</p></header>
-        <div class="product-grid" data-products data-filter="electronics"></div>
-      </div>
-    </section>
-
-    <!-- ============ FASHION ============ -->
-    <section class="section section-alt">
-      <div class="container">
-        <header class="section-head"><h2>Fashion</h2><p>Fresh styles for every season</p></header>
-        <div class="product-grid" data-products data-filter="fashion"></div>
-      </div>
-    </section>
-
-    <!-- ============ HOME & KITCHEN ============ -->
-    <section class="section">
-      <div class="container">
-        <header class="section-head"><h2>Home &amp; Kitchen</h2><p>Everything for a modern home</p></header>
-        <div class="product-grid" data-products data-filter="home"></div>
-      </div>
-    </section>
-
-    <!-- ============ BEAUTY ============ -->
-    <section class="section section-alt">
-      <div class="container">
-        <header class="section-head"><h2>Beauty</h2><p>Glow up with our top picks</p></header>
-        <div class="product-grid" data-products data-filter="beauty"></div>
-      </div>
-    </section>
+    <!-- ============ DYNAMIC CATEGORY SECTIONS ============ -->
+    <!-- Populated by the inline script below, one section per visible top-level category. -->
+    <div id="dynamic-sections"></div>
 
   </main>
 
@@ -314,13 +262,64 @@
 
   <!-- ============ JAVASCRIPT ============ -->
   <script src="assets/js/config.js"></script>
-  <script src="assets/js/supabase-client.js"></script>
   <script src="assets/js/catalog.js"></script>
   <script src="assets/js/cart.js"></script>
   <script src="assets/js/include.js"></script>
   <script src="assets/js/app.js"></script>
   <script src="assets/js/products.js"></script>
+  <script src="assets/js/category-grid.js"></script>
   <script src="assets/js/hero-slider.js"></script>
   <script src="assets/js/promo-modal.js"></script>
+
+  <!-- ============ DYNAMIC SECTION GENERATOR ============ -->
+  <script>
+  // Builds one product section per visible top-level category.
+  // Runs after catalog.js + products.js have loaded.
+  (function () {
+    async function build() {
+      if (!window.RainFowCatalog) return;
+
+      let cats;
+      try {
+        cats = await window.RainFowCatalog.getCategories();
+      } catch (e) {
+        console.error('[dynamic-sections] failed to load categories:', e);
+        return;
+      }
+
+      const top = (cats.topLevel || []).filter(c => c.productCountAll > 0);
+      const wrap = document.getElementById('dynamic-sections');
+      if (!wrap || !top.length) return;
+
+      const alt = (i) => i % 2 === 1 ? ' section-alt' : '';
+
+      wrap.innerHTML = top.map((c, i) => `
+        <section class="section${alt(i)}">
+          <div class="container">
+            <header class="section-head">
+              <h2>${c.name}</h2>
+              <p>Browse ${c.productCountAll} item${c.productCountAll === 1 ? '' : 's'}</p>
+            </header>
+            <div class="product-grid"
+                 data-products
+                 data-filter="category:${c.slug}"
+                 data-limit="8"></div>
+          </div>
+        </section>
+      `).join('');
+
+      // Now tell products.js to render the empty containers we just added
+      if (typeof window.__rfRenderDynamic === 'function') {
+        await window.__rfRenderDynamic();
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', build);
+    } else {
+      build();
+    }
+  })();
+  </script>
 </body>
 </html>

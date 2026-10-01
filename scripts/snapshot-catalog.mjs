@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /* =========================================================
-   RainFow — snapshot-catalog.mjs  (v2, chunked + categories)
+   RainFow — snapshot-catalog.mjs  (v3)
    Reads from SERVING DB, writes static JSON:
-     data/manifest.json       → { generatedAt, chunks, categories, totals }
-     data/categories.json     → full category tree
-     data/catalog-1.json      → first 24 products
-     data/catalog-2.json      → next 24
+     data/manifest.json       → { generatedAt, chunks, categories, totals, featuredIds }
+     data/categories.json     → full tree + visible + topLevel + withProducts
+     data/catalog-1.json      → first N products
+     data/catalog-2.json      → next N
      ...
-   Every 6h via GitHub Action. Public site NEVER hits Supabase.
+   Public site NEVER hits Supabase.
    ========================================================= */
 
 import { writeFile, mkdir, readdir, unlink } from 'node:fs/promises';
@@ -61,59 +61,117 @@ async function writeJson(file, payload) {
 
 function normalizeProduct(r) {
   const images = Array.isArray(r.images) ? r.images : [];
-  const firstImage = images.length
-    ? (typeof images[0] === 'string' ? images[0] : images[0].md || images[0].sm || images[0].lg || '')
-    : '';
+  const urls = images
+    .map(i => typeof i === 'string' ? i : (i.md || i.sm || i.lg || ''))
+    .filter(Boolean);
+
+  // Normalize specifications — may be null, {}, or a JSON object
+  const specs = (r.specifications && typeof r.specifications === 'object' && !Array.isArray(r.specifications))
+    ? r.specifications
+    : {};
 
   return {
-    id:           r.sku,
-    name:         r.title,
-    category:     r.category,
-    tag:          r.tag || '',
-    featured:     !!r.featured,
-    image:        firstImage,
-    images:       images.map(i => typeof i === 'string' ? i : (i.md || i.sm || i.lg || '')).filter(Boolean),
-    description:  r.description || '',
-    pricingMode:  r.pricing_mode || 'unpriced',
-    marketPrice:  r.market_price,
-    salePrice:    r.sale_price,
-    contactNote:  r.contact_note || '',
-    minOrderQty:  r.min_order_qty ?? 1,
-    stock:        r.stock ?? 0,
-    sortOrder:    r.sort_order ?? 0,
+    id:             r.sku,
+    name:           r.title,
+    category:       r.category,
+    tag:            r.tag || '',
+    featured:       !!r.featured,
+    image:          urls[0] || '',
+    images:         urls,
+    description:    r.description || '',
+    pricingMode:    r.pricing_mode || 'unpriced',
+    marketPrice:    r.market_price,
+    salePrice:      r.sale_price,
+    contactNote:    r.contact_note || '',
+    specifications: specs,
+    minOrderQty:    r.min_order_qty ?? 1,
+    stock:          r.stock ?? 0,
+    sortOrder:      r.sort_order ?? 0,
   };
+}
+
+/* Build a category tree with product counts (direct + descendants).
+   Returns:
+     tree[]         — flat list, each node has .productCountDirect, .productCountAll
+     visible[]      — nodes with productCountAll > 0
+     topLevel[]     — visible nodes with depth === 0
+     withProducts[] — nodes with productCountDirect > 0
+*/
+function buildCategoryStats(rawCats, products) {
+  const bySlug = new Map();
+  for (const c of rawCats) {
+    bySlug.set(c.slug, {
+      slug:               c.slug,
+      name:               c.name,
+      parentSlug:         c.parent_slug || null,
+      path:               c.path,
+      depth:              c.depth,
+      sortOrder:          c.sort_order ?? 0,
+      productCountDirect: 0,
+      productCountAll:    0,
+      children:           [],
+    });
+  }
+
+  // Direct counts from products
+  for (const p of products) {
+    const node = bySlug.get(p.category);
+    if (node) node.productCountDirect++;
+  }
+
+  // Link parents → children
+  for (const node of bySlug.values()) {
+    if (node.parentSlug && bySlug.has(node.parentSlug)) {
+      bySlug.get(node.parentSlug).children.push(node.slug);
+    }
+  }
+
+  // Compute descendant-inclusive counts. Process deepest first.
+  const ordered = [...bySlug.values()].sort((a, b) => b.depth - a.depth);
+  for (const node of ordered) {
+    let total = node.productCountDirect;
+    for (const childSlug of node.children) {
+      const child = bySlug.get(childSlug);
+      if (child) total += child.productCountAll;
+    }
+    node.productCountAll = total;
+  }
+
+  const tree = [...bySlug.values()].sort((a, b) => {
+    if (a.depth !== b.depth) return a.depth - b.depth;
+    if (a.sortOrder !== b.sortOrder) return a.sortOrder - b.sortOrder;
+    return a.slug.localeCompare(b.slug);
+  });
+
+  const visible      = tree.filter(n => n.productCountAll    > 0);
+  const topLevel     = visible.filter(n => n.depth === 0);
+  const withProducts = visible.filter(n => n.productCountDirect > 0);
+
+  return { tree, visible, topLevel, withProducts };
 }
 
 async function main() {
   console.log('RainFow snapshot — start');
 
-  // 1. Categories (active only, ordered by depth so tree builds correctly)
+  // 1. Categories
   const rawCats = await fetchAll(
     'categories',
     'select=slug,name,parent_slug,path,depth,sort_order&order=depth.asc,sort_order.asc,slug.asc'
   );
   console.log(`Fetched ${rawCats.length} categories.`);
 
-  const categories = rawCats.map(c => ({
-    slug:        c.slug,
-    name:        c.name,
-    parentSlug:  c.parent_slug || null,
-    path:        c.path,
-    depth:       c.depth,
-    sortOrder:   c.sort_order ?? 0,
-  }));
-
   // 2. Products (serving DB = already filtered to live + non-deleted)
   const rawProds = await fetchAll(
     'products',
-    'select=sku,title,description,category,images,pricing_mode,market_price,sale_price,contact_note,min_order_qty,stock,tag,featured,sort_order&order=sort_order.asc,sku.asc'
+    'select=sku,title,description,category,images,pricing_mode,market_price,sale_price,contact_note,specifications,min_order_qty,stock,tag,featured,sort_order&order=sort_order.asc,sku.asc'
   );
   console.log(`Fetched ${rawProds.length} products.`);
 
   const products = rawProds.map(normalizeProduct);
 
-  // 3. Featured products — build a stable list for the homepage hero/first section
-  const featured = products.filter(p => p.featured);
+  // 3. Category tree + counts
+  const { tree, visible, topLevel, withProducts } = buildCategoryStats(rawCats, products);
+  console.log(`Visible categories: ${visible.length} (top-level: ${topLevel.length})`);
 
   // 4. Chunk products
   await wipeOldChunks();
@@ -133,27 +191,34 @@ async function main() {
 
   // 5. Categories file
   await writeJson('categories.json', {
-    generatedAt: new Date().toISOString(),
-    count: categories.length,
-    categories,
+    generatedAt:  new Date().toISOString(),
+    count:        tree.length,
+    visibleCount: visible.length,
+    tree,
+    visible,
+    topLevel,
+    withProducts,
   });
 
-  // 6. Manifest
-  const manifest = {
+  // 6. Featured products
+  const featured = products.filter(p => p.featured);
+
+  // 7. Manifest
+  await writeJson('manifest.json', {
     generatedAt: new Date().toISOString(),
-    version: 2,
-    chunkSize: CHUNK_SIZE,
+    version:     3,
+    chunkSize:   CHUNK_SIZE,
     totals: {
-      products: products.length,
-      categories: categories.length,
-      featured: featured.length,
+      products:   products.length,
+      categories: tree.length,
+      visible:    visible.length,
+      featured:   featured.length,
     },
     chunks,
     featuredIds: featured.map(p => p.id),
-  };
-  await writeJson('manifest.json', manifest);
+  });
 
-  console.log(`Done. products=${products.length} categories=${categories.length} chunks=${chunks.length}`);
+  console.log(`Done. products=${products.length} categories=${tree.length} visible=${visible.length} chunks=${chunks.length}`);
 }
 
 main().catch(err => {
