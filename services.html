@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+
+  <title data-en="Our Services — RainFow BD" data-bn="আমাদের সেবাসমূহ — RainFow BD">Our Services — RainFow BD</title>
+  <meta name="description" content="RainFow Bangladesh Business Solution Center — Product Sourcing, International Shipping, Website Development, Content & Media Production, Branding & Marketing, CRM & Operations.">
+  <meta name="keywords" content="RainFow services, product sourcing Bangladesh, shipping support, website development, content creation, branding, CRM, B2B">
+  <meta name="author" content="RainFow">
+
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Our Services — RainFow">
+  <meta property="og:description" content="Business solutions for every stage — sourcing, shipping, web, media, branding, CRM.">
+  <meta property="og:url"         content="https://rainfowbd.github.io/services.html">
+
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Our Services — RainFow">
+  <meta name="twitter:description" content="Business solutions for every stage — from RainFow Bangladesh.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo-sq-b.svg">
+  <link rel="apple-touch-icon" href="images/logo-sq-b.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .svc-page {
+      --svc-blue:  #0057ff;
+      --svc-red:   #e53935;
+      --svc-gold:  #f4b400;
+      --svc-green: #0f9d58;
+      --svc-ink:   #14213d;
+      --svc-muted: #64748b;
+      --svc-line:  #e5eaf2;
+      --svc-bg:    #f7f9fc;
+
+      background: var(--svc-bg);
+      color: var(--svc-ink);
+      font-family: Inter, "Noto Sans Bengali", Arial, sans-serif;
+      line-height: 1.55;
+    }
+    html[lang="bn"] .svc-page {
+      font-family: "Noto Sans Bengali", Inter, Arial, sans-serif;
+    }
+    .svc-page *,
+    .svc-page *::before,
+    .svc-page *::after { box-sizing: border-box; }
+
+    .svc-container { max-width: 1100px; margin: 0 auto; padding: 0 22px; }
+
+    /* ---------- Buttons ---------- */
+    .svc-page .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 30px;
+      padding: 12px 22px;
+      font-weight: 700;
+      font-family: inherit;
+      font-size: 14.5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s;
+    }
+    .svc-page .btn-primary { background: var(--svc-blue); color: #fff; }
+    .svc-page .btn-primary:hover {
+      background: #0046cc; transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 87, 255, 0.3);
+    }
+    .svc-page .btn-light { background: #fff; color: var(--svc-blue); }
+    .svc-page .btn-light:hover {
+      background: #f0f4ff; transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .svc-page .btn-ghost {
+      background: transparent; color: #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.75);
+    }
+    .svc-page .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.12); border-color: #fff;
+    }
+
+    /* ============================================================
+       BANNER — full viewport width, Facebook-style hanging logo
+       ============================================================ */
+    .svc-cover-wrap { position: relative; margin-bottom: 78px; }
+
+    .svc-cover {
+      position: relative;
+      background: linear-gradient(120deg, #071d49 0%, #0057ff 60%, #0f9d58 100%);
+      color: #fff;
+      min-height: 260px;
+      padding: 64px 0 104px;
+      overflow: hidden;
+    }
+    .svc-cover-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; z-index: 0;
+    }
+    .svc-cover::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(7, 29, 73, 0.45) 0%, rgba(7, 29, 73, 0.80) 100%);
+      z-index: 1;
+    }
+    .svc-cover-inner {
+      position: relative; z-index: 2;
+      max-width: 780px; margin: 0 auto; padding: 0 22px;
+      text-align: center;
+    }
+    .svc-cover-inner .eyebrow {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+    }
+    .svc-cover-inner h1 {
+      font-size: clamp(32px, 5.5vw, 54px);
+      line-height: 1.15;
+      font-weight: 800;
+      margin: 16px 0 14px;
+    }
+    .svc-cover-inner p {
+      font-size: clamp(15px, 2vw, 17px);
+      line-height: 1.65;
+      margin: 0 auto;
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .svc-cover-actions {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center; margin-top: 26px;
+    }
+
+    /* Overlapping logo — logo FILLS the circle completely */
+    .svc-cover-logo {
+      position: absolute;
+      left: 50%;
+      bottom: -60px;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: #fff;
+      border: 4px solid #000;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+      overflow: hidden;
+      z-index: 3;
+    }
+    .svc-cover-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      padding: 6px;
+      display: block;
+    }
+
+    /* Language switch — top-right of banner */
+    .svc-lang-switch {
+      position: absolute;
+      top: 16px; right: 16px;
+      z-index: 6;
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 999px;
+      padding: 4px;
+      backdrop-filter: blur(8px);
+    }
+    .svc-lang-switch button {
+      padding: 6px 14px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.85);
+      font: inherit;
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+      letter-spacing: 0.3px;
+    }
+    .svc-lang-switch button:hover:not(.active) { color: #fff; }
+    .svc-lang-switch button.active {
+      background: #fff;
+      color: var(--svc-blue);
+    }
+
+    /* ============================================================
+       SERVICES ACCORDION
+       ============================================================ */
+    .svc-section { padding: 20px 0 40px; }
+    .svc-section-head { text-align: center; margin-bottom: 30px; }
+    .svc-section-head h2 {
+      font-size: clamp(24px, 3.4vw, 34px);
+      font-weight: 800; margin: 0 0 8px;
+    }
+    .svc-section-head p {
+      margin: 0; color: var(--svc-muted); font-size: 15px;
+    }
+
+    .svc-cards { display: flex; flex-direction: column; gap: 14px; }
+
+    .svc-card {
+      background: #fff;
+      border: 1px solid var(--svc-line);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color .2s, box-shadow .25s;
+    }
+    .svc-card:hover { border-color: #c9d6f5; }
+    .svc-card.is-open {
+      border-color: var(--svc-blue);
+      box-shadow: 0 12px 30px rgba(0, 87, 255, 0.10);
+    }
+
+    .svc-card-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      padding: 20px 22px;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      transition: background .15s;
+    }
+    .svc-card-head:hover { background: #f7f9fc; }
+    .svc-card-head:focus-visible {
+      outline: 2px solid var(--svc-blue);
+      outline-offset: -2px;
+    }
+    .svc-card-icon {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      border-radius: 12px;
+      background: #eef4ff;
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+    }
+    .svc-card-info {
+      flex: 1; min-width: 0;
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .svc-card-num {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--svc-blue);
+    }
+    .svc-card-title {
+      font-size: clamp(16px, 2vw, 18px);
+      font-weight: 800; line-height: 1.3;
+      color: var(--svc-ink);
+    }
+    .svc-card-sub {
+      font-size: 13.5px;
+      color: var(--svc-muted);
+      line-height: 1.45;
+    }
+    .svc-card-chevron {
+      flex-shrink: 0;
+      font-size: 15px;
+      color: var(--svc-muted);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+      width: 22px; height: 22px;
+      line-height: 22px;
+      text-align: center;
+    }
+    .svc-card.is-open .svc-card-chevron {
+      transform: rotate(180deg);
+      color: var(--svc-blue);
+    }
+
+    .svc-card-body {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .svc-card.is-open .svc-card-body { grid-template-rows: 1fr; }
+    .svc-card-body-inner { overflow: hidden; min-height: 0; }
+    .svc-card-body-content {
+      padding: 20px 22px 24px;
+      border-top: 1px dashed var(--svc-line);
+    }
+    .svc-card-body-content p {
+      margin: 0 0 16px;
+      color: var(--svc-muted);
+      font-size: 14.5px;
+      line-height: 1.7;
+    }
+    .svc-bullets {
+      list-style: none; padding: 0; margin: 0 0 22px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px 22px;
+    }
+    .svc-bullets li {
+      position: relative;
+      padding-left: 26px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.55;
+    }
+    .svc-bullets li::before {
+      content: "✓";
+      position: absolute; left: 0; top: 1px;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: #eef4ff;
+      color: var(--svc-blue);
+      text-align: center;
+      line-height: 18px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+    .svc-card-actions {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    }
+
+    /* ============================================================
+       PROCESS STRIP (lazy-loaded below the fold)
+       ============================================================ */
+    .svc-process {
+      margin: 30px 0 10px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(120deg, #071d49 0%, #0057ff 60%, #0f9d58 100%);
+      min-height: 160px;
+    }
+    .svc-process img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; z-index: 0;
+      opacity: 0.6;
+    }
+    .svc-process::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(7, 29, 73, 0.55) 0%, rgba(7, 29, 73, 0.85) 100%);
+      z-index: 1;
+    }
+    .svc-process-inner {
+      position: relative; z-index: 2;
+      padding: 30px 22px;
+      text-align: center;
+      color: #fff;
+    }
+    .svc-process-inner h3 {
+      margin: 0 0 12px;
+      font-size: clamp(18px, 2.6vw, 22px);
+      font-weight: 800;
+    }
+    .svc-process-steps {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 10px;
+    }
+    .svc-process-steps span {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(255, 255, 255, 0.14);
+      padding: 7px 16px;
+      border-radius: 999px;
+      font-size: 13.5px;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+    }
+    .svc-process-steps span::before {
+      content: "";
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--svc-gold);
+      display: inline-block;
+    }
+
+    /* ============================================================
+       INQUIRY
+       ============================================================ */
+    .svc-inquiry-section { padding: 20px 0 60px; }
+    .svc-inquiry-panel {
+      background: #fff;
+      border: 1px solid var(--svc-line);
+      border-radius: 20px;
+      padding: 40px 32px;
+      max-width: 780px;
+      margin: 0 auto;
+      scroll-margin-top: 110px;
+      box-shadow: 0 6px 24px rgba(20, 33, 61, 0.04);
+    }
+    .svc-inquiry-panel h2 {
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      margin: 0 0 8px;
+      text-align: center;
+    }
+    .svc-inquiry-panel .lead {
+      text-align: center;
+      color: var(--svc-muted);
+      font-size: 14.5px;
+      margin: 0 0 26px;
+    }
+    .svc-inquiry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .svc-field {
+      display: block;
+      margin: 0 0 16px;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--svc-ink);
+    }
+    .svc-field input,
+    .svc-field select,
+    .svc-field textarea {
+      display: block;
+      width: 100%;
+      margin-top: 6px;
+      padding: 12px 14px;
+      border: 1px solid #d8e0eb;
+      border-radius: 10px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--svc-ink);
+      background: #fff;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .svc-field input:focus,
+    .svc-field select:focus,
+    .svc-field textarea:focus {
+      outline: none;
+      border-color: var(--svc-blue);
+      box-shadow: 0 0 0 3px rgba(0, 87, 255, 0.15);
+    }
+    .svc-field textarea { resize: vertical; min-height: 120px; }
+    .svc-inquiry-submit {
+      display: flex; justify-content: center; margin-top: 6px;
+    }
+    .svc-note {
+      font-size: 12.5px;
+      color: var(--svc-muted);
+      margin: 14px 0 0;
+      text-align: center;
+    }
+
+    /* Toast */
+    .svc-toast {
+      position: fixed;
+      bottom: 22px; left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--svc-ink);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s, transform .25s;
+      z-index: 20;
+      max-width: 90vw;
+      text-align: center;
+    }
+    .svc-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 780px) {
+      .svc-cover { padding: 56px 0 92px; min-height: 230px; }
+      .svc-cover-wrap { margin-bottom: 66px; }
+      .svc-cover-logo {
+        width: 120px;
+        height: 120px;
+        bottom: -55px;
+        border-color: #000;
+        border-width: 3px;
+      }
+      .svc-lang-switch { top: 12px; right: 12px; padding: 3px; }
+      .svc-lang-switch button { padding: 5px 11px; font-size: 12px; }
+      .svc-inquiry-grid { grid-template-columns: 1fr; }
+      .svc-inquiry-panel { padding: 32px 22px; }
+    }
+    @media (max-width: 560px) {
+      .svc-card-head { padding: 16px; gap: 12px; }
+      .svc-card-icon { width: 44px; height: 44px; font-size: 20px; }
+      .svc-card-body-content { padding: 16px 16px 20px; }
+      .svc-bullets { grid-template-columns: 1fr; }
+      .svc-cover-actions .btn { flex: 1 1 auto; min-width: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .svc-page *,
+      .svc-page *::before,
+      .svc-page *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div data-include="partials/header.html"></div>
+
+  <main class="svc-page">
+
+    <!-- ============================================================
+         COVER / BANNER (full width) with language switch + logo
+         ============================================================ -->
+    <div class="svc-cover-wrap">
+      <section class="svc-cover">
+        <div class="svc-lang-switch" role="group" aria-label="Language / ভাষা">
+          <button type="button" data-lang-btn="en" class="active">English</button>
+          <button type="button" data-lang-btn="bn">বাংলা</button>
+        </div>
+
+        <img class="svc-cover-img"
+             src="images/service-banner.jpeg"
+             alt=""
+             aria-hidden="true"
+             width="1600"
+             height="900"
+             loading="eager"
+             decoding="async"
+             onerror="this.style.display='none'">
+
+        <div class="svc-cover-inner">
+          <span class="eyebrow"
+                data-en="Business Solution Center"
+                data-bn="বিজনেস সলিউশন সেন্টার">Business Solution Center</span>
+
+          <h1 data-en="Our Services" data-bn="আমাদের সেবাসমূহ">Our Services</h1>
+
+          <p data-en="RainFow stands by you at every stage of your business — from product sourcing to digital services, branding, and operational support."
+             data-bn="আপনার ব্যবসার প্রতিটি ধাপে RainFow পাশে আছে — পণ্য সোর্সিং থেকে শুরু করে ডিজিটাল সেবা, ব্র্যান্ডিং ও অপারেশনাল সাপোর্ট পর্যন্ত।">RainFow stands by you at every stage of your business — from product sourcing to digital services, branding, and operational support.</p>
+
+          <div class="svc-cover-actions">
+            <a class="btn btn-light" href="#svc-list" data-scroll-to="#svc-list"
+               data-en="Explore Services" data-bn="সেবাসমূহ দেখুন">Explore Services</a>
+            <a class="btn btn-ghost" href="#svc-inquiry" data-scroll-to="#svc-inquiry"
+               data-en="Start Inquiry" data-bn="অনুসন্ধান শুরু করুন">Start Inquiry</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="svc-cover-logo">
+        <img src="images/logo-sq-b.svg" alt="RainFow" loading="eager" decoding="async">
+      </div>
+    </div>
+
+    <!-- ============================================================
+         SERVICES ACCORDION
+         ============================================================ -->
+    <section class="svc-section" id="svc-list" style="scroll-margin-top:110px;">
+      <div class="svc-container">
+        <div class="svc-section-head">
+          <h2 data-en="Six Core Services" data-bn="ছয়টি প্রধান সেবা">Six Core Services</h2>
+          <p data-en="Click any service to see what is included."
+             data-bn="যেকোনো সেবায় ক্লিক করে বিস্তারিত দেখুন।">Click any service to see what is included.</p>
+        </div>
+
+        <div class="svc-cards">
+
+          <!-- 01 · PRODUCT SOURCING -->
+          <article class="svc-card" data-svc-card>
+            <button type="button" class="svc-card-head" aria-expanded="false" aria-controls="svc-body-1">
+              <span class="svc-card-icon" aria-hidden="true">📦</span>
+              <span class="svc-card-info">
+                <span class="svc-card-num"
+                      data-en="01 · Product Sourcing"
+                      data-bn="০১ · পণ্য সোর্সিং">01 · Product Sourcing</span>
+                <span class="svc-card-title"
+                      data-en="Find Your Desired Products from Bangladesh."
+                      data-bn="বাংলাদেশ থেকে আপনার কাঙ্ক্ষিত পণ্য খুঁজে নিন।">Find Your Desired Products from Bangladesh.</span>
+                <span class="svc-card-sub"
+                      data-en="Factory and supplier sourcing, sampling, wholesale collection."
+                      data-bn="ফ্যাক্টরি ও সরবরাহকারী অনুসন্ধান, স্যাম্পলিং, পাইকারি সংগ্রহ।">Factory and supplier sourcing, sampling, wholesale collection.</span>
+              </span>
+              <span class="svc-card-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="svc-card-body" id="svc-body-1">
+              <div class="svc-card-body-inner">
+                <div class="svc-card-body-content">
+                  <p data-en="Find the right products and reliable suppliers for your business — RainFow is with you through the entire process, from sample verification to bulk orders."
+                     data-bn="আপনার ব্যবসার জন্য সঠিক পণ্য ও নির্ভরযোগ্য সরবরাহকারী খুঁজে নিন — স্যাম্পল যাচাই থেকে বাল্ক অর্ডার পর্যন্ত পুরো প্রক্রিয়ায় RainFow পাশে থাকবে।">Find the right products and reliable suppliers for your business — RainFow is with you through the entire process, from sample verification to bulk orders.</p>
+                  <ul class="svc-bullets">
+                    <li data-en="Factory &amp; Supplier Sourcing" data-bn="ফ্যাক্টরি ও সরবরাহকারী অনুসন্ধান">Factory &amp; Supplier Sourcing</li>
+                    <li data-en="Product Selection" data-bn="পণ্য নির্বাচন">Product Selection</li>
+                    <li data-en="Wholesale Product Collection" data-bn="পাইকারি পণ্য সংগ্রহ">Wholesale Product Collection</li>
+                    <li data-en="Custom Product Requirements" data-bn="কাস্টম পণ্যের চাহিদা">Custom Product Requirements</li>
+                  </ul>
+                  <div class="svc-card-actions">
+                    <button type="button" class="btn btn-primary"
+                            data-inquire="Product Sourcing"
+                            data-en="Inquire about this service"
+                            data-bn="এই সেবা সম্পর্কে জানুন">Inquire about this service</button>
+                    <a class="btn" style="background:#eef4ff;color:var(--svc-blue);"
+                       href="products.html"
+                       data-en="Browse Products"
+                       data-bn="পণ্য দেখুন">Browse Products</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 02 · INTERNATIONAL SHIPPING -->
+          <article class="svc-card" data-svc-card>
+            <button type="button" class="svc-card-head" aria-expanded="false" aria-controls="svc-body-2">
+              <span class="svc-card-icon" aria-hidden="true">🚚</span>
+              <span class="svc-card-info">
+                <span class="svc-card-num"
+                      data-en="02 · International Shipping"
+                      data-bn="০২ · আন্তর্জাতিক শিপিং">02 · International Shipping</span>
+                <span class="svc-card-title"
+                      data-en="Move Your Products Across Borders."
+                      data-bn="সীমান্ত পেরিয়ে আপনার পণ্য পাঠান।">Move Your Products Across Borders.</span>
+                <span class="svc-card-sub"
+                      data-en="Air and sea freight, documentation, export packaging."
+                      data-bn="এয়ার ও সি ফ্রেইট, ডকুমেন্টেশন, এক্সপোর্ট প্যাকেজিং।">Air and sea freight, documentation, export packaging.</span>
+              </span>
+              <span class="svc-card-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="svc-card-body" id="svc-body-2">
+              <div class="svc-card-body-inner">
+                <div class="svc-card-body-content">
+                  <p data-en="Air and sea freight, documentation, and export packaging — from factory to your doorstep, all handled in one place."
+                     data-bn="ফ্যাক্টরি থেকে আপনার ঠিকানা পর্যন্ত এয়ার ও সি ফ্রেইট, ডকুমেন্টেশন এবং এক্সপোর্ট প্যাকেজিং — সব এক জায়গায়।">Air and sea freight, documentation, and export packaging — from factory to your doorstep, all handled in one place.</p>
+                  <ul class="svc-bullets">
+                    <li data-en="Air Freight" data-bn="এয়ার ফ্রেইট">Air Freight</li>
+                    <li data-en="Sea Freight" data-bn="সি ফ্রেইট">Sea Freight</li>
+                    <li data-en="Shipping Coordination" data-bn="শিপিং সমন্বয়">Shipping Coordination</li>
+                    <li data-en="Documentation Support" data-bn="ডকুমেন্টেশন সহায়তা">Documentation Support</li>
+                    <li data-en="Export Packaging Support" data-bn="এক্সপোর্ট প্যাকেজিং সহায়তা">Export Packaging Support</li>
+                  </ul>
+                  <div class="svc-card-actions">
+                    <button type="button" class="btn btn-primary"
+                            data-inquire="International Shipping Support"
+                            data-en="Inquire about this service"
+                            data-bn="এই সেবা সম্পর্কে জানুন">Inquire about this service</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 03 · WEBSITE DEVELOPMENT -->
+          <article class="svc-card" data-svc-card>
+            <button type="button" class="svc-card-head" aria-expanded="false" aria-controls="svc-body-3">
+              <span class="svc-card-icon" aria-hidden="true">💻</span>
+              <span class="svc-card-info">
+                <span class="svc-card-num"
+                      data-en="03 · Website Development"
+                      data-bn="০৩ · ওয়েবসাইট ডেভেলপমেন্ট">03 · Website Development</span>
+                <span class="svc-card-title"
+                      data-en="Build Your Digital Business Presence."
+                      data-bn="আপনার ডিজিটাল ব্যবসায়িক উপস্থিতি গড়ে তুলুন।">Build Your Digital Business Presence.</span>
+                <span class="svc-card-sub"
+                      data-en="Business and e-commerce sites, domain, hosting, management."
+                      data-bn="বিজনেস ও ই-কমার্স সাইট, ডোমেইন, হোস্টিং, ম্যানেজমেন্ট।">Business and e-commerce sites, domain, hosting, management.</span>
+              </span>
+              <span class="svc-card-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="svc-card-body" id="svc-body-3">
+              <div class="svc-card-body-inner">
+                <div class="svc-card-body-content">
+                  <p data-en="Fast and reliable websites for your business — from brand sites to complete e-commerce stores, with domain and management included."
+                     data-bn="আপনার ব্যবসার জন্য দ্রুত ও নির্ভরযোগ্য ওয়েবসাইট — ব্র্যান্ড সাইট থেকে সম্পূর্ণ ই-কমার্স স্টোর, ডোমেইন ও ম্যানেজমেন্ট সহ।">Fast and reliable websites for your business — from brand sites to complete e-commerce stores, with domain and management included.</p>
+                  <ul class="svc-bullets">
+                    <li data-en="Business Website" data-bn="বিজনেস ওয়েবসাইট">Business Website</li>
+                    <li data-en="E-commerce Website" data-bn="ই-কমার্স ওয়েবসাইট">E-commerce Website</li>
+                    <li data-en="Domain &amp; Hosting" data-bn="ডোমেইন ও হোস্টিং">Domain &amp; Hosting</li>
+                    <li data-en="Website Management" data-bn="ওয়েবসাইট ম্যানেজমেন্ট">Website Management</li>
+                  </ul>
+                  <div class="svc-card-actions">
+                    <button type="button" class="btn btn-primary"
+                            data-inquire="Website Development"
+                            data-en="Inquire about this service"
+                            data-bn="এই সেবা সম্পর্কে জানুন">Inquire about this service</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 04 · CONTENT & MEDIA -->
+          <article class="svc-card" data-svc-card>
+            <button type="button" class="svc-card-head" aria-expanded="false" aria-controls="svc-body-4">
+              <span class="svc-card-icon" aria-hidden="true">🎥</span>
+              <span class="svc-card-info">
+                <span class="svc-card-num"
+                      data-en="04 · Content &amp; Media"
+                      data-bn="০৪ · কনটেন্ট ও মিডিয়া">04 · Content &amp; Media</span>
+                <span class="svc-card-title"
+                      data-en="Create Content That Builds Your Brand."
+                      data-bn="ব্র্যান্ড গড়তে কনটেন্ট তৈরি করুন।">Create Content That Builds Your Brand.</span>
+                <span class="svc-card-sub"
+                      data-en="Product photography, promotional video, social and ad creative."
+                      data-bn="প্রোডাক্ট ফটোগ্রাফি, প্রমোশনাল ভিডিও, সোশ্যাল ও বিজ্ঞাপন ক্রিয়েটিভ।">Product photography, promotional video, social and ad creative.</span>
+              </span>
+              <span class="svc-card-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="svc-card-body" id="svc-body-4">
+              <div class="svc-card-body-inner">
+                <div class="svc-card-body-content">
+                  <p data-en="Product photography, promotional and cinematic video, social media content — professional media production to showcase your brand."
+                     data-bn="প্রোডাক্ট ফটোগ্রাফি, প্রমোশনাল ও সিনেমাটিক ভিডিও, সোশ্যাল মিডিয়া কনটেন্ট — আপনার ব্র্যান্ডকে তুলে ধরার জন্য পেশাদার মিডিয়া প্রোডাকশন।">Product photography, promotional and cinematic video, social media content — professional media production to showcase your brand.</p>
+                  <ul class="svc-bullets">
+                    <li data-en="Professional Product Photography" data-bn="পেশাদার প্রোডাক্ট ফটোগ্রাফি">Professional Product Photography</li>
+                    <li data-en="Promotional Video" data-bn="প্রমোশনাল ভিডিও">Promotional Video</li>
+                    <li data-en="Cinematic Video Production" data-bn="সিনেমাটিক ভিডিও প্রোডাকশন">Cinematic Video Production</li>
+                    <li data-en="Documentary-style Content" data-bn="ডকুমেন্টারি-স্টাইল কনটেন্ট">Documentary-style Content</li>
+                    <li data-en="Social Media Content" data-bn="সোশ্যাল মিডিয়া কনটেন্ট">Social Media Content</li>
+                    <li data-en="Advertising Creative" data-bn="বিজ্ঞাপন ক্রিয়েটিভ">Advertising Creative</li>
+                  </ul>
+                  <div class="svc-card-actions">
+                    <button type="button" class="btn btn-primary"
+                            data-inquire="Content Creation & Media Production"
+                            data-en="Inquire about this service"
+                            data-bn="এই সেবা সম্পর্কে জানুন">Inquire about this service</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 05 · BRANDING & MARKETING -->
+          <article class="svc-card" data-svc-card>
+            <button type="button" class="svc-card-head" aria-expanded="false" aria-controls="svc-body-5">
+              <span class="svc-card-icon" aria-hidden="true">🎨</span>
+              <span class="svc-card-info">
+                <span class="svc-card-num"
+                      data-en="05 · Branding &amp; Marketing"
+                      data-bn="০৫ · ব্র্যান্ডিং ও মার্কেটিং">05 · Branding &amp; Marketing</span>
+                <span class="svc-card-title"
+                      data-en="Build Your Brand. Reach Your Audience."
+                      data-bn="ব্র্যান্ড গড়ুন। আপনার অডিয়েন্সের কাছে পৌঁছান।">Build Your Brand. Reach Your Audience.</span>
+                <span class="svc-card-sub"
+                      data-en="Brand identity, social media management, ads and SEO."
+                      data-bn="ব্র্যান্ড আইডেন্টিটি, সোশ্যাল মিডিয়া ম্যানেজমেন্ট, বিজ্ঞাপন ও SEO।">Brand identity, social media management, ads and SEO.</span>
+              </span>
+              <span class="svc-card-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="svc-card-body" id="svc-body-5">
+              <div class="svc-card-body-inner">
+                <div class="svc-card-body-content">
+                  <p data-en="From brand identity to social media management, digital advertising, and SEO — get your brand in front of the right people."
+                     data-bn="ব্র্যান্ড আইডেন্টিটি থেকে শুরু করে সোশ্যাল মিডিয়া ম্যানেজমেন্ট, ডিজিটাল বিজ্ঞাপন ও SEO — আপনার ব্র্যান্ডকে সঠিক মানুষের কাছে পৌঁছে দিন।">From brand identity to social media management, digital advertising, and SEO — get your brand in front of the right people.</p>
+                  <ul class="svc-bullets">
+                    <li data-en="Brand Identity" data-bn="ব্র্যান্ড আইডেন্টিটি">Brand Identity</li>
+                    <li data-en="Logo &amp; Visual Design" data-bn="লোগো ও ভিজ্যুয়াল ডিজাইন">Logo &amp; Visual Design</li>
+                    <li data-en="Social Media Management" data-bn="সোশ্যাল মিডিয়া ম্যানেজমেন্ট">Social Media Management</li>
+                    <li data-en="Digital Advertising" data-bn="ডিজিটাল বিজ্ঞাপন">Digital Advertising</li>
+                    <li data-en="SEO Support" data-bn="SEO সহায়তা">SEO Support</li>
+                  </ul>
+                  <div class="svc-card-actions">
+                    <button type="button" class="btn btn-primary"
+                            data-inquire="Branding & Digital Marketing"
+                            data-en="Inquire about this service"
+                            data-bn="এই সেবা সম্পর্কে জানুন">Inquire about this service</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 06 · CRM & OPERATIONS -->
+          <article class="svc-card" data-svc-card>
+            <button type="button" class="svc-card-head" aria-expanded="false" aria-controls="svc-body-6">
+              <span class="svc-card-icon" aria-hidden="true">📊</span>
+              <span class="svc-card-info">
+                <span class="svc-card-num"
+                      data-en="06 · CRM &amp; Operations"
+                      data-bn="০৬ · CRM ও অপারেশনস">06 · CRM &amp; Operations</span>
+                <span class="svc-card-title"
+                      data-en="Manage Your Business More Efficiently."
+                      data-bn="আপনার ব্যবসা আরও দক্ষভাবে পরিচালনা করুন।">Manage Your Business More Efficiently.</span>
+                <span class="svc-card-sub"
+                      data-en="Customer, lead and order management support."
+                      data-bn="কাস্টমার, লিড ও অর্ডার ম্যানেজমেন্ট সহায়তা।">Customer, lead and order management support.</span>
+              </span>
+              <span class="svc-card-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="svc-card-body" id="svc-body-6">
+              <div class="svc-card-body-inner">
+                <div class="svc-card-body-content">
+                  <p data-en="Customer, lead, and order management — practical support to make your daily business operations easier."
+                     data-bn="কাস্টমার, লিড ও অর্ডার ম্যানেজমেন্ট — আপনার ব্যবসার প্রতিদিনের কাজ সহজ করতে প্র্যাকটিক্যাল সাপোর্ট।">Customer, lead, and order management — practical support to make your daily business operations easier.</p>
+                  <ul class="svc-bullets">
+                    <li data-en="Customer Management" data-bn="কাস্টমার ম্যানেজমেন্ট">Customer Management</li>
+                    <li data-en="Lead Management" data-bn="লিড ম্যানেজমেন্ট">Lead Management</li>
+                    <li data-en="Business Database" data-bn="বিজনেস ডেটাবেস">Business Database</li>
+                    <li data-en="Operational Coordination" data-bn="অপারেশনাল সমন্বয়">Operational Coordination</li>
+                  </ul>
+                  <div class="svc-card-actions">
+                    <button type="button" class="btn btn-primary"
+                            data-inquire="CRM & Operational Support"
+                            data-en="Inquire about this service"
+                            data-bn="এই সেবা সম্পর্কে জানুন">Inquire about this service</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Process strip — lazy-loaded image, gradient fallback -->
+        <div class="svc-process">
+          <img src="images/services-process.jpg"
+               alt=""
+               aria-hidden="true"
+               loading="lazy"
+               decoding="async"
+               onerror="this.style.display='none'">
+          <div class="svc-process-inner">
+            <h3 data-en="How RainFow Works" data-bn="RainFow কীভাবে কাজ করে">How RainFow Works</h3>
+            <div class="svc-process-steps">
+              <span data-en="Dream"    data-bn="স্বপ্ন">Dream</span>
+              <span data-en="Discover" data-bn="আবিষ্কার">Discover</span>
+              <span data-en="Connect"  data-bn="সংযোগ">Connect</span>
+              <span data-en="Build"    data-bn="নির্মাণ">Build</span>
+              <span data-en="Grow"     data-bn="প্রবৃদ্ধি">Grow</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INQUIRY FORM
+         ============================================================ -->
+    <section class="svc-inquiry-section" id="svc-inquiry">
+      <div class="svc-container">
+        <div class="svc-inquiry-panel">
+          <h2 data-en="Service Inquiry" data-bn="সেবা অনুসন্ধান">Service Inquiry</h2>
+          <p class="lead"
+             data-en="Tell us about your needs — the RainFow team will get in touch very soon."
+             data-bn="আপনার প্রয়োজনের কথা জানান — RainFow টিম খুব শীঘ্রই যোগাযোগ করবে।">Tell us about your needs — the RainFow team will get in touch very soon.</p>
+
+          <form id="svc-form" novalidate>
+            <div class="svc-inquiry-grid">
+              <label class="svc-field">
+                <span data-en="Your Name" data-bn="আপনার নাম">Your Name</span>
+                <input type="text" name="name" required autocomplete="name"
+                       data-en-placeholder="Your name"
+                       data-bn-placeholder="আপনার নাম"
+                       placeholder="Your name">
+              </label>
+              <label class="svc-field">
+                <span data-en="Phone / WhatsApp" data-bn="ফোন / WhatsApp">Phone / WhatsApp</span>
+                <input type="tel" name="phone" required autocomplete="tel"
+                       data-en-placeholder="+880…"
+                       data-bn-placeholder="+৮৮০…"
+                       placeholder="+880…">
+              </label>
+              <label class="svc-field">
+                <span data-en="Email" data-bn="ইমেইল">Email</span>
+                <input type="email" name="email" required autocomplete="email"
+                       data-en-placeholder="you@email.com"
+                       data-bn-placeholder="you@email.com"
+                       placeholder="you@email.com">
+              </label>
+              <label class="svc-field">
+                <span data-en="Which service?" data-bn="কোন সেবা?">Which service?</span>
+                <select name="service" required>
+                  <option value="" data-en="Select a service…" data-bn="একটি সেবা বেছে নিন…">Select a service…</option>
+                  <option value="Product Sourcing"                       data-en="Product Sourcing"                      data-bn="পণ্য সোর্সিং">Product Sourcing</option>
+                  <option value="International Shipping Support"         data-en="International Shipping Support"        data-bn="আন্তর্জাতিক শিপিং সহায়তা">International Shipping Support</option>
+                  <option value="Website Development"                    data-en="Website Development"                   data-bn="ওয়েবসাইট ডেভেলপমেন্ট">Website Development</option>
+                  <option value="Content Creation & Media Production"    data-en="Content Creation &amp; Media Production" data-bn="কনটেন্ট ক্রিয়েশন ও মিডিয়া প্রোডাকশন">Content Creation &amp; Media Production</option>
+                  <option value="Branding & Digital Marketing"           data-en="Branding &amp; Digital Marketing"      data-bn="ব্র্যান্ডিং ও ডিজিটাল মার্কেটিং">Branding &amp; Digital Marketing</option>
+                  <option value="CRM & Operational Support"              data-en="CRM &amp; Operational Support"         data-bn="CRM ও অপারেশনাল সহায়তা">CRM &amp; Operational Support</option>
+                  <option value="Multiple / Not sure yet"                data-en="Multiple / Not sure yet"               data-bn="একাধিক / এখনো নিশ্চিত নই">Multiple / Not sure yet</option>
+                </select>
+              </label>
+            </div>
+            <label class="svc-field">
+              <span data-en="Details" data-bn="বিস্তারিত">Details</span>
+              <textarea name="details" required rows="4"
+                        data-en-placeholder="Tell us about your needs, target market, timeline, and any other requirements…"
+                        data-bn-placeholder="আপনার প্রয়োজন, লক্ষ্যবাজার, টাইমলাইন ইত্যাদি লিখুন…"
+                        placeholder="Tell us about your needs, target market, timeline, and any other requirements…"></textarea>
+            </label>
+            <div class="svc-inquiry-submit">
+              <button type="submit" class="btn btn-primary"
+                      data-en="Send Inquiry via WhatsApp"
+                      data-bn="WhatsApp-এ অনুসন্ধান পাঠান">Send Inquiry via WhatsApp</button>
+            </div>
+            <p class="svc-note"
+               data-en="Submitting opens WhatsApp with your information pre-filled. No data is stored on this website."
+               data-bn="সাবমিট করলে WhatsApp খুলবে, আপনার তথ্য প্রি-ফিল থাকবে। কোনো ডেটা এই ওয়েবসাইটে সংরক্ষণ হয় না।">Submitting opens WhatsApp with your information pre-filled. No data is stored on this website.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="svc-toast" id="svc-toast" role="status" aria-live="polite"></div>
+
+  </main>
+
+  <div data-include="partials/footer.html"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ============================================================
+         LANGUAGE SYSTEM
+         ============================================================ */
+      var STORAGE_KEY = 'rainfow_lang';
+      var currentLang = 'en';
+      try {
+        var saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'en' || saved === 'bn') currentLang = saved;
+      } catch (e) {}
+
+      var TITLES = {
+        en: 'Our Services — RainFow BD',
+        bn: 'আমাদের সেবাসমূহ — RainFow BD'
+      };
+      var TOASTS = {
+        en: 'Opening WhatsApp',
+        bn: 'WhatsApp খোলা হচ্ছে'
+      };
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        document.title = TITLES[lang] || document.title;
+
+        document.querySelectorAll('[data-en][data-bn]').forEach(function (el) {
+          var v = el.getAttribute('data-' + lang);
+          if (v !== null) el.textContent = v;
+        });
+
+        document.querySelectorAll('[data-en-placeholder][data-bn-placeholder]').forEach(function (el) {
+          var v = el.getAttribute('data-' + lang + '-placeholder');
+          if (v !== null) el.placeholder = v;
+        });
+
+        document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === lang);
+        });
+
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      }
+
+      document.querySelectorAll('[data-lang-btn]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          applyLanguage(btn.getAttribute('data-lang-btn'));
+        });
+      });
+
+      applyLanguage(currentLang);
+
+      /* ============================================================
+         TOAST
+         ============================================================ */
+      var toastEl = document.getElementById('svc-toast');
+      function toast(msg) {
+        if (!toastEl) return;
+        toastEl.textContent = msg;
+        toastEl.classList.add('show');
+        clearTimeout(toastEl._t);
+        toastEl._t = setTimeout(function () {
+          toastEl.classList.remove('show');
+        }, 2600);
+      }
+
+      /* ============================================================
+         SMOOTH SCROLL (banner buttons)
+         ============================================================ */
+      document.querySelectorAll('[data-scroll-to]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var sel = link.getAttribute('data-scroll-to');
+          var target = document.querySelector(sel);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+
+      /* ============================================================
+         ACCORDION — click card header to toggle
+         ============================================================ */
+      document.querySelectorAll('[data-svc-card]').forEach(function (card) {
+        var head = card.querySelector('.svc-card-head');
+        if (!head) return;
+        head.addEventListener('click', function () {
+          var isOpen = card.classList.toggle('is-open');
+          head.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      });
+
+      /* ============================================================
+         INQUIRE BUTTONS — preselect + scroll + focus
+         ============================================================ */
+      var form = document.getElementById('svc-form');
+      var serviceSelect = form ? form.elements.service : null;
+      var nameInput = form ? form.elements.name : null;
+      var inquirySection = document.getElementById('svc-inquiry');
+
+      document.querySelectorAll('[data-inquire]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var svc = btn.getAttribute('data-inquire');
+          if (serviceSelect && svc) {
+            for (var i = 0; i < serviceSelect.options.length; i++) {
+              if (serviceSelect.options[i].value === svc) {
+                serviceSelect.selectedIndex = i;
+                break;
+              }
+            }
+          }
+          if (inquirySection) {
+            inquirySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          setTimeout(function () {
+            if (nameInput) nameInput.focus({ preventScroll: true });
+          }, 500);
+        });
+      });
+
+      /* ============================================================
+         FORM SUBMIT — WhatsApp prefill in current language
+         ============================================================ */
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          var serviceText = serviceSelect
+            ? serviceSelect.options[serviceSelect.selectedIndex].text
+            : '';
+          var data = {
+            name:    form.elements.name.value.trim(),
+            phone:   form.elements.phone.value.trim(),
+            email:   form.elements.email.value.trim(),
+            service: serviceText,
+            details: form.elements.details.value.trim()
+          };
+
+          var msg;
+          if (currentLang === 'bn') {
+            msg =
+              'হ্যালো RainFow,\n\n' +
+              'আমি জানতে চাই: ' + data.service + '\n\n' +
+              'নাম: '   + data.name  + '\n' +
+              'ফোন: '   + data.phone + '\n' +
+              'ইমেইল: ' + data.email + '\n\n' +
+              'বিস্তারিত:\n' + data.details;
+          } else {
+            msg =
+              'Hi RainFow,\n\n' +
+              'I would like to inquire about: ' + data.service + '\n\n' +
+              'Name: '  + data.name  + '\n' +
+              'Phone: ' + data.phone + '\n' +
+              'Email: ' + data.email + '\n\n' +
+              'Details:\n' + data.details;
+          }
+
+          var url = 'https://wa.me/8801876757033?text=' + encodeURIComponent(msg);
+          window.open(url, '_blank', 'noopener');
+          toast(TOASTS[currentLang]);
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
