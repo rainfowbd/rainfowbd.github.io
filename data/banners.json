@@ -1,0 +1,42 @@
+{
+  "heroSlides": [
+    {
+      "image": "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=1920&h=940&q=80",
+      "alt": "Flash Sale — Electronics & Lifestyle Deals",
+      "href": "products.html",
+      "label": "Shop the flash sale"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1920&h=940&q=80",
+      "alt": "Latest Gadgets & Tech Accessories",
+      "href": "products.html?cat=electronics",
+      "label": "Shop electronics deals"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&h=940&q=80",
+      "alt": "New Season Fashion & Essentials",
+      "href": "products.html?cat=fashion",
+      "label": "Shop all deals"
+    }
+  ],
+  "sidePromos": [
+    {
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=900&h=464&q=80",
+      "alt": "Electronics Promo Offer",
+      "href": "products.html?cat=electronics",
+      "label": "Electronics promo offer"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&h=464&q=80",
+      "alt": "Fashion Promo Offer",
+      "href": "products.html?cat=fashion",
+      "label": "Fashion promo offer"
+    }
+  ],
+  "promoModal": {
+    "image": "https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=600&h=600&q=80",
+    "alt": "Special Offer on RainFow Bangladesh",
+    "href": "products.html",
+    "label": "Shop the offer"
+  }
+}

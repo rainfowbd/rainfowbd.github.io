@@ -1,0 +1,77 @@
+{
+  "section": {
+    "id": "our-strategy",
+    "nameEn": "Our Strategy",
+    "nameBn": "আমাদের কৌশল",
+    "subtitleEn": "A connected step-by-step path from vision to shared growth.",
+    "subtitleBn": "ভিশন থেকে যৌথ প্রবৃদ্ধি পর্যন্ত ধাপে ধাপে সংযুক্ত পথ।"
+  },
+  "items": [
+    {
+      "id": "stg-dream",
+      "step": "01",
+      "parentId": null,
+      "titleEn": "We Dream",
+      "titleBn": "আমরা স্বপ্ন দেখি",
+      "descEn": "We start with bold goals and a clear vision for what is possible.",
+      "descBn": "আমরা স্পষ্ট ভিশন এবং সম্ভাবনার বড় লক্ষ্য নিয়ে শুরু করি।",
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "stg-problems",
+      "step": "02",
+      "parentId": "stg-dream",
+      "titleEn": "We Search Problems",
+      "titleBn": "আমরা সমস্যা খুঁজি",
+      "descEn": "We dig into bottlenecks, gaps, and real operational challenges.",
+      "descBn": "আমরা প্রতিবন্ধকতা, ঘাটতি এবং বাস্তব ব্যবসায়িক চ্যালেঞ্জগুলো খুঁজে বের করি।",
+      "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "stg-solution",
+      "step": "03",
+      "parentId": "stg-problems",
+      "titleEn": "We Discover Solution",
+      "titleBn": "আমরা সমাধান আবিষ্কার করি",
+      "descEn": "We shape practical, tailored strategies that solve root causes.",
+      "descBn": "আমরা মূল সমস্যার কার্যকর ও বাস্তবসম্মত সমাধান তৈরি করি।",
+      "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "stg-reality",
+      "step": "04",
+      "parentId": "stg-solution",
+      "titleEn": "We Connect them to Reality",
+      "titleBn": "আমরা বাস্তবের সাথে সংযুক্ত করি",
+      "descEn": "We align plans with real suppliers, tools, channels, and execution.",
+      "descBn": "আমরা পরিকল্পনাগুলো বাস্তব সাপ্লায়ার, টুলস, চ্যানেল ও কাজের সাথে যুক্ত করি।",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "stg-build",
+      "step": "05",
+      "parentId": "stg-reality",
+      "titleEn": "We Build",
+      "titleBn": "আমরা নির্মাণ করি",
+      "descEn": "We turn the blueprint into working systems, products, and presence.",
+      "descBn": "আমরা পরিকল্পনা থেকে কার্যকর সিস্টেম, পণ্য ও উপস্থিতি গড়ে তুলি।",
+      "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "stg-grow",
+      "step": "06",
+      "parentId": "stg-build",
+      "titleEn": "We grow together",
+      "titleBn": "আমরা একসাথে বেড়ে উঠি",
+      "descEn": "We scale steadily side by side with our partners and clients.",
+      "descBn": "আমরা পার্টনার ও ক্লায়েন্টদের সাথে কাঁধে কাঁধ মিলিয়ে এগিয়ে যাই।",
+      "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    }
+  ]
+}

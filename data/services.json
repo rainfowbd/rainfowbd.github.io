@@ -1,0 +1,194 @@
+{
+  "items": [
+    {
+      "id": "svc-sourcing",
+      "code": "01",
+      "name": "Product Sourcing",
+      "nameEn": "Product Sourcing",
+      "nameBn": "পণ্য সোর্সিং",
+      "titleEn": "Find Your Desired Products from Bangladesh.",
+      "titleBn": "বাংলাদেশ থেকে আপনার কাঙ্ক্ষিত পণ্য খুঁজে নিন।",
+      "shortDescEn": "Factory and supplier sourcing, sampling, wholesale collection, and custom product requirements with end-to-end verification.",
+      "shortDescBn": "ফ্যাক্টরি ও সরবরাহকারী অনুসন্ধান, স্যাম্পলিং, পাইকারি সংগ্রহ এবং কাস্টম পণ্যের চাহিদা যাচাইসহ সম্পূর্ণ সহায়তা।",
+      "detailsEn": [
+        "Factory & Supplier Sourcing",
+        "Product Selection",
+        "Wholesale Product Collection",
+        "Custom Product Requirements"
+      ],
+      "detailsBn": [
+        "ফ্যাক্টরি ও সরবরাহকারী অনুসন্ধান",
+        "পণ্য নির্বাচন",
+        "পাইকারি পণ্য সংগ্রহ",
+        "কাস্টম পণ্যের চাহিদা"
+      ],
+      "href": "services.html#svc-sourcing",
+      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "svc-shipping",
+      "code": "02",
+      "name": "International Shipping",
+      "nameEn": "International Shipping",
+      "nameBn": "আন্তর্জাতিক শিপিং",
+      "titleEn": "Move Your Products Across Borders.",
+      "titleBn": "সীমান্ত পেরিয়ে আপনার পণ্য পাঠান।",
+      "shortDescEn": "Air and sea freight, shipping coordination, export documentation, and protective packaging from factory to doorstep.",
+      "shortDescBn": "এয়ার ও সি ফ্রেইট, শিপিং সমন্বয়, এক্সপোর্ট ডকুমেন্টেশন এবং ফ্যাক্টরি থেকে গন্তব্য পর্যন্ত নিরাপদ প্যাকেজিং।",
+      "detailsEn": [
+        "Air Freight",
+        "Sea Freight",
+        "Shipping Coordination",
+        "Documentation Support",
+        "Export Packaging Support"
+      ],
+      "detailsBn": [
+        "এয়ার ফ্রেইট",
+        "সি ফ্রেইট",
+        "শিপিং সমন্বয়",
+        "ডকুমেন্টেশন সহায়তা",
+        "এক্সপোর্ট প্যাকেজিং সহায়তা"
+      ],
+      "href": "services.html#svc-shipping",
+      "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "svc-web",
+      "code": "03",
+      "name": "Web Development",
+      "nameEn": "Web Development",
+      "nameBn": "ওয়েব ডেভেলপমেন্ট",
+      "titleEn": "Build Your Digital Business Presence.",
+      "titleBn": "আপনার ডিজিটাল ব্যবসায়িক উপস্থিতি গড়ে তুলুন।",
+      "shortDescEn": "Business websites, full e-commerce storefronts, domain and hosting setup, and ongoing site management.",
+      "shortDescBn": "বিজনেস ওয়েবসাইট, পূর্ণাঙ্গ ই-কমার্স স্টোর, ডোমেইন-হোস্টিং সেটআপ এবং নিয়মিত সাইট ম্যানেজমেন্ট।",
+      "detailsEn": [
+        "Business Website",
+        "E-commerce Website",
+        "Domain & Hosting",
+        "Website Management"
+      ],
+      "detailsBn": [
+        "বিজনেস ওয়েবসাইট",
+        "ই-কমার্স ওয়েবসাইট",
+        "ডোমেইন ও হোস্টিং",
+        "ওয়েবসাইট ম্যানেজমেন্ট"
+      ],
+      "href": "services.html#svc-web",
+      "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "svc-media",
+      "code": "04",
+      "name": "Content & Media",
+      "nameEn": "Content & Media",
+      "nameBn": "কনটেন্ট ও মিডিয়া",
+      "titleEn": "Create Content That Builds Your Brand.",
+      "titleBn": "ব্র্যান্ড গড়তে কনটেন্ট তৈরি করুন।",
+      "shortDescEn": "Product photography, promotional and cinematic videos, documentary storytelling, social posts, and ad creatives.",
+      "shortDescBn": "প্রোডাক্ট ফটোগ্রাফি, প্রমোশনাল ও সিনেমাটিক ভিডিও, ডকুমেন্টারি কনটেন্ট, সোশ্যাল পোস্ট ও বিজ্ঞাপন ক্রিয়েটিভ।",
+      "detailsEn": [
+        "Professional Product Photography",
+        "Promotional Video",
+        "Cinematic Video Production",
+        "Documentary-style Content",
+        "Social Media Content",
+        "Advertising Creative"
+      ],
+      "detailsBn": [
+        "পেশাদার প্রোডাক্ট ফটোগ্রাফি",
+        "প্রমোশনাল ভিডিও",
+        "সিনেমাটিক ভিডিও প্রোডাকশন",
+        "ডকুমেন্টারি-স্টাইল কনটেন্ট",
+        "সোশ্যাল মিডিয়া কনটেন্ট",
+        "বিজ্ঞাপন ক্রিয়েটিভ"
+      ],
+      "href": "services.html#svc-media",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "svc-seo",
+      "code": "05",
+      "name": "SEO",
+      "nameEn": "SEO",
+      "nameBn": "এসইও",
+      "titleEn": "Get Found by High-Intent Buyers Online.",
+      "titleBn": "অনলাইনে সঠিক ক্রেতাদের সামনে দৃশ্যমান হন।",
+      "shortDescEn": "On-page optimization, technical search health, keyword strategy, and organic visibility growth across search engines.",
+      "shortDescBn": "অন-পেজ অপটিমাইজেশন, টেকনিক্যাল সার্চ হেলথ, কিওয়ার্ড কৌশল এবং সার্চ ইঞ্জিনে অর্গানিক ভিজিবিলিটি বৃদ্ধি।",
+      "detailsEn": [
+        "Technical & On-Page SEO",
+        "Keyword & Content Strategy",
+        "Local & Global Search Visibility",
+        "Search Performance Tracking"
+      ],
+      "detailsBn": [
+        "টেকনিক্যাল ও অন-পেজ SEO",
+        "কিওয়ার্ড ও কনটেন্ট কৌশল",
+        "লোকাল ও গ্লোবাল সার্চ ভিজিবিলিটি",
+        "সার্চ পারফরম্যান্স ট্র্যাকিং"
+      ],
+      "href": "services.html#svc-seo",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "svc-branding",
+      "code": "06",
+      "name": "Branding & Marketing",
+      "nameEn": "Branding & Marketing",
+      "nameBn": "ব্র্যান্ডিং ও মার্কেটিং",
+      "titleEn": "Build Your Brand. Reach Your Audience.",
+      "titleBn": "ব্র্যান্ড গড়ুন। আপনার অডিয়েন্সের কাছে পৌঁছান।",
+      "shortDescEn": "Brand identity, logo and visual systems, social media management, digital ads, and audience growth campaigns.",
+      "shortDescBn": "ব্র্যান্ড আইডেন্টিটি, লোগো ও ভিজ্যুয়াল সিস্টেম, সোশ্যাল মিডিয়া ম্যানেজমেন্ট, ডিজিটাল বিজ্ঞাপন ও প্রবৃদ্ধি ক্যাম্পেইন।",
+      "detailsEn": [
+        "Brand Identity",
+        "Logo & Visual Design",
+        "Social Media Management",
+        "Digital Advertising",
+        "SEO Support"
+      ],
+      "detailsBn": [
+        "ব্র্যান্ড আইডেন্টিটি",
+        "লোগো ও ভিজ্যুয়াল ডিজাইন",
+        "সোশ্যাল মিডিয়া ম্যানেজমেন্ট",
+        "ডিজিটাল বিজ্ঞাপন",
+        "SEO সহায়তা"
+      ],
+      "href": "services.html#svc-branding",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    },
+    {
+      "id": "svc-crm",
+      "code": "07",
+      "name": "CRM & Operations",
+      "nameEn": "CRM & Operations",
+      "nameBn": "CRM ও অপারেশনস",
+      "titleEn": "Manage Your Business More Efficiently.",
+      "titleBn": "আপনার ব্যবসা আরও দক্ষভাবে পরিচালনা করুন।",
+      "shortDescEn": "Customer and lead tracking, structured business databases, order workflows, and day-to-day operational coordination.",
+      "shortDescBn": "কাস্টমার ও লিড ট্র্যাকিং, সুসংগঠিত বিজনেস ডেটাবেস, অর্ডার ওয়ার্কফ্লো এবং প্রতিদিনের অপারেশনাল সমন্বয়।",
+      "detailsEn": [
+        "Customer Management",
+        "Lead Management",
+        "Business Database",
+        "Operational Coordination"
+      ],
+      "detailsBn": [
+        "কাস্টমার ম্যানেজমেন্ট",
+        "লিড ম্যানেজমেন্ট",
+        "বিজনেস ডেটাবেস",
+        "অপারেশনাল সমন্বয়"
+      ],
+      "href": "services.html#svc-crm",
+      "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80",
+      "fallback": "images/waiting.jpg"
+    }
+  ]
+}

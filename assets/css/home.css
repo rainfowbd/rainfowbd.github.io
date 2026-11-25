@@ -1,0 +1,640 @@
+/* =========================================================
+   RainFow — Home Page Styles (page-scoped)
+   Loaded only on index.html
+   ========================================================= */
+
+/* ---------- Visually hidden utility ---------- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* =========================================================
+   NEWS TICKER — 97% width · white · funnel ends · bold black
+   ========================================================= */
+.home-news-ticker {
+  width: 97%;
+  max-width: 100%;
+  margin: 12px auto;
+  background: linear-gradient(180deg, #ffffff 0%, #eef1f5 100%);
+  color: #000000;
+  overflow: hidden;
+  border-radius: 999px;
+}
+.home-news-inner {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  padding: 0 36px;
+  max-width: 100%;
+}
+.home-news-track-wrap {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.home-news-track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: homeNewsScroll 55s linear infinite;
+  padding-left: 100%;
+}
+.home-news-track:hover {
+  animation-play-state: paused;
+}
+.home-news-item {
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  white-space: pre;
+  tab-size: 2ch;
+  padding-right: 60px;
+}
+.home-news-item::before {
+  content: "\0009\0009";
+}
+@keyframes homeNewsScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+@media (max-width: 640px) {
+  .home-news-ticker {
+    width: 97%;
+    margin: 10px auto;
+    border-radius: 999px;
+  }
+  .home-news-inner {
+    height: 34px;
+    padding: 0 24px;
+  }
+  .home-news-item {
+    font-size: 12px;
+    font-weight: 700;
+    padding-right: 40px;
+  }
+  .home-news-track {
+    animation-duration: 45s;
+  }
+}
+
+/* =========================================================
+   NAVBAR TRANSLATE (INLINE, RIGHT-ALIGNED)
+   ========================================================= */
+.cat-nav {
+  display: flex;
+  align-items: center;
+}
+.cat-nav-inner {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.home-lang-nav {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1.5px solid #000;
+  border-radius: 999px;
+  padding: 2px;
+}
+.home-lang-nav button {
+  padding: 4px 10px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  color: #000;
+  transition: background 0.15s, color 0.15s;
+}
+.home-lang-nav button.active {
+  background: #000;
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .home-lang-nav {
+    padding: 2px;
+  }
+  .home-lang-nav button {
+    padding: 4px 8px;
+    font-size: 10.5px;
+  }
+}
+
+/* =========================================================
+   SURVEY — Edge-less Business Card · Black Title · Full-Bleed Image
+   ========================================================= */
+.home-survey-section {
+  padding: 52px 0;
+  background: var(--bg-alt, #f4f6f9);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.home-survey-intro {
+  text-align: center;
+  margin: 0 auto 24px;
+}
+
+.home-survey-intro h2,
+.survey-title-main {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  color: #000000;
+  background: none;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #000000;
+  letter-spacing: 0.03em;
+}
+
+.home-survey {
+  width: 82%;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.home-survey-frame {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-survey-slide {
+  display: none;
+}
+
+.home-survey-slide.is-active {
+  display: block;
+}
+
+/* Edge-less business card frame */
+.survey-card-horiz {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  overflow: hidden;
+  transform: translateY(0);
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.2s ease;
+  min-height: 296px;
+}
+
+.survey-card-horiz:hover {
+  transform: translateY(-5px);
+  border-color: #94a3b8;
+}
+
+/* Full-bleed image filling its side up to the card border, with no image border */
+.survey-card-media {
+  flex: 0 0 40%;
+  background: #000000;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.survey-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.survey-card-horiz:hover .survey-card-media img {
+  transform: scale(1.03);
+}
+
+.survey-card-body {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 24px;
+  background: #ffffff;
+}
+
+/* Separated question area with black & light contrast + hover popup */
+.home-survey-q {
+  position: relative;
+  z-index: 2;
+  background: #000000;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #1e293b;
+  margin: 0 0 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  transform: translateY(0) scale(1);
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: default;
+}
+
+.home-survey-q:hover {
+  z-index: 20;
+  background: #ffffff;
+  color: #000000;
+  border-color: #94a3b8;
+  transform: translateY(-6px) scale(1.02);
+}
+
+.survey-q-text,
+.survey-result-heading {
+  color: inherit;
+  letter-spacing: 0.05em;
+}
+
+.home-survey-ans {
+  padding: 0 4px;
+  color: #111111;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  margin: 0 0 16px;
+}
+
+.survey-hint-text {
+  color: inherit;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+.home-survey-slide[data-slide="q1b"] .home-survey-ans,
+.home-survey-slide[data-slide="result"] .home-survey-ans {
+  display: none;
+}
+
+/* Option buttons: light background with solid black text & light border */
+.home-survey-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.home-survey-option {
+  flex: 1 1 150px;
+  padding: 12px 18px;
+  background: #f8fafc;
+  color: #000000;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  text-align: center;
+}
+
+.home-survey-option:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.survey-opt-text {
+  color: inherit;
+  letter-spacing: 0.06em;
+}
+
+.home-survey-progress {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  padding: 16px 0 4px;
+}
+
+.home-survey-progress span {
+  width: 28px;
+  height: 4px;
+  border-radius: 999px;
+  background: #cbd5e1;
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+.home-survey-progress span.active {
+  background: #000000;
+  width: 40px;
+}
+
+.home-survey-progress span.done {
+  background: #334155;
+}
+
+.home-survey-result {
+  text-align: left;
+  padding: 6px 2px 0;
+  margin-top: auto;
+}
+
+.home-survey-result p {
+  margin: 0 0 16px;
+  color: #111111;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+}
+
+.survey-result-body {
+  color: inherit;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+}
+
+.home-survey-result button {
+  padding: 11px 24px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.home-survey-result button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.survey-result-cta {
+  color: inherit;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 768px) {
+  .home-survey-section {
+    padding: 36px 0;
+  }
+
+  .home-survey {
+    width: 100%;
+  }
+
+  .survey-card-horiz {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    border-width: 1px;
+    border-radius: 14px;
+    min-height: 0;
+  }
+
+  .survey-card-media {
+    flex: none;
+    width: 100%;
+    height: 195px;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .survey-card-body {
+    flex: none;
+    padding: 16px;
+  }
+
+  .home-survey-q {
+    font-size: 14.5px;
+    padding: 12px 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .home-survey-option {
+    flex: 1 1 120px;
+    padding: 11px 14px;
+    font-size: 13.5px;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* =========================================================
+   OUR SERVICES — Survey-inspired Borderless Image Cards (60/40 Split)
+   ========================================================= */
+.home-services-section {
+  padding: 56px 0;
+  background: var(--s-b-bg, #f2f4f8);
+}
+.home-services-head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.home-services-head h2 {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: var(--ink, #111);
+}
+.home-services-head p {
+  margin: 0;
+  color: var(--s-f-c1, #666666);
+  font-size: 14.5px;
+}
+
+.home-services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -5px 20px;
+}
+
+.home-service-card {
+  flex: 0 0 12.5%;
+  padding: 0 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+.home-service-card:hover {
+  text-decoration: none;
+}
+
+.home-service-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #ffffff;
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 0;
+  transform: translateY(0);
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.home-service-card:hover .home-service-inner {
+  transform: translateY(-4px);
+}
+
+.home-service-media {
+  flex: 0 0 60%;
+  width: 100%;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: #f4f7fb;
+  display: flex;
+}
+.home-service-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.home-service-card:hover .home-service-media img {
+  transform: scale(1.03);
+}
+
+.home-service-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 22px;
+  color: #000000;
+  gap: 2px;
+}
+.home-service-fallback span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.home-service-name {
+  flex: 1 1 40%;
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: #000000;
+  background: #ffffff;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.home-service-sub {
+  display: none;
+}
+.home-service-card:hover .home-service-name {
+  color: #ffffff;
+  background: #000000;
+}
+
+@media (max-width: 1299px) {
+  .home-service-card {
+    flex: 0 0 16.66%;
+  }
+  .home-service-name {
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-services-section {
+    padding: 40px 0;
+  }
+  .home-service-card {
+    flex: 0 0 25%;
+    margin-bottom: 10px;
+  }
+  .home-service-inner {
+    border-radius: 12px;
+    padding: 0;
+  }
+  .home-service-media {
+    flex: 0 0 60%;
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+  }
+  .home-service-name {
+    flex: 1 1 40%;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 6px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-service-card {
+    flex: 0 0 50%;
+  }
+}
+
+/* =========================================================
+   FEATURED PRODUCTS — flex-centred
+   ========================================================= */
+#home-featured-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+#home-featured-products .product-card {
+  flex: 0 0 auto;
+  width: 240px;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  #home-featured-products {
+    gap: 12px;
+  }
+  #home-featured-products .product-card {
+    width: calc(50% - 6px);
+  }
+}
